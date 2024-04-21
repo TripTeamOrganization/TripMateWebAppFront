@@ -50,7 +50,9 @@ $my-theme: mat.define-light-theme((
     accent: $my-accent,
     warn: $my-warn,
   ),
-  typography: mat.define-typography-config(),
+  typography: mat.define-legacy-typography-config(
+    $font-family: 'Roboto, Asap, sans-serif',
+  ),
   density: 0,
 ));
 
@@ -60,8 +62,7 @@ $my-theme: mat.define-light-theme((
 html, body {
   height: 100%;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, Asap, sans-serif;
   color: $negro;
   background-color: $blanco;
 }
-
