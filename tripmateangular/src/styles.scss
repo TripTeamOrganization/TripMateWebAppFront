@@ -1,4 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+$blanco: #FFFFFF;
+$negro: #000000;
+$negro-opaco: rgba(0, 0, 0, 0.8863);
+$azul: #3A6CEC;
+$amarillo: #FFD700;
+$gris: #F8F9FA;
+$gris-opaco: rgba(248, 249, 250, 0.5);
+
+// tripmate theme
+$theme: mat.define-light-theme((
+  color: (
+    primary: $blanco,
+    accent: $azul,
+    background: $gris,
+    foreground: $negro,
+    warning: $amarillo,
+  ),
+  typography: (
+    font-family: 'Roboto, Asap, sans-serif',
+    font-size: '1.15rem',
+    line-height: 1.5,
+    mobile: (
+      font-size: '1rem',
+    ),
+  ),
+));
+
+@include mat.all-component-themes($theme);
+
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+color:white;
+background-color: #1d1d1d;
+}
