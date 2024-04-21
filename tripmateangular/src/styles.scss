@@ -1,6 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
 @use "@angular/material" as mat;
+@include mat.core();
 
+// Define tus colores personalizados
 $blanco: #FFFFFF;
 $negro: #000000;
 $negro-opaco: rgba(0, 0, 0, 0.8863);
@@ -9,30 +10,58 @@ $amarillo: #FFD700;
 $gris: #F8F9FA;
 $gris-opaco: rgba(248, 249, 250, 0.5);
 
-// tripmate theme
-$theme: mat.define-light-theme((
+// Define tu paleta de colores
+$my-colors: (
+  50: $gris-opaco,
+  100: $gris,
+  200: $negro,
+  300: $azul,
+  400: $amarillo,
+  500: $blanco,
+  600: $blanco,
+  700: $blanco,
+  800: $blanco,
+  900: $blanco, // Puedes continuar según sea necesario
+  contrast: (
+    50: rgba($negro, 0.87),
+    100: rgba($negro, 0.87),
+    200: rgba($negro, 0.87),
+    300: rgba($blanco, 1),
+    400: rgba($negro, 0.87),
+    500: rgba($negro, 0.87),
+    600: rgba($negro, 0.87),
+    700: rgba($negro, 0.87),
+    800: rgba($negro, 0.87),
+    900: rgba($negro, 0.87), // Puedes continuar según sea necesario
+  )
+);
+
+// Define tus paletas primarias y de acento
+$my-primary: mat.define-palette($my-colors, 500);
+$my-accent: mat.define-palette($my-colors, 200, 100, 400);
+
+// Define la paleta de advertencia (opcional)
+$my-warn: mat.define-palette($my-colors);
+
+// Crea el tema utilizando las paletas definidas
+$my-theme: mat.define-light-theme((
   color: (
-    primary: $blanco,
-    accent: $azul,
-    background: $gris,
-    foreground: $negro,
-    warning: $amarillo,
+    primary: $my-primary,
+    accent: $my-accent,
+    warn: $my-warn,
   ),
-  typography: (
-    font-family: 'Roboto, Asap, sans-serif',
-    font-size: '1.15rem',
-    line-height: 1.5,
-    mobile: (
-      font-size: '1rem',
-    ),
-  ),
+  typography: mat.define-typography-config(),
+  density: 0,
 ));
 
-@include mat.all-component-themes($theme);
+// Aplica el tema al componente raíz de la aplicación
+@include mat.all-component-themes($my-theme);
 
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-color:white;
-background-color: #1d1d1d;
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: $negro;
+  background-color: $blanco;
 }
+
