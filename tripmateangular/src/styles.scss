@@ -7,17 +7,17 @@ $negro: #000000;
 $negro-opaco: rgba(0, 0, 0, 0.8863);
 $azul: #3A6CEC;
 $amarillo: #FFD700;
-$gris: #F8F9FA;
+$gris: #9da1aa;
 $gris-opaco: rgba(248, 249, 250, 0.5);
 
 // Define tu paleta de colores
 $my-colors: (
-  50: $gris-opaco,
-  100: $gris,
-  200: $negro,
-  300: $azul,
-  400: $amarillo,
-  500: $blanco,
+  50: $amarillo,
+  100: $negro,
+  200: $azul,
+  300: $gris,
+  400: $gris-opaco,
+  500: $negro-opaco,
   600: $blanco,
   700: $blanco,
   800: $blanco,
@@ -37,9 +37,8 @@ $my-colors: (
 );
 
 // Define tus paletas primarias y de acento
-$my-primary: mat.define-palette($my-colors, 500);
-$my-accent: mat.define-palette($my-colors, 200, 100, 400);
-
+$my-primary: mat.define-palette($my-colors, 200);
+$my-accent: mat.define-palette($my-colors, 50, 100, 400);
 // Define la paleta de advertencia (opcional)
 $my-warn: mat.define-palette($my-colors);
 
@@ -47,7 +46,7 @@ $my-warn: mat.define-palette($my-colors);
 $my-theme: mat.define-light-theme((
   color: (
     primary: $my-primary,
-    accent: $my-accent,
+    accent:$my-accent,
     warn: $my-warn,
   ),
   typography: mat.define-legacy-typography-config(

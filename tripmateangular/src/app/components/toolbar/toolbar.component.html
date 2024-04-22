@@ -1,11 +1,12 @@
-<mat-toolbar>
+<mat-toolbar color="primary">
   <div class="ochenta">
-      <mat-tab-group color="accent" >
-        <mat-tab routerLink="activities" label="Alojamientos"></mat-tab>
-        <mat-tab routerLink="activities" label="Vuelos"></mat-tab>
-        <mat-tab routerLink="activities" label="Actividades"></mat-tab>
-        <mat-tab routerLink="activities" label="Restaurantes"></mat-tab>
-      </mat-tab-group>
+    <mat-tab-group color="accent">
+      <mat-tab routerLink="accommodations" routerLinkActive="selected-tab" label="Alojamientos"></mat-tab>
+      <mat-tab routerLink="flights" routerLinkActive="selected-tab" label="Vuelos"></mat-tab>
+      <mat-tab routerLink="activities" routerLinkActive="selected-tab" label="Actividades"></mat-tab>
+      <mat-tab routerLink="restaurants" routerLinkActive="selected-tab" label="Restaurantes"></mat-tab>
+    </mat-tab-group>
+
   </div>
   <div class="veinte">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="30">
