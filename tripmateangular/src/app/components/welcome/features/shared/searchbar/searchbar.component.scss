@@ -5,7 +5,7 @@ $azul: #3A6CEC;
 $amarillo: #FFD700;
 $gris: #F8F9FA;
 $gris-opaco: rgba(248, 249, 250, 0.5);
-
+$pene: rgba(255, 255, 255, 0.02);
 .input {
   color: $negro-opaco;
   font-size: 0.9rem;
@@ -18,8 +18,11 @@ $gris-opaco: rgba(248, 249, 250, 0.5);
   border-bottom: var(--border-height) solid var(--border-before-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-}
 
+}
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
 .input:hover {
   transform: scale(1.05); /* Ajusta el valor de escala según sea necesario */
 }
@@ -40,11 +43,17 @@ $gris-opaco: rgba(248, 249, 250, 0.5);
 
 .input:focus + .input-border {
   width: 100%;
+
 }
 
 .form-control {
   position: relative;
   --width-of-input: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1vw;
+
 }
 
 .input-alt {
@@ -52,14 +61,58 @@ $gris-opaco: rgba(248, 249, 250, 0.5);
   padding-inline: 1em;
   padding-block: 0.8em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+
+  background-color: $azul; /* Fondo azul */
+  border-radius: 10px; /* Borde circular */
+  transition: transform 0.5s ease, box-shadow 0.2s ease; /* Transición para el efecto de zoom y sombra */
+
+
+
 }
 
 .input-border-alt {
+
   height: 3px;
-  background: linear-gradient(90deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.27) 0%, $azul 60%, $pene 80%);
   transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
 }
 
 .input-alt:focus + .input-border-alt {
   width: 100%;
 }
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Sin traslación en el eje Y al inicio */
+  }
+  50% {
+    transform: translateY(-10px); /* Rebote hacia arriba */
+  }
+  100% {
+    transform: translateY(+10px); /* Volver a la posición original */
+  }
+}
+.form-control > svg {
+  background-color: $azul; /* Fondo azul */
+  border: 0.5px black; /* Borde sólido dorado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+  padding-top: 4px; /* Espacio interno */
+  padding-bottom: 4px; /* Espacio interno */
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 50%; /* Borde circular */
+  transition: transform 0.5s ease, box-shadow 0.2s ease; /* Transición para el efecto de zoom y sombra */
+
+}
+
+.form-control > svg:hover {
+  transform: scale(1.15); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+.form-control > svg:active {
+  transform: scale(1.15); /* Aumenta ligeramente el tamaño al pasar el ratón */
+
+  animation: bounce 0.3s infinite; /* Agregar la animación de rebote */
+}
+

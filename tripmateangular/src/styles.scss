@@ -37,10 +37,10 @@ $my-colors: (
 );
 
 // Define tus paletas primarias y de acento
-$my-primary: mat.define-palette($my-colors, 200);
-$my-accent: mat.define-palette($my-colors, 50, 100, 400);
+$my-primary: mat.define-palette($my-colors, 200 ,100);
+$my-accent: mat.define-palette($my-colors, 400, 200, 50);
 // Define la paleta de advertencia (opcional)
-$my-warn: mat.define-palette($my-colors);
+$my-warn: mat.define-palette($my-colors,50,100, 200, 50);
 
 // Crea el tema utilizando las paletas definidas
 $my-theme: mat.define-light-theme((

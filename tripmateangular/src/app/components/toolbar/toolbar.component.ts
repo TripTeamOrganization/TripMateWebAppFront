@@ -6,15 +6,17 @@ import {MatTab, MatTabChangeEvent, MatTabGroup, MatTabLink, MatTabNav, MatTabNav
 import {Router, RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
 import {routes} from '../../app.routes';
+import {MatTooltip} from "@angular/material/tooltip";
 @Component({
   selector: 'app-toolbar',
   standalone: true,
-  imports: [MatToolbarModule, MatIconModule, MatIconButton, MatTabGroup, MatTab, RouterLink, RouterOutlet, RouterLinkActive, MatTabNav, MatTabLink, MatTabNavPanel],
+  imports: [MatToolbarModule, MatIconModule, MatIconButton, MatTabGroup, MatTab, RouterLink, RouterOutlet, RouterLinkActive, MatTabNav, MatTabLink, MatTabNavPanel, MatTooltip],
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements AfterViewInit {
   @ViewChild(MatTabGroup) tabGroup: MatTabGroup | undefined;
+  Usuario: string='UsuarioExample';
 
   constructor(private router: Router) { }
 

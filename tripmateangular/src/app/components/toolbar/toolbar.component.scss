@@ -9,8 +9,21 @@ width: 80%;
   display:flex;
   justify-content: right;
   margin-right: 2vw;
-}
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10%;
 
+}
+.mat-tab-label{
+  color: red;
+  height: 20vh !important;
+
+}
+@media screen and (max-width: 768px) {
+  .veinte h2{
+    display:none;
+  }
+}
 .mat-toolbar {
   margin: 0;
   padding: 0;
