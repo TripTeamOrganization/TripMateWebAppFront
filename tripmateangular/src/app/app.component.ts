@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {ToolbarComponent} from "./components/toolbar/toolbar.component";
 import {WelcomeComponent} from "./components/welcome/welcome.component";
-
 @Component({
   selector: 'app-root',
   standalone: true,
