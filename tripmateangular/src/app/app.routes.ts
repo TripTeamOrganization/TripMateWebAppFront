@@ -24,15 +24,15 @@ export const routes: Routes = [
         path: 'features',
         children: [
           {
-            path: 'accommodations',
+            path: 'accommodations-component',
             component: AccomodationsComponentComponent,
           },
           {
-            path: 'activities',
+            path: 'activities-component',
             component: ActivitiesComponentComponent,
           },
           {
-            path: 'restaurants',
+            path: 'restaurants-component',
             component: RestaurantsComponentComponent,
           },
           {
