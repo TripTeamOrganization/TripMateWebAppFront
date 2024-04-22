@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-accomodations-component',
+  selector: 'app-accomodations',
   standalone: true,
   imports: [],
   templateUrl: './accomodations-component.component.html',

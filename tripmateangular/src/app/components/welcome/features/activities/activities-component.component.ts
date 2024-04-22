@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {RouterLink, RouterOutlet} from "@angular/router";
 
 @Component({
-  selector: 'app-activities-component',
+  selector: 'app-activities',
   standalone: true,
   imports: [
     RouterLink,

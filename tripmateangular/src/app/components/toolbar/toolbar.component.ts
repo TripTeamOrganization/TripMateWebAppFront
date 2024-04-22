@@ -21,18 +21,9 @@ export class ToolbarComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     if (this.tabGroup) {
       this.tabGroup.selectedTabChange.subscribe((event: MatTabChangeEvent) => {
-        if (event.index === 0) {
-          this.router.navigate(['welcome/features/accommodations-component']);
-        }
-        if (event.index === 1) {
-          this.router.navigate(['welcome/features/flights-component']);
-        }
-        if (event.index === 2) {
-          this.router.navigate(['welcome/features/activities-component']);
-        }
-        if (event.index === 3) {
-          this.router.navigate(['welcome/features/restaurants-component']);
-        }
+        const routes = ['accommodations', 'flights', 'activities', 'restaurants'];
+        const selectedRoute = routes[event.index];
+        this.router.navigate([selectedRoute]);
       });
     }
   }
