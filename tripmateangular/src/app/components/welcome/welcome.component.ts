@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { MainContainerComponent } from "../layout/";
-import { FlightsComponentComponent } from "../features/flights-component/flights-component.component";
-import { RestaurantsComponentComponent } from "../features/restaurants-component/restaurants-component.component";
-import { ActivitiesComponentComponent } from "../features/activities-component/activities-component.component";
-import { AccomodationsComponentComponent } from "../features/accomodations-component/accomodations-component.component";
 import { RouterModule } from "@angular/router";
+import {FlightsComponentComponent} from "./features/flights-component/flights-component.component";
+import {RestaurantsComponentComponent} from "./features/restaurants-component/restaurants-component.component";
+import {ActivitiesComponentComponent} from "./features/activities-component/activities-component.component";
+import {AccomodationsComponentComponent} from "./features/accomodations-component/accomodations-component.component";
 
 
 
