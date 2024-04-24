@@ -24,8 +24,6 @@ export class CardmainComponent {
   @Input() sourceimage: string = '';
   @Input() ubicacion: string = '';
   @Input() price: string = '';
-  @Input() maxWidthimg: number = 230;
-  @Input() maxHeightimg: number = 230;
   @Input() starcount: string ='0';
   getStarIndices(starcount: string): number[] {
     const count: number = parseInt(starcount, 10);

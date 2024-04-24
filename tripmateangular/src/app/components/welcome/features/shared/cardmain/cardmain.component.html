@@ -1,6 +1,8 @@
 
 <div class="cardmain" [style.max-width.vw]="maxWidth">
-  <img [src]="sourceimage" [style.width.px]="maxWidthimg" [style.height.px]="maxHeightimg" alt="Imagen">
+  <div class="imagecontainer">
+    <img class="imagen" [src]="sourceimage" alt="Imagen">
+  </div>
   <div class="textcontain">
     <span class="title">{{ title }}</span>
     <div class="svgclass" >
