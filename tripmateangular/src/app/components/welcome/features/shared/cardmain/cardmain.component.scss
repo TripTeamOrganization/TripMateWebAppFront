@@ -1,21 +1,11 @@
-/*
-<div class="cardmain" [style.max-width.vw]="maxWidth">
-  <img src="{{sourceimage}}}" alt="Imagen">
-  <span class="title">{{ title }}</span>
-  <svg class="mat-icon"></svg>
-  <h4 class="mat-subtitle-1">{{ubicacion}}</h4>
-  <p class="description"> {{ descripcion }} </p>
-  <button class="accept">{{ buttontext }}</button>
-</div>
 
-*/
 .cardmain {
   background-color: white;
   box-shadow:
-    0px 3px 5px rgba(0, 0, 0, 0.1), /* Sombra superior */
-    0px -3px 5px rgba(0, 0, 0, 0.1), /* Sombra inferior */
-    3px 0px 5px rgba(0, 0, 0, 0.1), /* Sombra derecha */
-    -3px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra izquierda */
+    0px 3px 5px rgba(0, 0, 0, 0.1),
+    0px -3px 5px rgba(0, 0, 0, 0.1),
+    3px 0px 5px rgba(0, 0, 0, 0.1),
+    -3px 0px 5px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: auto 3.5fr;
   padding: 2.3%;
@@ -62,7 +52,7 @@
 }
 
 .svgclass {
-  grid-area: b; /* Ocupa el área 'icon' */
+  grid-area: b;
   display: flex;
   flex-direction: row;
   margin-top:0;
@@ -72,7 +62,7 @@
 }
 
 .mat-subtitle-1 {
-  grid-area: c; /* Ocupa el área 'ubicacion' */
+  grid-area: c;
   padding:0;
   margin:0;
   color: rgba(0, 0, 0, 0.5);
@@ -83,12 +73,12 @@
 }
 
 .description {
-  grid-area: d; /* Ocupa el área 'description' */
+  grid-area: d;
 
 }
 
 .boton {
-  grid-area: e; /* Ocupa el área 'accept' */
+  grid-area: e;
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
