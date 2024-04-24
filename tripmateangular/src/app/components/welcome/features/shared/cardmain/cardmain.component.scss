@@ -10,8 +10,9 @@
   grid-template-columns: auto 3.5fr;
   padding: 2.3%;
   grid-column-gap: 1vw;
-  max-height: 20vw;
+  max-height: 25vw;
   max-width: 30vw;
+  border-radius: 20px;
 }
 .imagecontainer{
   grid-column-start: 1;
@@ -74,6 +75,8 @@
 
 .description {
   grid-area: d;
+  line-height: 1.5;
+  font-size: 0.9rem;
 
 }
 
@@ -157,3 +160,5 @@
     width: 100%;
   }
 }
+
+
