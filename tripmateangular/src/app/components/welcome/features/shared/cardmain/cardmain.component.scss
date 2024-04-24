@@ -1,83 +1,78 @@
-.cookie-card {
-  max-width: 320px;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+/*
+<div class="cardmain" [style.max-width.vw]="maxWidth">
+  <img src="{{sourceimage}}}" alt="Imagen">
+  <span class="title">{{ title }}</span>
+  <svg class="mat-icon"></svg>
+  <h4 class="mat-subtitle-1">{{ubicacion}}</h4>
+  <p class="description"> {{ descripcion }} </p>
+  <button class="accept">{{ buttontext }}</button>
+</div>
+
+*/
+.cardmain {
+  background-color: white;
+  box-shadow:
+    0px 3px 5px rgba(0, 0, 0, 0.1), /* Sombra superior */
+    0px -3px 5px rgba(0, 0, 0, 0.1), /* Sombra inferior */
+    3px 0px 5px rgba(0, 0, 0, 0.1), /* Sombra derecha */
+    -3px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra izquierda */
+  display: grid;
+  grid-template-columns: 1fr 3.7fr;
+  padding: 3%;
+
+}
+
+.img{
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.textcontain {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: grid;
+  grid-template-areas:
+            "a a f"
+            "b . ."
+            "c . ."
+            "d d d"
+            ". . e";
+
 }
 
 .title {
-  font-weight: 600;
-  color: rgb(31 41 55);
+  grid-area: a; /* Ocupa el área 'title' */
+  font-size: 1.6rem;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.svgclass {
+  grid-area: b; /* Ocupa el área 'icon' */
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  margin-top:0;
+  padding-top: 0;
+  gap: 0.2vw;
+}
+
+.mat-subtitle-1 {
+  grid-area: c; /* Ocupa el área 'ubicacion' */
+  padding: 10px;
+
 }
 
 .description {
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: rgb(75 85 99);
+  grid-area: d; /* Ocupa el área 'description' */
+
 }
 
-.description a {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246);
-}
+.boton {
+  grid-area: e; /* Ocupa el área 'accept' */
 
-.description a:hover {
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
 }
+.price{
+  grid-area: f;
 
-.actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-  -moz-column-gap: 1rem;
-  column-gap: 1rem;
-  flex-shrink: 0;
-}
-
-.pref {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: rgb(31 41 55 );
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
-  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
-  background-color: transparent;
-}
-
-.pref:hover {
-  color: rgb(156 163 175);
-}
-
-.pref:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.accept {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  background-color: rgb(17 24 39);
-  font-weight: 500;
-  border-radius: 0.5rem;
-  color: #fff;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  border: none;
-  transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.accept:hover {
-  background-color: rgb(55 65 81);
-}
-
-.accept:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
 }

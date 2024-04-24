@@ -1,14 +1,19 @@
 
-<div class="cookie-card" [style.max-width.vw]="maxWidth">
-  <span class="title">{{ title }}</span>
-  <p class="description"> {{ descripcion }} </p>
-  <div class="actions">
-    <button class="pref">
-      Manage your preferences
-    </button>
-    <button class="accept">
-      Accept
-    </button>
+<div class="cardmain" [style.max-width.vw]="maxWidth">
+  <img [src]="sourceimage" [style.width.px]="maxWidthimg" [style.height.px]="maxHeightimg" alt="Imagen">
+  <div class="textcontain">
+    <span class="title">{{ title }}</span>
+    <div class="svgclass" >
+      @for (i of getStarIndices(starcount); track i) {
+    <app-starsvg></app-starsvg>
+    } @empty {
+    <span>No stars</span>
+  }
+    </div>
+    <span class="price">{{price}}</span>
+    <h4 class="mat-subtitle-1">{{ubicacion}}</h4>
+    <p class="description"> {{ descripcion }} </p>
+    <button class="boton">{{ buttontext }}</button>
   </div>
 </div>
 
