@@ -96,25 +96,24 @@ $pene: rgba(255, 255, 255, 0.02);
   }
 }
 .form-control > svg {
-  background-color: $azul; /* Fondo azul */
-  border: 0.5px black; /* Borde sólido dorado */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
-  padding-top: 4px; /* Espacio interno */
-  padding-bottom: 4px; /* Espacio interno */
+  background-color: $azul;
+  border: 0.5px black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding-top: 4px;
+  padding-bottom: 4px;
   padding-left: 8px;
   padding-right: 8px;
-  border-radius: 50%; /* Borde circular */
-  transition: transform 0.5s ease, box-shadow 0.2s ease; /* Transición para el efecto de zoom y sombra */
-
+  border-radius: 50%;
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
 }
 
 .form-control > svg:hover {
-  transform: scale(1.15); /* Aumenta ligeramente el tamaño al pasar el ratón */
+  transform: scale(1.15);
 }
 
 .form-control > svg:active {
-  transform: scale(1.15); /* Aumenta ligeramente el tamaño al pasar el ratón */
+  transform: scale(1.15);
 
-  animation: bounce 0.3s infinite; /* Agregar la animación de rebote */
+  animation: bounce 0.3s infinite;
 }
 
