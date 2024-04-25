@@ -10,6 +10,9 @@ import {
   RestaurantsComponentComponent
 } from "./components/welcome/features/restaurants/restaurants-component.component";
 import {FlightsComponentComponent} from "./components/welcome/features/flights/flights-component.component";
+import { JourneysComponentComponent } from './components/welcome/features/journeys/journeys-component/journeys-component.component';
+import { MyjourneysComponent } from './components/welcome/features/myjourneys/myjourneys.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -19,7 +22,9 @@ export const routes: Routes = [
       { path: 'accommodations', component: AccomodationsComponentComponent },
       { path: 'activities', component: ActivitiesComponentComponent },
       { path: 'restaurants', component: RestaurantsComponentComponent },
-      { path: 'flights', component: FlightsComponentComponent }
+      { path: 'flights', component: FlightsComponentComponent },
+      { path: 'journeys', component: JourneysComponentComponent},
+      { path: 'myjourneys', component: MyjourneysComponent}
     ]
   }
 ];
