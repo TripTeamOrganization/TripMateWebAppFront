@@ -18,4 +18,5 @@ export interface InputPassword {
 export class PasswordImputsComponent {
   @Input()
   inputData: InputPassword | undefined;
+  @Input() value: any;
 }

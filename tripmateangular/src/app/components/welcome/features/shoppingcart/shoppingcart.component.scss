@@ -1,4 +1,13 @@
-//que el titulo h2 vaya a la izquierda
-h2{
-    text-align: left;
+h2 {
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombreado oscuro */
+  margin-bottom: 0;
+
+}
+.titulo{
+  display: flex;
+  text-align: left;
+  justify-content: left;
+  margin-right: auto;
+  margin-bottom: 0;
 }

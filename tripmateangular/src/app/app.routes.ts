@@ -13,6 +13,11 @@ import {FlightsComponentComponent} from "./components/welcome/features/flights/f
 import { JourneysComponentComponent } from './components/welcome/features/journeys/journeys-component/journeys-component.component';
 import { MyjourneysComponent } from './components/welcome/features/myjourneys/myjourneys.component';
 import { ShoppingcartComponent } from './components/welcome/features/shoppingcart/shoppingcart.component';
+import {SigninComponent} from "./components/welcome/features/signin/signin.component";
+import {UserviewComponent} from "./components/welcome/features/userview/userview.component";
+import {RegisterComponent} from "./components/welcome/features/register/register.component";
+import {ReservationComponent} from "./components/welcome/features/reservation/reservation.component";
+import {ItineraryComponent} from "./components/welcome/features/itinerary/itinerary.component";
 export const routes: Routes = [
   {
     path: '',
@@ -25,7 +30,12 @@ export const routes: Routes = [
       { path: 'flights', component: FlightsComponentComponent },
       { path: 'journeys', component: JourneysComponentComponent},
       { path: 'myjourneys', component: MyjourneysComponent},
-      { path: 'shoppingcart', component: ShoppingcartComponent}
+      { path: 'shoppingcart', component: ShoppingcartComponent},
+      { path: 'signin', component:SigninComponent},
+      { path: 'userview',component:UserviewComponent},
+      {path: 'register', component: RegisterComponent},
+      {path: 'reservation',component: ReservationComponent},
+      {path: 'itinerary', component: ItineraryComponent}
     ]
   }
 ];

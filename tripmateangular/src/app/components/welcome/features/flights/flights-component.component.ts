@@ -4,13 +4,15 @@ import {AllapisService} from "../shared/services/allapis.service";
 import { Flight } from '../../../../models/flight.interface';
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
+import {ImputsComponent} from "../shared/imputs/imputs.component";
+import {PasswordImputsComponent} from "../shared/password-imputs/password-imputs.component";
 
 @Component({
   selector: 'app-flights',
   standalone: true,
-    imports: [
-        SearchbarComponent,HttpClientModule
-    ],
+  imports: [
+    SearchbarComponent, HttpClientModule, ImputsComponent, PasswordImputsComponent
+  ],
   templateUrl: './flights-component.component.html',
   styleUrl: './flights-component.component.scss'
 })
@@ -35,4 +37,6 @@ export class FlightsComponentComponent implements OnInit {
       }
     );
   }
+
+  protected readonly crossOriginIsolated = crossOriginIsolated;
 }

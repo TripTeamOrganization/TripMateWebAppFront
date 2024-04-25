@@ -18,4 +18,6 @@ export interface InputInfo {
 export class ImputsComponent {
   @Input()
   inputData: InputInfo | undefined;
+  @Input()
+  placeholder: string="Escriba aquí su placeholder";
 }
