@@ -2,9 +2,23 @@
 <app-searchbar textoplaceholder="Selecciona tu ubicación"></app-searchbar>
 
 <group-cardgroup>
-
-
-
+    @for (accommodation of accomodations; track accommodation.nombre) {
+      @if ((accomodations.length)-(accomodations.length-1) < accomodations.length - 1) {
+        <app-cardmain
+          [maxWidth]="50"
+          [maxHeight]="30"
+          starcount="0"
+          [sourceimage]="accommodation.imagen"
+          [title]="accommodation.nombre"
+          [price]="accommodation.precio"
+          [ubicacion]="accommodation.direccion"
+          [descripcion]="accommodation.descripcion ? accommodation.descripcion : ''"
+          buttontext="Seleccionar">
+        </app-cardmain>
+      }
+    } @empty {
+      <p>Cargando...</p>
+    }
 </group-cardgroup>
 
 
