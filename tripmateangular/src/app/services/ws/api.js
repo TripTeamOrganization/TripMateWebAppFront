@@ -130,83 +130,50 @@ async function scrapeActividades() {
 }
 app.get('/vuelos', async (req, res) => {
   try {
-    const vuelos = await scrapeVuelos();
+    const vuelos = await scrapeViajes();
     res.json(vuelos);
   } catch (error) {
     console.error('Error al obtener vuelos:', error);
     res.status(500).json({ error: 'Error al obtener vuelos' });
   }
 });
-
-async function scrapeVuelos() {
+async function scrapeViajes() {
+  const url = 'https://www.atrapalo.pe/viajes/';
   try {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    const url = 'https://www.lima-airport.com/pasajeros/vuelos';
-    await page.goto(url);
-
-    const html = await page.content();
-    const $ = cheerio.load(html);
-
-    const vuelos = [];
-
-    const flightElements = $('.col-number .textInformationFlight').toArray();
-
-    for (const element of flightElements) {
-      try {
-        const numeroVuelo = $(element).find('h4').text().trim();
-        const detalleUrl = `https://www.lima-airport.com/pasajeros/vuelos/detalle/${numeroVuelo.substring(3)}?day=today`;
-
-        const vueloDetalle = await scrapeVueloDetalle(detalleUrl);
-        vuelos.push(vueloDetalle);
-      } catch (error) {
-        console.error('Error al obtener detalle de vuelo:', error);
-      }
-    }
-
-    await browser.close();
-
-    return vuelos;
-  } catch (error) {
-    console.error('Error al obtener vuelos:', error);
-    throw error;
-  }
-}
-
-async function scrapeVueloDetalle(url) {
-  try {
-    // Ignorar la verificación del certificado SSL
-    const agent = new https.Agent({
-      rejectUnauthorized: false
-    });
-
-    // Realizar la solicitud HTTP con Axios
-    const response = await axios.get(url, { httpsAgent: agent });
+    const response = await axios.get(url);
     const html = response.data;
     const $ = cheerio.load(html);
 
-    const aerolinea = $('.titulo-aerolinea img').attr('src').replace(/^.*[\\/]/, '');
-    const estado = $('.titulo-aerolinea h2').text().trim();
-    const refVuelo = $('.titulo-aerolinea .ref-vuelo').text().trim();
-    const fechaHoraProgramada = $('.texto-vuelo-detalle .hora-salida p').text().trim();
-    const destino = $('.texto-vuelo-detalle .ciudad p').text().trim();
-    const fechaHoraEstimada = $('.texto-vuelo-detalle .hora-llegada p').text().trim();
-    const counterCheckIn = $('.detalles .counter').text().trim();
+    const viajes = [];
 
-    return {
-      aerolinea,
-      estado,
-      refVuelo,
-      fechaHoraProgramada,
-      destino,
-      fechaHoraEstimada,
-      counterCheckIn
-    };
+    $('.js-box-offer').each((index, element) => {
+      const nombre = $(element).find('.name').text().trim();
+      const imagen = $(element).find('img').attr('data-src');
+      const tipo = $(element).find('.product-type').text().trim();
+      const duracion = $(element).find('.product-duration').text().trim();
+      const precio = $(element).find('.price').text().trim();
+      const ubicacion = $(element).find('.module-content a').attr('title');
+
+      const viaje = {
+        nombre,
+        imagen,
+        tipo,
+        duracion,
+        precio,
+        ubicacion
+      };
+
+      viajes.push(viaje);
+    });
+
+    return viajes;
   } catch (error) {
-    console.error('Error al obtener detalle de vuelo:', error);
     throw error;
   }
 }
+
+
+
 app.listen(port, () => {
   console.log(`Servidor de la API escuchando en http://localhost:${port}`);
 });
