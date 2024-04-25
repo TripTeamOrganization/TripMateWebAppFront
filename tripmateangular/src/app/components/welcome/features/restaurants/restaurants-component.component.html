@@ -1,8 +1,8 @@
+<app-searchbar textoplaceholder="Selecciona tu Restaurante" (searchChanged)="searchHandler($event)"></app-searchbar>
 
-<app-searchbar textoplaceholder="Selecciona tu Restaurante"></app-searchbar>
 <group-cardgroup>
-  <div *ngFor="let restaurant of restaurants; let i = index;" role="list">
-    <ng-container *ngIf="i < restaurants.length - 2">
+  <div *ngFor="let restaurant of filteredRestaurants; let i = index;" role="list">
+    <ng-container *ngIf="i < filteredRestaurants.length">
       <app-cardmain
         [maxWidth]="80"
         [maxHeight]="30"
