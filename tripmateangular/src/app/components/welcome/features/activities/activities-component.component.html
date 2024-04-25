@@ -1,21 +1,21 @@
 
-<app-searchbar textoplaceholder="Busca tu actividad"></app-searchbar>
-
+<app-searchbar textoplaceholder="Busca tu actividad"
+               (searchChanged)="searchHandler($event)"></app-searchbar>
 
 <group-cardgroup>
-  @for (activity of activities; track activity.nombre) {
-    @if ((activities.length)-(activities.length-1) < activities.length - 1) {
-      <app-cardmain
-        [maxWidth]="80"
-        [maxHeight]="30"
-        starcount="0"
-        [sourceimage]="activity.imagen"
-        [title]="activity.nombre"
-        [ubicacion]="activity.ubicacion"
-        [descripcion]="activity.descripcion ? activity.descripcion : ''"
-        buttontext="Seleccionar">
-      </app-cardmain>    }
-  } @empty {
+  @for (activity of filteredActivities.length > 0 ? filteredActivities : activities; track activity.nombre) {
+    <app-cardmain
+      [maxWidth]="80"
+      [maxHeight]="30"
+      starcount="0"
+      [sourceimage]="activity.imagen"
+      [title]="activity.nombre"
+      [ubicacion]="activity.ubicacion"
+      [descripcion]="activity.descripcion ? activity.descripcion : ''"
+      buttontext="Seleccionar">
+    </app-cardmain>
+  }
+  @empty {
     <p>Cargando...</p>
   }
 </group-cardgroup>
