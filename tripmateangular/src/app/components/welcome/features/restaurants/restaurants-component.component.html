@@ -1,16 +1,19 @@
 
 <app-searchbar textoplaceholder="Selecciona tu Restaurante"></app-searchbar>
-
-<div *ngFor="let restaurant of restaurants" role="list">
-  <app-cardmain
-    [maxWidth]="100"
-    starcount="4"
-    sourceimage="{{restaurant.imagen}}"
-    title="{{restaurant.nombre}}"
-    price="{{restaurant.locationCost}}"
-    ubicacion="Av. Benavides 1234, Miraflores"
-    descripcion="{{restaurant.descripcion}}"
-    buttontext="Seleccionar">
-  </app-cardmain>
-</div>
-
+<group-cardgroup>
+  <div *ngFor="let restaurant of restaurants; let i = index;" role="list">
+    <ng-container *ngIf="i < restaurants.length - 2">
+      <app-cardmain
+        [maxWidth]="80"
+        [maxHeight]="30"
+        starcount="0"
+        [sourceimage]="restaurant.imagen"
+        [title]="restaurant.nombre"
+        [price]="restaurant.mustTry"
+        [ubicacion]="restaurant.cuisines"
+        [descripcion]="restaurant.locationCost ? restaurant.locationCost : ''"
+        buttontext="Seleccionar">
+      </app-cardmain>
+    </ng-container>
+  </div>
+</group-cardgroup>

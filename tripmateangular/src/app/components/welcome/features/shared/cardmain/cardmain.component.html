@@ -1,5 +1,5 @@
 
-<div class="cardmain" [style.max-width.vw]="maxWidth">
+<div class="cardmain" [style.max-width.vw]="maxWidth" [style.max-height.vw]="maxHeight">
   <div class="imagecontainer">
     <img class="imagen" [src]="sourceimage" alt="Imagen">
   </div>
@@ -9,7 +9,7 @@
       @for (i of getStarIndices(starcount); track i) {
     <app-starsvg></app-starsvg>
     } @empty {
-    <span>No stars</span>
+    <span></span>
   }
     </div>
     <span class="price">{{price}}</span>

@@ -3,13 +3,14 @@ import {SearchbarComponent} from "../shared/searchbar/searchbar.component";
 import {CardmainComponent} from "../shared/cardmain/cardmain.component";
 import {Restaurant} from "../../../../models/restaurant.interface";
 import {AllapisService} from "../shared/services/allapis.service";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
+import {CardgroupComponent} from "../shared/groups/cardgroup";
 
 @Component({
   selector: 'app-restaurants',
   standalone: true,
   imports: [
-    SearchbarComponent, CardmainComponent, NgForOf
+    SearchbarComponent, CardmainComponent, NgForOf, CardgroupComponent, NgIf
   ],
   templateUrl: './restaurants-component.component.html',
   styleUrl: './restaurants-component.component.scss'
@@ -27,7 +28,7 @@ export class RestaurantsComponentComponent implements OnInit {
   }
 
   getRestaurants() {
-    this.ApiService.getRestaurants().subscribe((data: any) => {
+    this.ApiService.getRestaurants().subscribe((data: Restaurant) => {
       if (Array.isArray(data)) {
         this.restaurants = [];
         data.forEach((restaurant) => {
