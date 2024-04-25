@@ -5,7 +5,7 @@
     @for (accommodation of accomodations; track accommodation.nombre) {
       @if ((accomodations.length)-(accomodations.length-1) < accomodations.length - 1) {
         <app-cardmain
-          [maxWidth]="80"
+          [maxWidth]="50"
           [maxHeight]="30"
           starcount="0"
           [sourceimage]="accommodation.imagen"
@@ -17,7 +17,7 @@
         </app-cardmain>
       }
     } @empty {
-      <p>No hay alojamientos disponibles.</p>
+      <p>Cargando...</p>
     }
 </group-cardgroup>
 

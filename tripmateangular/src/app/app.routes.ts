@@ -24,6 +24,7 @@ export const routes: Routes = [
     component: WelcomeComponent,
     pathMatch: 'prefix',
     children: [
+      { path: '', redirectTo: 'restaurants', pathMatch: 'full' },
       { path: 'accommodations', component: AccomodationsComponentComponent },
       { path: 'activities', component: ActivitiesComponentComponent },
       { path: 'restaurants', component: RestaurantsComponentComponent },
@@ -33,10 +34,11 @@ export const routes: Routes = [
       { path: 'shoppingcart', component: ShoppingcartComponent},
       { path: 'signin', component:SigninComponent},
       { path: 'userview',component:UserviewComponent},
-      {path: 'register', component: RegisterComponent},
-      {path: 'reservation',component: ReservationComponent},
-      {path: 'itinerary', component: ItineraryComponent}
+      { path: 'register', component: RegisterComponent},
+      { path: 'reservation',component: ReservationComponent},
+      { path: 'itinerary', component: ItineraryComponent}
     ]
   }
 ];
+
 

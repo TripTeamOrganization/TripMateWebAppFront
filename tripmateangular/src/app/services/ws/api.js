@@ -3,6 +3,7 @@ const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 const axios = require('axios');
 const https = require('https');
+const iconv = require('iconv-lite');
 
 const cors = require('cors');
 const app = express();
@@ -93,6 +94,13 @@ async function scrapeRestaurantes() {
   return restaurantes;
 }
 
+
+
+
+
+
+
+
 app.get('/actividades', async (req, res) => {
   try {
     const actividades = await scrapeActividades();
@@ -110,11 +118,16 @@ async function scrapeActividades() {
 
   const actividades = [];
 
-  $('figure').each((index, element) => {
-    const nombre = $(element).find('figcaption').text().trim();
-    const imagen = $(element).find('img').attr('data-lazy-src');
-    const descripcion = $(element).next('p').first().text().trim();
-    const ubicacion = $(element).nextAll('ul').first().find('li').first().text().trim();
+  // Buscar elementos HTML que coincidan con el patrón específico
+  $('h2.wp-block-heading').each((index, element) => {
+    const nombre = $(element).text().trim();
+    const imagen = $(element).next('.wp-block-image').find('img').attr('data-lazy-src');
+    const descripcion = $(element).nextUntil('ul').filter('p').text().trim();
+
+    // Extraer la ubicación
+    const ubicacionElement = $(element).nextAll('ul').first().find('li').text().trim(); // Se cambió nextUntil por nextAll
+    const ubicacionParts = ubicacionElement.split(':');
+    const ubicacion = ubicacionParts.length > 1 ? ubicacionParts[1].trim() : ubicacionElement.trim();
 
     const actividad = {
       nombre,
@@ -128,6 +141,7 @@ async function scrapeActividades() {
 
   return actividades;
 }
+
 app.get('/vuelos', async (req, res) => {
   try {
     const vuelos = await scrapeViajes();
@@ -140,8 +154,8 @@ app.get('/vuelos', async (req, res) => {
 async function scrapeViajes() {
   const url = 'https://www.atrapalo.pe/viajes/';
   try {
-    const response = await axios.get(url);
-    const html = response.data;
+    const response = await axios.get(url, { responseType: 'arraybuffer' });
+    const html = iconv.decode(response.data, 'iso-8859-1');
     const $ = cheerio.load(html);
 
     const viajes = [];
@@ -171,7 +185,6 @@ async function scrapeViajes() {
     throw error;
   }
 }
-
 
 
 app.listen(port, () => {
