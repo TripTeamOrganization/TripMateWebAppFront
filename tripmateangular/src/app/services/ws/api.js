@@ -94,13 +94,6 @@ async function scrapeRestaurantes() {
   return restaurantes;
 }
 
-
-
-
-
-
-
-
 app.get('/actividades', async (req, res) => {
   try {
     const actividades = await scrapeActividades();

@@ -3,7 +3,7 @@
 
 <group-cardgroup>
   <div *ngFor="let restaurant of filteredRestaurants; let i = index;" role="list">
-    <ng-container *ngIf="i < filteredRestaurants.length-2">
+    <ng-container *ngIf="i < filteredRestaurants.length">
       <app-cardmain
         [maxWidth]="80"
         [maxHeight]="30"

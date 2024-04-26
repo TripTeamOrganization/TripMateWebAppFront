@@ -26,10 +26,11 @@ export class RestaurantsComponentComponent implements OnInit {
   }
 
   getRestaurants() {
-    this.ApiService.getRestaurants().subscribe((data: Restaurant) => {
+    this.ApiService.getRestaurants().subscribe((data: Restaurant[]) => {
       if (Array.isArray(data)) {
         this.restaurants = [];
-        data.forEach((restaurant) => {
+        this.filteredRestaurants = [];
+        data.slice(0, -2).forEach((restaurant) => {
           const newRestaurant = new Restaurant(
             restaurant.nombre,
             restaurant.imagen,
@@ -40,7 +41,7 @@ export class RestaurantsComponentComponent implements OnInit {
             restaurant.openingHours
           );
           this.restaurants.push(newRestaurant);
-          this.filteredRestaurants.push(newRestaurant)
+          this.filteredRestaurants.push(newRestaurant);
         });
       } else {
         console.error('El formato de datos recibido no es un array.');
@@ -48,6 +49,7 @@ export class RestaurantsComponentComponent implements OnInit {
       console.log(this.restaurants);
     });
   }
+
 
   // Método para manejar la consulta de búsqueda por nombre
   searchHandler(searchQuery: string) {

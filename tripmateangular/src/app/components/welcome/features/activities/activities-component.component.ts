@@ -64,7 +64,6 @@ export class ActivitiesComponentComponent implements OnInit {
     this.filteredActivities = this.activities.filter(activity =>
       activity.nombre.toLowerCase().includes(trimmedQuery)
     );
-
     // Puedes agregar un console.log aquí para verificar los resultados filtrados
     console.log('Actividades filtrados:', this.filteredActivities);
   }

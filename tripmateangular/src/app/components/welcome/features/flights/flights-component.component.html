@@ -1,21 +1,18 @@
-
-<app-searchbar textoplaceholder="Selecciona tu Vuelo"></app-searchbar>
-
+<app-searchbar textoplaceholder="Busca tu vuelo" (searchChanged)="searchHandler($event)"></app-searchbar>
 <group-cardgroup>
-  @for (flight of flights; track flight.nombre) {
-    @if ((flights.length)-(flights.length-1) < flights.length - 1) {
-      <app-cardmain
-        [maxWidth]="80"
-        [maxHeight]="30"
-        starcount="5"
-        [price]="flight.duracion"
-        [sourceimage]="flight.imagen"
-        [title]="flight.nombre"
-        [ubicacion]="flight.ubicacion"
-        [descripcion]="flight.duracion ? flight.duracion : ''"
-        buttontext="Seleccionar">
-      </app-cardmain>    }
-  } @empty {
+  @for (flight of filteredFlights.length > 0 ? filteredFlights : flights; track flight.nombre) {
+    <app-cardmain
+      [maxWidth]="80"
+      [maxHeight]="30"
+      starcount="5"
+      [price]="flight.precio"
+      [sourceimage]="flight.imagen"
+      [title]="flight.nombre"
+      [ubicacion]="flight.tipo"
+      buttontext="Seleccionar">
+    </app-cardmain>
+  }
+  @empty {
     <p>Cargando...</p>
   }
 </group-cardgroup>
