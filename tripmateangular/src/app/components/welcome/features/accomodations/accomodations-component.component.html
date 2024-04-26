@@ -1,24 +1,23 @@
 <!--  Acá el código visual en html de la sección Alojamientos  -->
-<app-searchbar textoplaceholder="Selecciona tu ubicación"></app-searchbar>
 
+<app-searchbar textoplaceholder="Busca entre las opciones.."
+               (searchChanged)="searchHandler($event)"></app-searchbar>
 <group-cardgroup>
-    @for (accommodation of accomodations; track accommodation.nombre) {
-      @if ((accomodations.length)-(accomodations.length-1) < accomodations.length - 1) {
-        <app-cardmain
-          [maxWidth]="50"
-          [maxHeight]="30"
-          starcount="0"
-          [sourceimage]="accommodation.imagen"
-          [title]="accommodation.nombre"
-          [price]="accommodation.precio"
-          [ubicacion]="accommodation.direccion"
-          [descripcion]="accommodation.descripcion ? accommodation.descripcion : ''"
-          buttontext="Seleccionar">
-        </app-cardmain>
-      }
-    } @empty {
-      <p>Cargando...</p>
-    }
+  @for (accommodation of filteredAccomodations.length > 0 ? filteredAccomodations : accomodations; track accommodation.nombre) {
+
+      <app-cardmain
+        [maxWidth]="50"
+        [maxHeight]="30"
+        starcount="0"
+        [sourceimage]="accommodation.imagen"
+        [title]="accommodation.nombre"
+        [descripcion]="accommodation.datosAdicionales ? accommodation.datosAdicionales : ''"
+        buttontext="Seleccionar">
+      </app-cardmain>
+
+  } @empty {
+    <p>Cargando... (Esto podría tardas unos segundos)</p>
+  }
 </group-cardgroup>
 
 

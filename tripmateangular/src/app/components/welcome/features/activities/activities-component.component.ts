@@ -67,4 +67,5 @@ export class ActivitiesComponentComponent implements OnInit {
     // Puedes agregar un console.log aquí para verificar los resultados filtrados
     console.log('Actividades filtrados:', this.filteredActivities);
   }
+
 }

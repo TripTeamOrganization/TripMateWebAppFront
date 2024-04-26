@@ -20,6 +20,7 @@ app.get('/alojamientos', async (req, res) => {
     res.status(500).json({ error: 'Error al obtener alojamientos' });
   }
 });
+
 async function scrapeAlojamientos() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -32,17 +33,18 @@ async function scrapeAlojamientos() {
 
     elementos.forEach(elemento => {
       const nombre = elemento.querySelector('h3')?.innerText || 'Sin nombre';
-      const puntuacion = elemento.querySelector('span.aqK')?.innerText || 'Sin puntuación';
       const imagen = elemento.querySelector('img')?.src || 'Sin imagen';
-      const descripcion = elemento.querySelector('span.st')?.innerText || 'Sin descripción';
-      const precio = elemento.querySelector('span .swlyg')?.innerText || 'Sin precio';
 
-      // Obtener información adicional
-      const direccion = elemento.querySelector('span.LrzXr')?.innerText || 'Sin dirección';
-      const telefono = elemento.querySelector('span.LrzXr:nth-child(3)')?.innerText || 'Sin teléfono';
-      const sitioWeb = elemento.querySelector('div.kno-ecr-pt a')?.href || 'Sin sitio web';
+      const datosAdicionales = {};
+      const datosElement = elemento.querySelector('div.s');
+      if (datosElement) {
+        const datos = datosElement.querySelectorAll('span');
+        datos.forEach((dato, index) => {
+          datosAdicionales[`valor${index}`] = dato.innerText.trim();
+        });
+      }
 
-      resultados.push({ nombre, puntuacion, imagen, descripcion, precio, direccion, telefono, sitioWeb });
+      resultados.push({ nombre, imagen, ...datosAdicionales });
     });
 
     return resultados;
@@ -51,6 +53,7 @@ async function scrapeAlojamientos() {
   await browser.close();
   return alojamientos;
 }
+
 
 app.get('/restaurantes', async (req, res) => {
   try {

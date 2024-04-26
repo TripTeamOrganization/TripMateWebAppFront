@@ -4,7 +4,6 @@ import {CardmainComponent} from "../shared/cardmain/cardmain.component";
 import {CardgroupComponent} from "../shared/groups/cardgroup";
 import {Accommodation} from "../../../../models/accomodation.interface";
 import {AllapisService} from "../shared/services/allapis.service";
-import {Restaurant} from "../../../../models/restaurant.interface";
 import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
@@ -23,7 +22,7 @@ import {NgForOf, NgIf} from "@angular/common";
 export class AccomodationsComponentComponent implements OnInit {
   accomodationData: Accommodation;
   accomodations: Accommodation[] = [];
-
+  filteredAccomodations: Accommodation[] = [];
   constructor(private apiservice: AllapisService) {
     this.accomodationData = {} as Accommodation;
   }
@@ -36,28 +35,29 @@ export class AccomodationsComponentComponent implements OnInit {
     this.apiservice.getAccomodations().subscribe(
       (data: any) => {
         if (Array.isArray(data)) {
-          this.accomodations = [];
-          data.forEach((accommodation) => {
-            const newAccommodation = new Accommodation(
-              accommodation.nombre,
-              accommodation.puntuacion,
-              accommodation.imagen,
-              accommodation.descripcion,
-              accommodation.precio,
-              accommodation.direccion,
-              accommodation.telefono,
-              accommodation.sitioWeb
-            );
-            this.accomodations.push(newAccommodation);
-            console.log(this.accomodations);
-          });
+          this.accomodations = data.map(accomodation => new Accommodation(
+            accomodation.nombre,
+            accomodation.imagen,
+            accomodation.datosAdicionales,
+          ));
         } else {
           console.error('El formato de datos recibido no es un array.');
         }
-        console.log(this.accomodations);
+      },
+      error => {
+        console.error('Error al obtener datos de actividades:', error);
       }
     );
   }
 
+  searchHandler(searchQuery: any) {
+    const trimmedQuery = searchQuery.trim().toLowerCase();
 
+    this.filteredAccomodations = this.accomodations.filter(accomodation =>
+      accomodation.nombre.toLowerCase().includes(trimmedQuery)
+    );
+    console.log('Alojamientos filtrados:', this.filteredAccomodations);
+  }
+
+  protected readonly event = event;
 }
