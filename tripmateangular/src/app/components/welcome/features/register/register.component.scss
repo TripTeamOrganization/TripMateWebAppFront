@@ -10,6 +10,7 @@ body {
   background-image: url('../../../../../assets/images/fondo.jpg');
   margin: 0;
   padding: 0;
+
 }
 
 a {
@@ -20,9 +21,11 @@ a {
 
 .contenedor {
   width: 100%;
-  min-height: 100vh;
   background-image: url('../../../../../assets/images/fondo.jpg');
   transition: all .3s ease;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .contenedor.active {
@@ -71,7 +74,6 @@ a {
 
 }
 
-
 .main {
   grid-area: contenido;
   background: #E9E5D8;
@@ -79,14 +81,12 @@ a {
   padding: 40px;
 }
 
-
-
-
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  height:94.855vh;
 }
 
 
@@ -112,9 +112,11 @@ a {
   padding: 50px;
   border-radius: 8px;
   text-align: center;
-  margin-top: auto;
   max-width: 600px;
   width: 90%;
+  height: auto;
+  align-items: center;
+  transform: scale(0.85);
 }
 
 .registration .title {
