@@ -39,35 +39,22 @@ a {
   border-radius: 5px;
   padding: 15px;
   font-size: 18px;
-
   text-align: center;
-
   position: absolute;
-
   top: 50%;
-
   left: 50%;
-
   transform: translate(-50%, -50%);
-
   z-index: 9999;
 
 }
 
-
 .custom-alert::before {
   content: "";
-
   position: absolute;
-
   top: -10px;
-
   left: 50%;
-
   margin-left: -10px;
-
   border-width: 10px;
-
   border-style: solid;
 
   border-color: transparent transparent #ff5733 transparent;
@@ -171,15 +158,11 @@ a {
   transform: scale(1.1);
 }
 
-
 .error-message {
   color: red;
   font-size: 14px;
   margin-top: 4px;
 }
-
-
-
 
 #telefono {
   width: 100%;
@@ -194,7 +177,6 @@ a {
 
 #telefono:focus {
   border-color: #007bff;
-
   outline: none;
 
 }
@@ -246,7 +228,6 @@ a {
     padding: 10px 20px;
   }
 }
-
 
 
 @media screen and (max-width: 1200px) {
