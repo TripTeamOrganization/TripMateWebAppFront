@@ -5,12 +5,13 @@ import { Restaurant } from '../../../../models/restaurant.interface';
 import { AllapisService } from '../shared/services/allapis.service';
 import { NgForOf, NgIf } from '@angular/common';
 import { CardgroupComponent } from '../shared/groups/cardgroup';
+import {MainFilterComponent} from "../shared/main-filter/main-filter.component";
 
 @Component({
   selector: 'app-restaurants',
   standalone: true,
   imports: [
-    SearchbarComponent, CardmainComponent, NgForOf, CardgroupComponent, NgIf
+    SearchbarComponent, CardmainComponent, NgForOf, CardgroupComponent, NgIf, MainFilterComponent
   ],
   templateUrl: './restaurants-component.component.html',
   styleUrl: './restaurants-component.component.scss'

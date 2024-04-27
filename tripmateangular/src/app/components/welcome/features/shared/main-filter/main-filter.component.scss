@@ -1,0 +1,48 @@
+/* Estilo para el contenedor principal */
+.container {
+  margin: 0 auto;
+}
+
+/* Contenedor para las cajas circulares */
+.circle-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Espacio entre las cajas y el slider */
+}
+
+/* Estilo para las cajas circulares */
+.circle {
+  width: 50px; /* Ajusta el tamaño del círculo según tus preferencias */
+  height: 50px; /* Ajusta el tamaño del círculo según tus preferencias */
+  border-radius: 50%; /* Hace que el div sea circular */
+  display: flex;
+  align-items: center; /* Centra el texto verticalmente */
+  justify-content: center; /* Centra el texto horizontalmente */
+  background-color: #f0f0f0; /* Fondo gris claro */
+  border: 1px solid #ccc; /* Borde alrededor del círculo */
+  font-size: 16px; /* Ajusta el tamaño de la fuente según preferencias */
+  font-weight: bold; /* Negrita */
+}
+
+/* Usando Flexbox para alinear el slider y los dropdowns */
+.filter-container {
+  display: flex; /* Activa el modo Flexbox */
+  justify-content: space-between; /* Distribuye los elementos de manera uniforme */
+  align-items: center; /* Alinea verticalmente los elementos */
+}
+
+/* Ampliar el slider */
+.slider {
+  width: 70%; /* Ajusta el ancho según tus preferencias */
+}
+
+/* Contenedor para los dropdowns */
+.dropdown-filter {
+  display: flex;
+  flex-direction: column; /* Organiza los dropdowns en columna */
+  gap: 10px; /* Espacio entre los dropdowns, ajusta según preferencias */
+}
+
+h1 {
+  margin-bottom: 0;
+}

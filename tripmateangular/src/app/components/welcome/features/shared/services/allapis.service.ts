@@ -18,12 +18,10 @@ export class AllapisService {
   getFlights(){
     return this.http.get<any>(`${this.url}/vuelos`,{
     headers: this.getHttpHeaders() })//linea importante para la conexion exterior
-
   };
   getActivities(){
     return this.http.get<any>(`${this.url}/actividades`,{
     headers: this.getHttpHeaders()})//linea importante para la conexion exterior
-
   };
   getRestaurants() {
     return this.http.get<any>(`${this.url}/restaurantes`, {

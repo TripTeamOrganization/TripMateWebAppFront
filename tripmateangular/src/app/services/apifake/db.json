@@ -1,0 +1,612 @@
+{
+  "alojamientos":[
+    {
+      "nombre": "¿QUÉ ES UN SERVICIO DE ALOJAMIENTO TURÍSTICO EN UN ...",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAm0lEQVR4AWJwL/ChCGMI9OR55QI6JYMbAEEYil5YgjUYgimYxwGYpaNwdJdak9/kp4fGengRlT7oB0OMg+fE95YK3olGN9TYJFLILoyFZSwYJJm8ihfz/6yFBpmgYNAONc0g4i2FfPZnAYoUhb6TUxVMIHhfxkgFiWx7K1UBh9uNVRZwsL9boAx6VRBP5JQF4VLdGGeCPNBEUOMBPUMwS0ZkvCoAAAAASUVORK5CYII="
+    },
+    {
+      "nombre": "Los tipos de alojamientos turísticos en España - Ostelea",
+      "imagen": "Sin imagen"
+    },
+    {
+      "nombre": "El alojamiento turístico - CEUPE",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAs0lEQVR4AaWMgQbCYBSF7yi9zwC9QBAQRqSIEOiVAoI0IQVo9Aa9w2BgAMbdDsbvcA8Mx3//e8/32eqynhR5XJRdg0iBhN/uiJJIeHa8I1ISw8XVzbYI5lDCcJXCmZ2+CEmqUEDwa9xjTiWhYH5+MmwsQScUWF4OcPEf/xzcLH8IwcE9W35ukQA3dGLB3n8oDO+GYexwQ4cFXGxZksAt/ixQkh3CMAukJIRZEEhqBLMWTEgPegBTKwuCHVUAAAAASUVORK5CYII="
+    },
+    {
+      "nombre": "¿Qué es un alojamiento extrahotelero? - Certicalia",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAATlBMVEXK5KqKxz6MyEKMyEGGxTSFxTOZzljV6rzx+Of5/PSe0F++3pb///+02YaJxzvp9NrY68Hh8M39//um02+DxCyk02uw2IG43I7L5K3z+epeD5ykAAAAcklEQVR4AW0PgwGAQPBt5dp/0e6ROxsIYVKAFonBzxZmHBBDGKMcZ0IqraRhYOcAt66CDyUQPNgxRec6ngM0aNcPIx8nKWgOhNm5hefJnJYZbHWOtt3fwG8LDb3rpzb0tlaea7+H5dPTprdUTv8893l/B1z7Bm9HMeqnAAAAAElFTkSuQmCC"
+    },
+    {
+      "nombre": "Airbnb | Alojamientos para vacaciones, cabañas, casas en ...",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAgVBMVEX/Wl//VVr/T1X/TVP/io3/y8z/jpH/S1H/w8X/////6uv/U1j/oaT/SU//nZ//kpX/8PH/2tv/1tf/+Pn/mJv/cXX/V1z/bHD/z9D/XWL/v8D/7u//SE7/dnr/pqn/4+T/fYH/g4b2////Ulf/t7nVw8Psz9D/ra/y8/Psw8TQ0NB9coXpAAABLUlEQVR4Aa2SRYLDMAxFbamJojA6jOXe/36BMq5mtNTT+0bxPyUB5C+GK03T8Tsjg02TNfrGLJ1tx3HZs76JfuAI4YQRfRFjTpQQKmXX+oR+huddZZH1wdyzeFbtd4pRSAKIQFEWwaco86L0i1wm72o1i1bJRcG+nNXqRfS4hoZTwpQbSDh+VqEMELR2Fpw2Awx9eDC54k6CUc4tNA1QNevyDqmdJelxqlS6RDptS3exO09ilDmkMZyT+psKmb8MWjb39dCsl6gywyt0og2cL6L1t7uFifWGnRvk/bmlBB+UOsPmDjEwl1PL9fHEwVoud9IGt1jZs7Em7Mqh69jvkNbFY0MCbI4Ck83ashKTyyDiBp5uKN2Ehk7ztKKVEW7SJzb31gjy9j9xrcQfawK2mxMZFR8t7QAAAABJRU5ErkJggg=="
+    },
+    {
+      "nombre": "Lima: alquileres vacacionales y alojamientos - Airbnb",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAgVBMVEX/Wl//VVr/T1X/TVP/io3/y8z/jpH/S1H/w8X/////6uv/U1j/oaT/SU//nZ//kpX/8PH/2tv/1tf/+Pn/mJv/cXX/V1z/bHD/z9D/XWL/v8D/7u//SE7/dnr/pqn/4+T/fYH/g4b2////Ulf/t7nVw8Psz9D/ra/y8/Psw8TQ0NB9coXpAAABLUlEQVR4Aa2SRYLDMAxFbamJojA6jOXe/36BMq5mtNTT+0bxPyUB5C+GK03T8Tsjg02TNfrGLJ1tx3HZs76JfuAI4YQRfRFjTpQQKmXX+oR+huddZZH1wdyzeFbtd4pRSAKIQFEWwaco86L0i1wm72o1i1bJRcG+nNXqRfS4hoZTwpQbSDh+VqEMELR2Fpw2Awx9eDC54k6CUc4tNA1QNevyDqmdJelxqlS6RDptS3exO09ilDmkMZyT+psKmb8MWjb39dCsl6gywyt0og2cL6L1t7uFifWGnRvk/bmlBB+UOsPmDjEwl1PL9fHEwVoud9IGt1jZs7Em7Mqh69jvkNbFY0MCbI4Ck83ashKTyyDiBp5uKN2Ehk7ztKKVEW7SJzb31gjy9j9xrcQfawK2mxMZFR8t7QAAAABJRU5ErkJggg=="
+    },
+    {
+      "nombre": "LOS 10 MEJORES alojamientos especiales en Lima",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAY1BMVEU14KE14aI25KQ356Y36acz1ZknpXcfgV0ab1AsuoYRSDQAAAAXYUYbcVEUVj4pq3swyZEz2JskmW4IIBcLLiEde1khimM576wQRDEqsX8TTzkuwosSTjgVWkEikmkghmAGGRIWv5SNAAAA30lEQVR4AdWRBwKCMAxFm9Bi5bNXqMz7n9KAW0/g6x7Z5l8hjhQm8wtbF5+8P8XO8oeICthzgjvJ2eoF3d9c6rMcyIuyqspi32U+dfdXLnBQWyJb46DgpycN2s4D3tp97lo0T7+iFL2I0IAQMJBue6TRwyYuMg6pMZgmGJMOo1xwt8kBsQDIZPdFMgASI/DHo5cZmMV/PJLTq9AMFUPhamiCzHiEYnPUIqKLMlvd1sjtI5QKSJZ1w8G2LglQkbnDVQplcYBboKQVv2fXjKVWZBy1MuVoos/SENEx37f/yBVglg6wZs+jsQAAAABJRU5ErkJggg=="
+    },
+    {
+      "nombre": "Los 10 mejores hoteles de Lima, Perú (desde € 23)",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAZlBMVEUAO5UAL5EAIIwAJo4AOZSRn8b09/rd4u0AG4v////k6PEAKI/Iz+K0vti+x92ap8oALZAAAIZ6jLzV2+nv8/gANZM+XqQAEIkAMpKptNIAN5MABocAGItfdrCsttOgrc46WaJRaqrnfwslAAAAnUlEQVR4AdWQVQLCMAxAa/Otrjj3vyQpLuEfXr3xkF+FsgqnApM1baVrOCLthyvjJFDhvEjYlcaErZl6OwyOY0LPSIhfhYalBdxSNKb3sHVoQlfmjAuLUh3EZHhMrRN4jis8W8KhUpsF1eJduNZ6A5bbnMuOiLcm7EsZIbSewHyesGzBcHLQYv4pbOVBk3AElfAS9AybaqqBsUD+jxORLwoFQ8B1lAAAAABJRU5ErkJggg=="
+    },
+    {
+      "nombre": "Alojamientos y Hoteles baratos en Despegar",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACVUlEQVR4Ae3XA6wcURQG4Cqqbdu2FaO2bdu2bdvuqjYWtRvXHax35qXv9K/5cPZO8DDJl0x4/+tzk/z4Er9uBZQGXfPJU0bWVMev7u8bb9kYHO+waONdNn283aRFZzh0gOp2k57JYYlIGlaAjjnkaa3TS9Qmo0Sdcso0qIJCizp76fSaINlPa+Qwa2Q3RekTuMEJc6GCw6wnZwXokF2e1iqdRF+llahlGgCMCi3s5KXzu0KEEUFjsfIG5kEufoC/tEwLMLSKSseXBzghIuEqVBcK8EMLjEbvYgodXsQKQfAM6gsH+BGib0mFTOuC3BAPoKxwgB8hxjV007XDoR8LM7aO2s16OqEAP7TJINGmUT7uKOjQSzjAj1EYXEmly/vZo3ADMgsF+KFtJol2T/eT08oKEIKmhgRokVqiOa09nMZ/WGFMAEzDsGoqXT8S4ga4BKmEA7REgN5FFZyQ7HXwHHKJB0grUbf8Mtk2s8+E11AkfgToFd4UvIBcxizCqipd4y/Cy3azltqQbTi7VVjbcKUh2xCFC+2exj6INGhuyFGMioku7WPP/y3IIhygdQaJNo5gX0YR0MeQ63hsfTddPcTu/UksvvTCBUmf4gqdXsve+4+hgnBJ1rOIQgfns0uyl9BYrCj9cv9XVOno0gB32G9C7bDL8hbQJY9M89t56NwOVln+HhZDXv7DBCsc/zSgrEILOnjo5Kog3Y75YRIJXrgHi6EKHiYpknA+PEAadc0rzxpRQ526sq93qml9cCoaneqyaVPtpmiNha5QG7Ki4WScdhO/z1BB6vtikvn5AAAAAElFTkSuQmCC"
+    },
+    {
+      "nombre": "Casa/apartamento entero Alojamiento económico en Lima ...",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAolBMVEX////87vDnUG3yr7riCEPhADn//vz/2b7+6+3jKFHhAD//0rL/jhf/pVn53eLjIE3/38n/mTr/kSX/qmT3ztT/7N7/iQD/kyz/9u//snX/w5ThHFP8hyX8izH/t37/nELgAC/i8fvz+f3H3/QAd9QAf9ehyezm8voAfdYAiNkAhNiMvum61/EAgdcSjdqXxOtzseViqeKu0e/Q5fZPoOA6mN5MdqdwAAAA2ElEQVR4AaTJtQGAQBAEwMXdXV76bxJ3johJB/8pqvJ5mm4caVq3slXdcff0/OB6oRE5e8aJn2bXzHVnyyIo04rOupmqolJX2qWmDF7Z9X618FPrnWyptGwBMqfiNcicKisAOn0RA++UruvqzALJHhuZwx2AYBgIwPcqNmXdFIb3fzUUy5Alvl+9u6QHFFSHRzBpszUR1feqoUlj65jZB6hO9iAWSc870qJlvQ2SQbQZOxv08hMynrUTOQ9X5aN1nKEBDzFbXcDL3F8vRSK+4iJEtDYoMAa/bWTOH0r6LIA+AAAAAElFTkSuQmCC"
+    },
+    {
+      "nombre": "Los 10 mejores alojamientos de Perú",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAZlBMVEUAO5UAL5EAIIwAJo4AOZSRn8b09/rd4u0AG4v////k6PEAKI/Iz+K0vti+x92ap8oALZAAAIZ6jLzV2+nv8/gANZM+XqQAEIkAMpKptNIAN5MABocAGItfdrCsttOgrc46WaJRaqrnfwslAAAAnUlEQVR4AdWQVQLCMAxAa/Otrjj3vyQpLuEfXr3xkF+FsgqnApM1baVrOCLthyvjJFDhvEjYlcaErZl6OwyOY0LPSIhfhYalBdxSNKb3sHVoQlfmjAuLUh3EZHhMrRN4jis8W8KhUpsF1eJduNZ6A5bbnMuOiLcm7EsZIbSewHyesGzBcHLQYv4pbOVBk3AElfAS9AybaqqBsUD+jxORLwoFQ8B1lAAAAABJRU5ErkJggg=="
+    },
+    {
+      "nombre": "trivago.pe - Comparar precios de hoteles en todo el mundo",
+      "imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAolBMVEX////87vDnUG3yr7riCEPhADn//vz/2b7+6+3jKFHhAD//0rL/jhf/pVn53eLjIE3/38n/mTr/kSX/qmT3ztT/7N7/iQD/kyz/9u//snX/w5ThHFP8hyX8izH/t37/nELgAC/i8fvz+f3H3/QAd9QAf9ehyezm8voAfdYAiNkAhNiMvum61/EAgdcSjdqXxOtzseViqeKu0e/Q5fZPoOA6mN5MdqdwAAAA2ElEQVR4AaTJtQGAQBAEwMXdXV76bxJ3johJB/8pqvJ5mm4caVq3slXdcff0/OB6oRE5e8aJn2bXzHVnyyIo04rOupmqolJX2qWmDF7Z9X618FPrnWyptGwBMqfiNcicKisAOn0RA++UruvqzALJHhuZwx2AYBgIwPcqNmXdFIb3fzUUy5Alvl+9u6QHFFSHRzBpszUR1feqoUlj65jZB6hO9iAWSc870qJlvQ2SQbQZOxv08hMynrUTOQ9X5aN1nKEBDzFbXcDL3F8vRSK+4iJEtDYoMAa/bWTOH0r6LIA+AAAAAElFTkSuQmCC"
+    }
+  ], "vuelos": [
+  {
+    "nombre": "Ocho Rios",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/9234/9493/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "",
+    "ubicacion": "Ocho Rios"
+  },
+  {
+    "nombre": "Ciudad de Panamá",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/2356/23656/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "5 días/4 noches",
+    "precio": "USD530S/1,973",
+    "ubicacion": "Ciudad de Panamá"
+  },
+  {
+    "nombre": "La Habana",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/1739/23445/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "7 días/6 noches",
+    "precio": "USD700S/2,606",
+    "ubicacion": "La Habana"
+  },
+  {
+    "nombre": "Medellín",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/8154/23692/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "USD323S/1,202",
+    "ubicacion": "Medellín"
+  },
+  {
+    "nombre": "Playa Blanca, Panamá",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/5762/23829/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "",
+    "ubicacion": "Playa Blanca, Panamá"
+  },
+  {
+    "nombre": "Cusco",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/3737/23326/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "USD140S/521",
+    "ubicacion": "Cusco"
+  },
+  {
+    "nombre": "Arequipa",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/5764/23336/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "5 días/4 noches",
+    "precio": "USD129S/480",
+    "ubicacion": "Arequipa"
+  },
+  {
+    "nombre": "Cancún",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/528/23356/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "7 días/6 noches",
+    "precio": "USD522S/1,943",
+    "ubicacion": "Cancún"
+  },
+  {
+    "nombre": "Cartagena de Indias",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/8152/15808/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "5 días/4 noches",
+    "precio": "USD353S/1,314",
+    "ubicacion": "Cartagena de Indias"
+  },
+  {
+    "nombre": "Punta Cana",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/606/20489/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "5 días/4 noches",
+    "precio": "USD528S/1,965",
+    "ubicacion": "Punta Cana"
+  },
+  {
+    "nombre": "Máncora",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/47225/19588/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "USD192S/715",
+    "ubicacion": "Máncora"
+  },
+  {
+    "nombre": "Zorritos",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/47224/18762/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "9 días/8 noches",
+    "precio": "USD242S/901",
+    "ubicacion": "Zorritos"
+  },
+  {
+    "nombre": "Medellín",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/8154/23692/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "USD323S/1,202",
+    "ubicacion": "Medellín"
+  },
+  {
+    "nombre": "Buenos Aires",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/1625/23476/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "9 días/8 noches",
+    "precio": "USD492S/1,831",
+    "ubicacion": "Buenos Aires"
+  },
+  {
+    "nombre": "San Andrés",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/1708/23680/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "8 días/7 noches",
+    "precio": "USD564S/2,099",
+    "ubicacion": "San Andrés"
+  },
+  {
+    "nombre": "Puerto Iguazú",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/7257/22624/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "",
+    "ubicacion": "Puerto Iguazú"
+  },
+  {
+    "nombre": "Salta",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/5526/7899/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "",
+    "ubicacion": "Salta"
+  },
+  {
+    "nombre": "São Paulo",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/1665/23622/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "8 días/7 noches",
+    "precio": "USD444S/1,653",
+    "ubicacion": "São Paulo"
+  },
+  {
+    "nombre": "Punta Sal",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/47223/18753/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "USD860S/3,201",
+    "ubicacion": "Punta Sal"
+  },
+  {
+    "nombre": "Búzios",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/7331/12621/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "8 días/7 noches",
+    "precio": "USD595S/2,215",
+    "ubicacion": "Búzios"
+  },
+  {
+    "nombre": "Santa Catarina",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/7341/9668/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "",
+    "ubicacion": "Santa Catarina"
+  },
+  {
+    "nombre": "San Juan",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/8283/19219/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "",
+    "ubicacion": "San Juan"
+  },
+  {
+    "nombre": "Santiago de Chile",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/1673/18239/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "8 días/7 noches",
+    "precio": "USD289S/1,076",
+    "ubicacion": "Santiago de Chile"
+  },
+  {
+    "nombre": "Los Cabos",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/5760/23426/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "",
+    "ubicacion": "Los Cabos"
+  },
+  {
+    "nombre": "La Habana",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/1739/23445/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "7 días/6 noches",
+    "precio": "USD700S/2,606",
+    "ubicacion": "La Habana"
+  },
+  {
+    "nombre": "San Andrés",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/1708/23680/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "8 días/7 noches",
+    "precio": "USD564S/2,099",
+    "ubicacion": "San Andrés"
+  },
+  {
+    "nombre": "Miami",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/6746/23172/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "9 días/8 noches",
+    "precio": "USD783S/2,915",
+    "ubicacion": "Miami"
+  },
+  {
+    "nombre": "Bayahibe",
+    "imagen": "https://www.atrapalo.pe/common/photo/d/598/20510/ticr_200_88.jpg",
+    "tipo": "vuelo+hotel",
+    "duracion": "6 días/5 noches",
+    "precio": "",
+    "ubicacion": "Bayahibe"
+  }
+], "actividades": [
+  {
+    "nombre": "Machu Picchu, Cusco",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Machu-Picchu-lugares-turisticos-peru-300x188.jpg",
+    "descripcion": "El Santuario Histórico de Machu Picchu es el destino turístico más visitado de Perú y de América. Es una antigua ciudad inca que está ubicado en el corazón de los Andes peruanos. Fue construido en el siglo XV, durante la época inca. Se cree que esta ciudad sagrada fue un importante lugar de culto religioso y de descanso durante el reinado del Inca Pachacutec.El año 2007, Machu Picchu fue declarado una de las 7 maravillas del mundo moderno.La llacta inca de Machu Picchu posee la más impresionante arquitectura inca. Pues la ciudad acoge innumerables edificaciones de piedra, entre los que sobresalen: la Casa del Guardián, la Plaza Sagrada, el Reloj Solar, el Templo del Sol, el Templo del Cóndor, la Roca Sagrada, etc.En los alrededores de la ciudad inca de Machu Picchu también están ubicados las montañas Machupicchu y Huaynapicchu. Además, hasta la misma ciudad inca llega el Camino Inca, una de las rutas más famosas de trekking.",
+    "ubicacion": "distrito de Machu Picchu, provincia Urubamba, región Cusco. A 122 kilómetros de la ciudad de Cusco, al sur de Perú."
+  },
+  {
+    "nombre": "Valle del Colca, Arequipa",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Valle-de-Colca-Peru-300x188.jpg",
+    "descripcion": "El Valle del Colca es un extenso valle de tierras fértiles que bordea el río Colca. También es conocido como el Valle del Fuego. Es otro de los más importantes atractivos del Perú; pues aquí están ubicados el cañón del Colca (uno de los cañones más profundos del mundo), los baños Termales de la Calera y el famoso mirador la Cruz del Cóndor, donde podrás apreciar el vuelo de los cóndores.Otra de las razones para visitar el Valle de Colca es para disfrutar de actividades al aire libre y practicar deportes de aventura (canotaje, trekking, escalada, canopy y ciclismo de montaña).",
+    "ubicacion": "provincia de Caylloma, región Arequipa. A 145 km al norte de Arequipa."
+  },
+  {
+    "nombre": "Choquequirao, Cusco",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Choquequirao-lugares-turisticos-peru-300x188.jpg",
+    "descripcion": "El Parque Arqueológico de Choquequirao es otro de los mejores destinos turísticos de Perú. Por ello, el año 2017 fue declarado como una de las mejores rutas de trekking del mundo.La ciudad inca de Choquequirao está ubicado entre las estribaciones que forman el gran Cañón del Apurímac y el nevado de Salkantay.Las ruinas incas de Choquequirao es considerado como el último refugio inca, porque aquí se refugiaron los últimos incas que hicieron resistencia frente a la invasión española.Choquequirao sobresale por sus complejos de edificios, andenes, templos, fuentes de agua y zonas residenciales que están distribuidas entre las montañas. Además, tiene un parecido arquitectónico con Machu Picchu, por esta razón se le considera como la hermana sagrada de Machu Picchu.",
+    "ubicacion": "distrito de Santa Teresa, provincia La Convención, región Cusco. A 191 km al noreste de Cusco."
+  },
+  {
+    "nombre": "Líneas de Nazca, Ica",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Lineas-de-Nazca-lugares-turisticos-peru-300x188.jpg",
+    "descripcion": "Las Líneas de Nazca son un grupo de antiguos geoglifos grabados en la arena del desierto. Están ubicados en el Valle de Nazca, Valle de Palpa y en el desierto de Jumana. Estos enigmáticos geoglifos fueron creados por los hombres de la Cultura Nazca (200 a. C. – 700 d. C.) y se extienden sobre una superficie de 450 km².El tamaño de los geoglifos oscila entre 50 y 300 metros y tienen variadas formas: figuras geométricas, zoomorfas, fitomorfas y antropomorfas. Y entre las líneas y geoglifos más famosos podemos mencionar: colibrí, mono, pájaro fragata, pájaro gigante, araña.Para la mayoría de estudiosos, las Líneas de Nazca fueron un enorme calendario astronómico o un lugar de culto al agua.La mejor forma de visitar las Líneas de Nazca es haciendo un sobrevuelo. Para ello, lo ideal es tomar un vuelo en avioneta, desde Pisco o Paracas.",
+    "ubicacion": "en la provincia de Nazca, región Ica. A 450 kilómetros de Lima, al sur de Perú."
+  },
+  {
+    "nombre": "Kuelap, Amazonas",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Kuelap-lugares-turisticos-Peru-300x188.jpg",
+    "descripcion": "Es una ciudadela pre inca amurallada con bloques de piedras. Fue construido por la cultura Chachapoyas (800 d. C. al 1470 d. C.), pero posteriormente fue ocupado por los incas. Está ubicado sobre la cima de la colina Barreta, en los Andes nororientales del Perú, en la región Amazonas.La ciudadela tiene una muralla de piedras de 20 metros de altura y cuenta con tres puertas de ingreso. En el interior de la ciudad se encuentran recintos de índole administrativa, religioso, espacios ceremoniales y de residencia permanente, que están distribuidos en diferentes niveles. La mayoría de estas edificaciones de piedra tienen formas circulares con frisos en forma de rombos y zigzag.Por su impresionante arquitectónica, el maravilloso paisaje que lo rodea, y por ser el único atractivo turístico de Perú al que se puede llegar en teleférico: el centro arqueológico de Kuelap es otro de los destinos turísticos más visitados de Perú.",
+    "ubicacion": "en la parte alta del valle del río Utcubamba, distrito de Tingo, provincia de Luya, región Amazonas. A 50 km al sur de Chachapoyas."
+  },
+  {
+    "nombre": "Reserva Nacional de Paracas e Islas Ballestas, Ica",
+    "descripcion": "Es un importante destino turístico, que está ubicado en la costa de Paracas, donde podrás disfrutar de turismo de playa, actividades de aventura, observación de aves y actividades recreativas; ya sea en pareja o en familia.Tanto a la Reserva Nacional de Paracas y a las Islas Ballestas se puede ir en cualquier mes del año.",
+    "ubicacion": "provincia de Pisco, región Ica. A 263 km al sur de Lima"
+  },
+  {
+    "nombre": "Caral, Lima",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Caral-lugares-turisticos-peru-300x188.jpg",
+    "descripcion": "El sitio arqueológico de Caral es considerado la ciudad más antigua de Perú. Es un complejo de edificaciones que pertenece a la civilización Caral, una de las civilizaciones más antiguas del mundo, de aproximadamente 5000 años de antigüedad.La ciudad sagrada de Caral está ubicada sobre una terraza natural, en el valle de Supe. Fue construido con piedra, barro y madera. La ciudad está organizada en anfiteatros, seis pirámides, templos y numerosas edificaciones con fines de vivienda.Durante tu viaje por Perú, Caral deberá ser el primer atractivo turístico a visitar. Pues, aquí se forjaron muchas de las técnicas y tecnologías que fueron perfeccionados por las culturas pre incas e incas. Por poner un ejemplo, el quipu más antiguo fue encontrado aquí. De igual modo, muchos instrumentos de pesca y agricultura, y 32 flautas hechas con huesos de cóndor y pelícanos.",
+    "ubicacion": "Valle de Supe, provincia de Barranca, a 182 km al norte de Lima."
+  },
+  {
+    "nombre": "Lago Titicaca, Puno",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Lago-Titicaca-lugares-turisticos-Peru-300x188.jpg",
+    "descripcion": "El lago Titicaca es el lago navegable más alto del mundo. Es una de las mayores reservas de agua dulce en América del Sur. Está ubicado en la meseta del Collao, entre Perú y Bolivia. Tiene una extensión de 8562 km² y una profundidad de 281 metros. Y según la mitología andina, de las frías y diáfanas aguas de este lago emergieron los fundadores del gran imperio inca.En los alrededores de este hermoso lago se desarrollaron las culturas pre incas: Tiahuanaco y Pucará. Y actualmente, muchas costumbres y tradiciones de estos pueblos aborígenes aún perviven en la población local que habita las numerosas islas que se encuentran dentro del lago Titicaca.Los centros turísticos más bonitos que podrás visitar dentro del lago Titicaca y en sus alrededores, son: las Islas flotantes de los Uros (hechos a base de totora), la Isla Amantaní, la Isla Taquile y las Chullpas de Sillustani. Y entre las actividades turísticas más recomendadas que podrás disfrutar aquí, se encuentran: el turismo vivencial, los deportes de aventuras en aguas planas y la pesca deportiva.",
+    "ubicacion": "en la región Puno"
+  },
+  {
+    "nombre": "Parque Nacional de Manu, Madre de Dios",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Manu-lugares-turisticos-Peru-300x188.jpg",
+    "descripcion": "El Parque Nacional de Manu es un área natural protegida con la mayor diversidad de reptiles, anfibios, mariposas diurnas y aves de todo el planeta. Es Patrimonio Natural de la Humanidad. Es una de las mayores reservas de biosfera en el Mundo. Y fue creado con el fin de catalogar, preservar y dará conocer a la humanidad la herencia natural y cultural de la selva amazónica.En la Reserva Nacional del Manu se encuentra la mayor diversidad biológica del planeta. Además, es el hogar de numerosos grupos étnicos: Kugapakori, Nahua, Matsiguenga, Harakmbut, Yine y algunos grupos étnicos que viven en aislamiento voluntario.Este entorno natural que abarca la sabana amazónica de la selva baja y los bosques nublados de la selva alta es un sitio turístico ideal para: caminar en la selva virgen, observar abundante flora y fauna en su estado natural, escuchar el gran abanico de sonidos de la naturaleza, conectarte con el entorno natural y encontrarte contigo mismo.",
+    "ubicacion": "parte occidental de la cuenca amazónica, región de Cusco y Puno."
+  },
+  {
+    "nombre": "Río Amazonas, Loreto",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Rio-Amazonas-lugares-turisticos-peru-300x188.jpg",
+    "descripcion": "El río Amazonas es el río más largo y caudaloso de la tierra y una de las mayores reservas de agua dulce del planeta. Nace en las cumbres nevadas de la cordillera de los Andes y recorre más de 7200 kilómetros, atravesando los territorios de Perú, Colombia y Brasil.En la cuenca del río Amazonas se desarrollan impresionantes ecosistemas naturales y numerosas comunidades nativas: Boras, Yahuas, Witotos y muchos otros.La ciudad de Iquitos es el lugar más privilegiado para apreciar la belleza del río Amazonas. Pues, aquí están ubicados la mayoría de los miradores turísticos, lodges, plataformas flotantes, puentes colgantes y puentes pluviales para navegar por el río Amazonas.Es un espacio natural que protege las formaciones geológicas, nevados, lagunas, flora, fauna y los variados ecosistemas de la cordillera Blanca, la cordillera tropical más extensa del mundo. El año 1985 fue declarado Patrimonio Natural de la Humanidad.El Parque Nacional del Huascarán sobresale por su belleza paisajística, sus innumerables picos nevados que se alzan por encima de los 6000 msnm.Entre las zonas turísticas más increíbles, que no puedes dejar de visitar en este Parque Nacional, se encuentran: el nevado de Huascarán (6768 msnm), el nevado Alpamayo (5947 msnm), la laguna Llanganuco y la laguna 69.Por otro lado, el Parque Nacional del Huascarán también es una importante ruta de turismo de aventura donde podrás hacer trekking, escalada de hielo y roca, ciclismo de montaña. Pues, acoge 25 circuitos y 102 lugares de escalada en roca y hielo. Además, en este importante destino turístico también podrás: visitar 33 sitios arqueológicos prehispánicos, y observar 112 especies de aves, 13 especies de mamíferos, el oso de anteojos y la puya Raimondi (bromeliácea más grande que una sola vez, antes de morir, florece 18000 flores y produce 6 millones de semillas).",
+    "ubicacion": "en la región Ancash, entre las provincias de Huaylas, Yungay, Carhuaz, Huaraz, Recuay…"
+  },
+  {
+    "nombre": "Parque Nacional del Huascarán, Áncash",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Huascaran-Lugares-turisticos-Peru-300x188.jpg",
+    "descripcion": "Es un espacio natural que protege las formaciones geológicas, nevados, lagunas, flora, fauna y los variados ecosistemas de la cordillera Blanca, la cordillera tropical más extensa del mundo. El año 1985 fue declarado Patrimonio Natural de la Humanidad.El Parque Nacional del Huascarán sobresale por su belleza paisajística, sus innumerables picos nevados que se alzan por encima de los 6000 msnm.Entre las zonas turísticas más increíbles, que no puedes dejar de visitar en este Parque Nacional, se encuentran: el nevado de Huascarán (6768 msnm), el nevado Alpamayo (5947 msnm), la laguna Llanganuco y la laguna 69.Por otro lado, el Parque Nacional del Huascarán también es una importante ruta de turismo de aventura donde podrás hacer trekking, escalada de hielo y roca, ciclismo de montaña. Pues, acoge 25 circuitos y 102 lugares de escalada en roca y hielo. Además, en este importante destino turístico también podrás: visitar 33 sitios arqueológicos prehispánicos, y observar 112 especies de aves, 13 especies de mamíferos, el oso de anteojos y la puya Raimondi (bromeliácea más grande que una sola vez, antes de morir, florece 18000 flores y produce 6 millones de semillas).",
+    "ubicacion": "en la región Ancash, entre las provincias de Huaylas, Yungay, Carhuaz, Huaraz, Recuay…"
+  },
+  {
+    "nombre": "Valle Sagrado de los Incas, Cusco",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Valle-Sagrado-lugares-turisticos-Peru-300x188.jpg",
+    "descripcion": "Es un extenso valle de clima templado que se extiende a ambos lados del río Urubamba. Se caracteriza por su clima templado y por sus fértiles tierras dónde se produce el mejor maíz del mundo y muchas especies de hortalizas.En las inmediaciones del Valle Sagrado de los Incas están ubicados los principales complejos arqueológicos de la ciudad de Cusco: Pisac, Ollantaytambo, Moray, Salineras y Chinchero. Asimismo, aquí están ubicados los pueblos tradicionales más importantes de Cusco (Pisac, Maras, Ollantaytambo y Chinchero), donde aún se conservan y practican el legado cultural de los incas.El Valle Sagrado de los Incas es un sitio ideal para descansar y degustar la rica gastronomía cuzqueña, pues aquí están ubicados los restaurantes y hoteles turísticos más importantes de Cusco. También es un sitio de paso obligado para quienes viajan a Machu Picchu, porque acoge a dos estaciones de trenes: Ollantaytambo y Urubamba.",
+    "ubicacion": "provincia de Calca y Urubamba, región Cusco."
+  },
+  {
+    "nombre": "Montaña de Colores, Cusco",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Montana-7-Colores-Lugares-turisticos-Peru-300x188.jpg",
+    "descripcion": "La Montaña Sagrada de Vinicunca o Montaña 7 Colores es el segundo destino turístico más visitado de Cusco. Y según el sitio web Business Insider, es uno de 100 viajes que todo el mundo debería hacer una vez en la Vida.Está ubicado entre las formaciones montañosas que rodean al nevado Ausangate, en la cordillera de los Andes, a una altitud de 5200 msnm.La orogénesis de esta mágica montaña se debe a complejos motivos geomorfológicos y es un claro ejemplo de los efectos del calentamiento global. Pues la montaña surgió producto de la desglaciación.En tu viaje a la Montaña de 7 Colores, podrás: percibir las franjas de colores (tonos de morado, verde, amarillo, rosado y otras variaciones) que se distingue en sus cumbres y laderas; observar los impresionantes paisajes andinos que se divisan desde la cima de sus cumbres; y disfrutar de la adrenalina y la aventura en la ruta de trekking más concurrida de Cusco.",
+    "ubicacion": "distrito de Cusipata, provincia Quispicanchis, región Cusco. A 105 km de la ciudad inca de Cusco."
+  },
+  {
+    "nombre": "Camino Inca, Cusco",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Camino-Inca-lugares-turisticos-Peru-300x188.jpg",
+    "descripcion": "El Camino Inca a Machu Picchu es una de las rutas de trekking más hermosas y concurridas de América y del mundo. Forma parte de la red del Qhapaq Ñan, la antigua red vial de los incas que medía más de 20000 km y se extendía a lo largo y ancho del Tahuantinsuyo. Actualmente, la ruta de trekking empieza en el kilómetro 82, de la línea férrea Cusco – Machu Picchu, y tiene un recorrido de 43 km que se recorren en 4 días.A lo largo del Camino Inca están ubicados impresionantes paisajes naturales (cumbres nevados, valles, arroyos, bosques…) y numerosos complejos arqueológicos (Llactapata, Runkurakay, Saycamarca, Phuyupatamarca y Wiñaywayna). Del mismo modo, en la ruta también se pueden apreciar variados ecosistemas, diversas variedades de orquídeas y aves multicolores.El destino final del Camino Inca es la ciudad inca de Machu Picchu. Pero, antes de arribar a la ciudad inca, se hace una parada en Inti Punku, lugar desde donde podrás apreciar, en toda su inmensidad: la ciudad sagrada de Machu Picchu, el río Urubamba, las Montañas Machu Picchu y Huayna Picchu y los impresionantes paisajes naturales que rodean Machu Picchu.",
+    "ubicacion": "región Cusco."
+  },
+  {
+    "nombre": "Reserva Nacional de Tambopata, Madre de Dios",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Tambopata-lugares-turisticos-Peru-300x188.jpg",
+    "descripcion": "La Reserva Nacional de Tambopata es un área natural protegida dónde se conservan la flora, la fauna y los procesos ecológicos de la selva húmeda tropical. Es un sitio turístico ideal para visitar en familia; pues aquí podrán conectarse con la naturaleza y observar la flora, fauna y los paisajes naturales.Está ubicado en la cuenca del río Tambopata, contiguo al Parque Nacional Bahuaja Sonene.En los innumerables aguajales, pantanos, pacales, bosques ribereños de la cuenca de Tambopata se puede observar los mayores índices de diversidad biológica en el mundo: 632 especies de aves, 1200 especies de mariposas, 103 especies de anfibios, 180 especies de peces, 169 especies de mamíferos y 103 especies de reptiles. También, la reserva sirve de paradero a más de 40 especies de aves migratorias transcontinentales.Los principales atractivos turísticos a visitar en Tambopata, son: el lago Sandoval, los lagos Cocococha y Sachavacayoc, y las collpas Chuncho y Colorado.",
+    "ubicacion": "distritos de Tambopata e Inambari, provincia de Tambopata, región Madre de Dios."
+  },
+  {
+    "nombre": "Catarata de Gocta, Amazonas",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Gocta-lugares-turisticos-Peru-300x188.jpg",
+    "descripcion": "La Catarata de Gocta es una impresionante caída de agua de 771 metros que está rodeado de exuberante vegetación, encanto y misticismo. Es la tercera catarata más alta de Perú y el decimoquinto más alto del mundo. Está ubicado en las cercanías de los poblados de Cocachimba o San Pablo. También es conocido, por los lugareños, como La Chorrera.El impresionante salto de agua tiene dos niveles, el primero de 231 metros y el segundo de 540 metros, haciendo un total de 771 metros. En el trayecto a la catarata se puede observar 22 cataratas, especies de flora y fauna, entre las que destacan: el gallito de las rocas, el colibrí cola de espátula, el tucán andino y el oso de anteojos. Y es un destino turístico recomendado para los aventureros que aman el trekking y desean conectarse con la naturaleza.Para llegar a la piscina de la catarata es necesario caminar, por el extenso bosque de neblina que lo rodea, durante seis horas (ida y vuelta).",
+    "ubicacion": "distrito de Valera, provincia de Bongará, región Amazonas."
+  },
+  {
+    "nombre": "Laguna Huacachina, Ica",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/09/Huacachina-lugares-turisticos-Peru-300x188.jpg",
+    "descripcion": "La Laguna de Huacachina es un oasis en medio del desierto de Ica que está rodeado de dunas, eucaliptos, palmeras y huarangos. También es conocido como el Oasis de América.De todos los lugares para visitar en Perú, este es el lugar más recomendado para viajar en pareja o con la familia, incluso con niños. Pues aquí podrás disfrutar del radiante sol, viajar en buggy, practicar sandboarding y pasear en botes a pedal.Este bonito lugar, lleno de magia y misticismo, también es un lugar de paso para los viajeros que se dirigen hacia las líneas de Nazca, Arequipa, Puno y Cusco.A las aguas de color verduzco de Huacachina, que provienen de afloraciones subterráneas, antaño se le atribuía muchas propiedades curativas. Por ello, hoy, aunque luce algo abandonada, no deja de ser uno de los más bellos y vistosos lugares del Perú.",
+    "ubicacion": "A 5 km minutos al oeste de la ciudad de Ica."
+  },
+  {
+    "nombre": "Los Manglares de Tumbes",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/manglares-de-tumbes-300x188.jpg",
+    "descripcion": "Es un área protegida que abarca una porción de la eco región del golfo de Guayaquil, 2972 hectáreas de bosque de manglar. Está ubicado en la provincia de Zarumilla.Dentro del Santuario Nacional los Manglares de Tumbes se encuentran los paisajes turísticos más hermosos del norte peruano: islotes, canales, manglares. Asimismo, este entorno natural es el hogar de 4 especies de mangle (rojo, salado, blanco y botón), 40 variedades botánicas y más de 200 especies de aves, muchas de ellas en peligro de extinción. Entre las especies que más destacan se encuentran: aves (garzas y fragatas), peces, crustáceos, moluscos y mamíferos (como el oso manglero y la nutria del noroeste).Por otro lado, los Manglares de Tumbes también sirven como un recurso hidrobiológico a las poblaciones locales que encuentran sus alimentos dentro de los manglares: cangrejo de manglar, conchas negras y langostinos.Este lugar turístico es ideal para hacer trekking, observar vida silvestre y practicar la fotografía. Sin embargo, hay que tener en cuenta que, para ingresar a los manglares, es necesario hacerlo en canoas o kayak, y disponer al menos de dos días para apreciar los manglares durante la marea alta y baja.",
+    "ubicacion": "en la provincia de Zarumilla, a 24 km al noreste de la ciudad de Tumbes."
+  },
+  {
+    "nombre": "Playa Pocitas, Piura",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Playa-Pocitas-Mancora-300x188.jpg",
+    "descripcion": "La playa Las Pocitas es la playa más tranquila y hermosa de Perú. Está ubicado a tres kilómetros de Máncora, en la ciudad de Piura. Geográficamente, se llama Máncora Chico; sin embargo, debido a sus características naturales, todos le conocen como Playa Pocitas o Pocitas. Su nombre se debe a los pozos o piscinas naturales que se forman durante la marea baja.A la playa Las Pocitas se puede acceder en taxi o moto desde Máncora, Vichayito o desde Los Órganos.La playa está rodeada de un ambiente tranquilo y exclusivo. Asimismo, en los alrededores se encuentran ubicados bellas casas y hostales lujosos que destacan por sus palmeras y su bien cuidada vegetación.Pocitas es un lugar paradisíaco y acogedor, ideal para los viajes en pareja o con la familia. Ya que, aquí, los niños podrán divertirse a sus anchas en las pequeñas pozas que se forman durante la marea baja. Además (en sus amplias playas llenas de arena blanca, sol y perfectas olas), también podrás relajarte, apreciar las vistas más espectaculares, tomar sol, degustar la deliciosa gastronomía a base de productos marinos.",
+    "ubicacion": "a 3 kilómetros de Máncora, en la región Piura."
+  },
+  {
+    "nombre": "Ciudadela de Chan Chan, Trujillo",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Ciudadela-de-Chan-Chan-la-Libertad-300x188.jpg",
+    "descripcion": "Chan Chan es la ciudad de adobe más grande de América y la segunda del mundo. Fue construido por los chimúes, cultura pre inca que se desarrolló en la costa norte de Perú, alrededor de los años 900 y 1300 d. C. Está ubicado en el valle de Moche, entre el balneario de Huanchaco y la ciudad de Trujillo, en los distritos de Trujillo y Huanchaco.El complejo arqueológico de Chan Chan abarca 20 hectáreas de extensión. Y está formado por diez pequeñas ciudades amuralladas, en cuyas paredes resaltan los decorados en alto relieve de figuras geométricas, peces y aves. Chan Chan fue la capital administrativa de la cultura Chimú que llegó a acoger entre veinte mil y treinta mil habitantes.La ciudadela de Chan Chan está conformada por palacios, centros administrativos, residencias de élite, templos, mausoleos de los gobernantes Chimú, barrios populares, canales, veredas y cementerios.Por su impresionante arquitectura, gran trascendencia y valor histórico fue declarado Patrimonio Cultural de la Humanidad.",
+    "ubicacion": "a 5 kilómetros de la actual ciudad de Trujillo."
+  },
+  {
+    "nombre": "Tumbas Reales de Sipán, Lambayeque",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Tumbas-Reales-de-Sipan-Chiclayo-300x188.jpg",
+    "descripcion": "El Museo Tumbas Reales de Sipán es una réplica funeraria exacta de la cámara funeraria del Señor de Sipán, antiguo gobernante mochica del siglo III. El museo cuenta con tres niveles donde se exhibe y resguarda más de 2000 piezas de oro, joyas, cerámicas y ajuares funerarios. Entre los restos y piezas culturales más importantes, que pertenecieron a este gobernante del antiguo Perú, resaltan: ornamentos, emblemas, atuendos, estandartes de cobre, corona de cobre, pectorales de conchas, orejeras de oro y turquesa, sonajeras de oro, tocado del algodón y adornos de plumas.El diseño arquitectónico del museo está inspirado en las antiguas pirámides truncas de la cultura Mochica. Y el acceso al interior del museo es a través de una rampa de 58 metros que lleva al tercer piso.La visita guiada por el museo es de forma descendente, de arriba hacia abajo, simulando la experiencia de los exploradores de Sipán. En el tercer piso se ofrece información general sobre la cultura Mochica: territorio, organización social, agricultura, monumentos importantes y distribución del santuario de Sipán. En el segundo piso se brinda información sobre el descubrimiento y la excavación de la tumba del Señor de Sipán; asimismo, aquí están exhibidos las maravillosas joyas reales y emblemas de mando. En el primer piso está ubicado la recreación del mausoleo del Señor de Sipán y de otros dignatarios moches. Finalmente, en el último tramo de la visita, cuando el viajero piensa haber explorado ya todos los recintos, las puertas que se abren dan paso a la Casa Real del Señor de Sipán.La visita al Museo Tumbas Reales del Señor de Sipán es una oportunidad para viajar al pasado, para encontrarse con los antiguos dignatarios moches que fueron descubiertos en el mausoleo de Huaca Rajada – Sipán.",
+    "ubicacion": "en la ciudad de Lambayeque."
+  },
+  {
+    "nombre": "Punta Sal, Tumbes",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Punta-Sal-Tumbes-300x188.jpg",
+    "descripcion": "Es un hermoso balneario que está ubicado en la provincia de Contralmirante Villar, a 80 km de la ciudad de Tumbes. Es considerada como una de las playas más hermosas y extensas del norte peruano. Destaca por sus aguas tranquilas y cálidas (por encima de los 20 °C.), arena fina durante la marea baja, olas suaves y sol brillante durante los 365 días del año.El balneario de Punta Sal está rodeado de abundante biodiversidad. Incluso se puede observar delfines y ballenas jorobadas entre los meses de julio y octubre.Por otro lado, Punta Sal es un importante destino turístico de Perú para pasar las vacaciones en familia; pues cuenta con una excelente infraestructura hotelera: alojamientos de lujo, restaurantes exclusivos y tiendas de primera calidad. Además, también es un lugar ideal para practicar surf, moto náutica y pesca deportiva.",
+    "ubicacion": "en el distrito de Canoas de Punta Sal, en Tumbes."
+  },
+  {
+    "nombre": "Monasterio de Santa Catalina, Arequipa",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Monasterio-de-Santa-Catalina-Arequipa-300x188.jpg",
+    "descripcion": "El Monasterio o Convento de Santa Catalina es el complejo turístico religioso más importante de Arequipa y de Perú. Está ubicado en el Centro Histórico de Ciudad Blanca de Arequipa. Según la opinión de muchos viajeros, el monasterio es una pequeña ciudadela dentro de una ciudad. Este emblemático e histórico complejo religioso fue construido alrededor de los años 1580, como Monasterio de Monjas Privado de la Orden de Santa Catalina de Siena, para albergar a las hijas de las familias más distinguidas de Arequipa.El claustro está distribuido en cuatro barrios, tratando de emular la distribución urbana arequipeña de los primeros años de la colonia. Dentro de la ciudadela se encuentran innumerables calles, habitaciones, pasillos, cocinas, plazas y fuentes. En cambio, los exteriores del monasterio, de más de veinte mil metros cuadrados, están rodeados de altos muros.Su arquitectura de barro y sillar se basa en la fusión de elementos españoles e indígenas, con magníficas pinturas al fresco. El monasterio también acoge un museo que guarda una de las muestras más importantes de arte religioso del continente americano e incluye una pinacoteca que contiene una de las colecciones de pinturas religiosas más importantes de América Latina (más de 400 piezas restauradas de la Escuela Cuzqueña).A pesar de que el monasterio fue un convento de clausura absoluta hasta el año 1970, actualmente está abierto al público. Por ello, durante tu visita por este importante claustro podrás apreciar la fusión de los sentimientos y valores de la cultura incaica y española.",
+    "ubicacion": "en el Centro Histórico de Arequipa."
+  },
+  {
+    "nombre": "Chavín de Huántar, Ancash",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Chavin-de-Huantar-Ancash-300x188.jpg",
+    "descripcion": "El sitio arqueológico de Chavín está ubicado en el distrito Chavín de Huántar, provincia de Huari, región Áncash. Fue el centro administrativo de la cultura Chavín (1500 – 300 a. C.) y el santuario religioso más importante de la época pre inca, al que acudían los antiguos peruanos para recibir las respuestas de sus divinidades y dejar las ofrendas a sus dioses.Este principal oráculo del antiguo Perú, ubicado en las faldas de la cordillera de los Andes, está conformada numerosas edificaciones de piedra y barro: pirámides truncas, portadas, escalinatas, caminos, galerías, templos, estrechos pasadizos y cámaras interiores. Dentro del complejo, las estructuras que más destacan son: la pirámide Tello, la Plaza Circular, la Plaza Rectangular, las Plataformas Norte y Sur Norte, el Nuevo y Viejo templo, el templo de las cabezas clavas y su deidad principal que está representado en el lanzón, un monolito esculpido en forma de una punta de una lanza de casi cuatro metros de alto.De igual modo, en los alrededores del Complejo Arqueológico de Chavín también se puede visitar el Museo Nacional de Chavín. En este museo se conservan y se exhiben una amplia colección de cerámicas y cabezas clavas que pertenecieron a la cultura Chavín.",
+    "ubicacion": "en el distrito de Chavín de Huántar, región Áncash."
+  },
+  {
+    "nombre": "Pacaya Samiria, Loreto",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Pacaya-Samiria-Loreto-300x188.jpg",
+    "descripcion": "Es la reserva más extensa de la Amazonia Peruana. Está ubicado entre las provincias de Requena, Alto Amazonas y Ucayali, en la región Loreto. Abarca las cuencas de Pacaya, Samiria y Yanayacu-Pucate. Tiene una superficie de 2 080 000 hectáreas donde se conservan ecosistemas representativos de la selva baja, preservan la diversidad genética, protegen algunas especies en peligro de extinción (lagarto negro, lobo de río y paiche) y fomentan los estudios de flora y fauna.Pacaya Samiria es un lugar ideal para el turismo de naturaleza, pues aquí se encuentran más mil especies de fauna y 965 de plantas nativas. Y, también, para practicar el turismo vivencial comunitario, ya que dentro de la reserva subsisten muchas comunidades nativas y mestizas que aprovechan los recursos naturales de la reserva.En el interior de la reserva se puede practicar trekking, camping, espeleología y observación de aves, flora y fauna.El lugar turístico más visitado dentro de la reserva es la laguna El Dorado, considerado por muchos como el corazón de la reserva, por su abundante fauna.Para recorrer la reserva es recomendable ir por cualquiera de estas tres rutas turísticas: Cuenca Yanayacu-Pucate, Cuenca baja y media del río Samiria y Cuenca baja de Pacaya.",
+    "ubicacion": "en la región Loreto."
+  },
+  {
+    "nombre": "Huanchaco, Trujillo",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Huanchaco-Trujillo-300x188.jpg",
+    "descripcion": "Huanchaco es un histórico balneario que está ubicado en el distrito de Huanchaco, a 13 km de la ciudad de Trujillo. Actualmente, forma parte de la Ruta Moche. Es el balneario más visitado de la ciudad de Trujillo.El 26 de octubre fue reconocido como la Reserva Mundial del Surf, pues fue y es escenario de competencias internacionales de surf.Sin embargo, más allá de sus apacibles playas, Huanchaco es mundialmente conocido por sus famosos Caballitos de Totora, que fueron usados para navegar y pescar desde tiempos ancestrales por los mochicas y los chimúes. Los Caballitos de Totora se hacen de hojas y tallos de totora.Otro motivo para visitar Huanchaco es para degustar su exquisita gastronomía a base de productos marinos: pescados, mariscos, algas. El plato bandera que no puedes dejar de probar es el ceviche peruano.Por otro lado, en el Balneario de Huanchaco se puede practicar muchos deportes náuticos, pasear por la playa, hacer surf y observar magníficos atardeceres. Y por esta razón, es uno de los lugares más recomendados para los viajes en familia.",
+    "ubicacion": "en el distrito de Huanchaco, a 13 km de la ciudad de Trujillo."
+  },
+  {
+    "nombre": "Los Baños del Inca, Cajamarca",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Banos-del-Inca-Cajamarca-300x188.jpg",
+    "descripcion": "Los Baños del Inca es un balneario de aguas termo medicinales que posee propiedades curativas para tratar afecciones al sistema nervioso, huesos, piel, gastritis y otros.Este importante destino turístico, muy visitado por los turistas que viajan en familia a relajarse o desean disfrutar de las propiedades terapéuticas de sus aguas, está ubicado en el Balneario de Pultumarca, a 6 km de la ciudad de Cajamarca.Se cree que en este mágico lugar se aseaba el inca Pachacúteq. También se dice que, el inca Atahualpa tomaba su descanso aquí, antes de emprender sus hazañas. Pero también, muchos afirman que estos baños todavía fueron construidos por los Cajamarca, como un lugar de culto al agua y para realizar sanaciones a sus habitantes.El balneario está distribuido en cuatro secciones: servicio de duchas, pozas colectivas, pozas individuales y pozas imperiales. Las pozas de aguas termales cerradas son de uso privado, mientras que las piscinas al aire libre son de uso común. Por otro lado, también es posible encontrar aquí servicios de sauna e hidromasaje.La temperatura de sus aguas sobrepasa los 70 °C.De todos los pozos de agua, el que más sobresale es un pozo que mide 4 metros de largo, 4 metros de ancho y 1.70 metros de profundidad. Se cree que en este pozo se relajaba y recuperaba fuerzas el inca Atahualpa. Por esta razón, a este pozo se le conoce como el Pozo del Inca.",
+    "ubicacion": "en el distrito Baños del Inca, región Cajamarca."
+  },
+  {
+    "nombre": "Salkantay, Cusco",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Salkantay-Cusco-300x188.jpg",
+    "descripcion": "La ruta de trek Salkantay – Machu Picchu, es una de las rutas de senderismo más famosas de América y del Mundo. Es considerada, por muchos aventureros, como la alternativa perfecta al camino inca clásico a Machu Picchu. Por esta razón, el año 2017 fue reconocido como una de las 25 mejores rutas de excursiones en el mundo.El trayecto de 65 km está rodeado de innumerables cumbres nevadas, lagunas, arroyos, quebradas. Asimismo, ambos lados del ancestral camino inca son ribeteados por una densa vegetación de la ceja de selva donde viven innumerables especies animales.En las inmediaciones del antiguo camino inca que bordea montañas, precipicios y valles, están ubicados la hermosa laguna de Humantay y los dos nevados tutelares de Cusco: Salkantay y Humantay.Es un destino ideal para los amantes de la aventura y adrenalina.",
+    "ubicacion": "en el distrito de Mollepata, región Cusco."
+  },
+  {
+    "nombre": "Huaca Pucllana, Lima",
+    "imagen": "https://travel1tours.com/wp-content/uploads/2019/11/Huaca-Pucllana-Lima-300x188.jpg",
+    "descripcion": "Huaca Pucllana es un antiguo centro ceremonial precolombino construido con adobes, cantos rodados y arena. Fue edificado por la cultura Lima (200 y 700 d. C.) como residencia de una élite sacerdotal que controlaba el poder político, religioso y económico. Por este motivo, muchos estudiosos lo consideran como un templo.El sitio arqueológico de Huaca Pucllana está dividido en dos zonas: la Gran Pirámide y la zona baja. La Gran Pirámide alargada tiene más de 400 metros de largo y 22 metros de alto; cuenta con siete plataformas donde se encuentran plazas, recintos y pasadizos; y estuvo destinada como lugar de culto. En cambio, la parte baja, de construcción más reciente, acoge plazas y sistemas de recintos; y se cree que estuvo destinado a actividades más cotidianas o relacionadas con el trato directo con la población. Además, también cuenta con una sala de exposiciones, circuito de visitas y otros sitios turísticos.Bajo el dominio de la cultura Wari, quienes conquistaron a los Lima, Huaca Pucllana fue convertido en un cementerio. Pero el antiguo templo, incluso con la llegada de los incas, no perdió su resplandor. Mas al contrario fue venerado como un lugar sagrado.Actualmente, es el museo de sitio más visitado de Perú y uno de los monumentos más importantes de Lima, donde se conserva, investiga y salvaguarda evidencias culturales de los primeros habitantes de la ciudad de Lima.",
+    "ubicacion": "en el exclusivo distrito de Miraflores, región Lima."
+  }
+], "restaurantes" : [
+  {
+    "nombre": "1. Azurmendi Restaurant – Spain",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/Azurmendi-Restaurant.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "This is one of the top Michelin star restaurants around the world and is located in the beautiful city of Larrabetzu in Spain. It follows the vision of the highly acclaimed chef Eneko Atxa, who aims at giving the most unique experience to every visitor. This restaurant features a terrace garden where the diners can glance at the fresh produce which is used in the delicious food served here. The visitors are then taken into a greenhouse through the kitchen where the restaurant’s famous snacks are served. The edible cotton served here is popular among frequent visitors. After this, visitors can enjoy a hearty meal in the dining area. This highest Michelin star restaurant is also known for its eco-friendly ways of functioning.",
+    "cuisines": "Location: Legina Auzoa, s/n, 48195 Larrabetzu, Vizcaya, Spain\nCost for two: INR 10,000\nCuisines: European\nMust try: Salads\nOpening hours: 8:30 PM – 10:15 PM",
+    "mustTry": "Must Read: Your Stays Made Easy With These Hostels In Spain",
+    "openingHours": ""
+  },
+  {
+    "nombre": "2. Per Se Restaurant – New York",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/Per-Se-Restaurant.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "This is one of the well-known Michelin rated restaurants around the world which is located in the heart of New York City. The Time Warner Building which is situated in Columbus Circle in Midtown Manhattan houses this magnificent restaurant. Located on the fourth floor of the building, this 3 Michelin star restaurant offers picturesque views of the entire city. The exquisite cuisines featured here are carefully curated by Chef Thomas Keller who owns two other Michelin star restaurants apart from this one. This is one of the highest Michelin star restaurants that offer special tasting menus on an everyday basis and not even a single ingredient is repeated in these meals.",
+    "cuisines": "Location: 10 Columbus Circle, New York, NY 10019, USA\nCost for two: INR 50,000\nCuisines: French\nMust try: Macadamia nut dipped in chocolate\nOpening hours: 10:00AM-9:00PM",
+    "mustTry": "Suggested Read: 6 Indian Restaurants In New York That Will Lure You To Get Desi In The Modern City",
+    "openingHours": "3. Robuchon Au Dome Restaurant – Macau"
+  },
+  {
+    "nombre": "3. Robuchon Au Dome Restaurant – Macau",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/Robuchon-Au-Dome-Restaurant.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "One of the most celebrated chefs of all time, Chef Joel Robuchon runs the show in this restaurant which is a gastronomic paradise. It is wonderfully situated in the Grand Lisboa hotel in Macau. This top Michelin star restaurant sits atop the 48 story hotel offering immense spectacular sights of the surroundings. Chef Julien Tongurian’s culinary creations are offered here in the most unique style. It is rated as the best restaurant in all of Macau which offers a variety of highly delectable cuisine with a refined sensibility. A Prestige Menu is also featured by this restaurant which includes imperial dishes like Caviar and King Crab.",
+    "cuisines": "Location: 43/F Grand Lisboa, Avenida De Lisboa, Macau Peninsula, Macau, China\nCost for two: INR 17,000\nCuisines: French, European\nMust try: King Crab\nOpening hours: 12–2:30 PM and 6:30–10:30 PM",
+    "mustTry": "Suggested Read: Winter In Spain: A Guide That’ll Help You Curl Up Amid The Country’s Eternal Charm In 2023",
+    "openingHours": "4. Le Bernardin Restaurant – New York"
+  },
+  {
+    "nombre": "4. Le Bernardin Restaurant – New York",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/Le-Bernardin-Restaurant.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "Le Bernardin Restaurant was established by Maguy and Gilbert Le Coze in the year 1972 in Paris. Later, this restaurant was relocated to New York City where it gained massive popularity. Initially, only fish-based dishes were served in this restaurant, over a period of time this restaurant’s wonderfully transformed and soon was given the honor of a Michelin star-rated restaurant. It is one of the restaurants which is highly regarded and is famous among the local food lovers. In fact, it is the highest Michelin star restaurant. New York city’s culinary scene is incomplete without the mention of this exquisite restaurant which is run by Chef Eric Ripert. The fish-based dishes are still the star of this restaurant.",
+    "cuisines": "Location: 155 W 51st St, New York, NY 10019, USA\nCost for two: INR 35,000\nCuisines: French\nMust try: Fish and chips\nOpening hours: 12–2:30 PM and 5:15–10:30 PM",
+    "mustTry": "Suggested Read: 20 New York Restaurants: The Culinary Capital Of The World (2023)",
+    "openingHours": "5. The Fat Duck Restaurant – UK"
+  },
+  {
+    "nombre": "5. The Fat Duck Restaurant – UK",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/The-Fat-Duck-Restaurant.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "This restaurant earned its popularity due to the unique culinary techniques employed by Chef Heston Blumenthal, like multi-sensory cooking, food pairing, and flavor encapsulation. It was established in the year 1995 in a 16th-century cottage that was beautifully renovated to offer the most rustic and charming dining ambiance. One of the best Michelin rated restaurants around the world, this place is known for the 14-course tasting menu which features a variety of delicious dishes served in the most stylish way. The must-try food item here is the Turtle Soup which mocks Alice in Wonderland theme. The Chef’s talent is beautifully displayed in the dish Sounds of Sea which is famous among the frequent diners.",
+    "cuisines": "Location: High St, Bray SL6 2AQ, UK\nCost for two: INR 46,000\nCuisines: European, British, Contemporary\nMust try: Turtle Soup\nOpening hours: 12–1:15 PM and 7–8:15 PM",
+    "mustTry": "Suggested Read: 10 Best Day Trips From London To Explore This Extravagant Capital City In England!",
+    "openingHours": ""
+  },
+  {
+    "nombre": "6. Alinea Restaurant – Chicago",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/Alinea-Restaurant.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "This restaurant located in Illinois, Chicago was founded by Chef Grant Achatz in the year 2005 and it soon gained popularity due to the uniquely featured dishes served here. It is the highest Michelin star restaurant. Chef Grant Achatz wonderfully showcases his talent through the unique preparation of deconstructed dishes. He employs a pretty unconventional approach to the idea of fine dining which sets this restaurant apart from the other restaurants in the area. This restaurant features molecular gastronomy in all the dishes served here which offers a delightful and surprising experience to every visitor. The must-try dishes at this restaurant include an edible balloon made with apple and the truffle-topped ravioli.",
+    "cuisines": "Location: 1723 N Halsted Street, Chicago, IL 60614, USA\nCost for two: INR 32,000\nCuisines: American, International\nMust try: Apple and the truffle-topped ravioli\nOpening hours: 11 am–3:15 PM and 7–10:45 PM",
+    "mustTry": "Suggested Read: 10 Best Restaurants In Chicago For A Delicious Dining Experience",
+    "openingHours": "7. Eleven Madison Park – New York"
+  },
+  {
+    "nombre": "7. Eleven Madison Park – New York",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/Eleven-Madison-Park.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "Distinct American cuisine is served in this world-class restaurant which is located in Manhattan. The creativity of Chef Daniel Humm leaves every diner astonished with excitement. This is one of the well-known Michelin rated restaurants around the world which offers a unique multi-course tasting menu. This menu changes every season according to the availability of fresh ingredients in the city. Only fresh seasonal ingredients are used to curate the world-class dishes at this restaurant. Diners can spend hours indulging in the 11-course tasting menu which forms an event in itself. The famous tasting menu offered here includes Foie Gras Terrine, Muscovy Duck, Bitter Almonds and Umeboshi.",
+    "cuisines": "Location: 11 Madison Avenue, New York, NY 10010, USA\nCost for two: INR 43,000\nCuisines: American, European\nMust try: Foie Gras Terrine\nOpening hours: 5:30–10:30 PM",
+    "mustTry": "Suggested Read: 10 Thrilling Water Parks In USA To Pamper That Child Within You",
+    "openingHours": "8. Osteria Francescana Restaurant – Italy"
+  },
+  {
+    "nombre": "8. Osteria Francescana Restaurant – Italy",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/Osteria-Francescana-Restaurant.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "This restaurant is run by the famous Chef Massimo Bottura who is well-known for being the writer of the international bestseller “Never Trust a Skinny Chef”. It is located in the beautiful city of Modena in Italy. Chef Bottura offers a variety of dishes from Italian cuisine with his own contemporary twist which gives the dish a unique taste and flavor. Classic Italian cuisine dishes can be relished here like the Tagliatelle, Risotto, and much more that makes it one of the best Michelin star restaurants in the world. Apart from the traditional Italian dishes, some of the famous delicacies offered here include Rabbit Macaroons and the Five Ages of Parmigiano Reggiano. These highly palatable delicacies are served in the most appealing way which lures in every food lover.",
+    "cuisines": "Location: Via Stella, 22, 41121 Modena MO, Italy\nCost for two: INR 16,000\nCuisines: Italian, European, Contemporary\nMust try: lobsters\nOpening hours: 12:30–1:30PM and 8–9PM",
+    "mustTry": "Suggested Read: 12 Indian Restaurants In Italy Where You Can Satisfy Your Spice Cravings",
+    "openingHours": "9. The Restaurant At Meadowood – California"
+  },
+  {
+    "nombre": "9. The Restaurant At Meadowood – California",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/The-Restaurant-At-Meadowood.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "This Michelin restaurant in California is located in Napa Valley and it features food that has elevated taste as well as presentation. The food served here displays the wonderful innovations of Chef Christopher Kostow who pays meticulous attention to detailing and uses only the freshly available seasonal ingredients. The menu at this restaurant changes frequently according to the season with new and innovative dishes being added to the menu frequently making it one of the top Michelin star restaurants in the world.",
+    "cuisines": "Location: 900 Meadowood Ln, St Helena, California 94574, USA\nCost for two: INR 71,000\nCuisines: seafood\nMust try: Squab caviar abalone wagyu beef oysters\nOpening hours: 5:30–9:30PM",
+    "mustTry": "Suggested Read: 12 Places To Visit In California: A Short Trip To Experience Miniature America In 2023",
+    "openingHours": "10. The Song Of India – Singapore"
+  },
+  {
+    "nombre": "10. The Song Of India – Singapore",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/The-Song-Of-India.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "There are no Michelin star restaurants in India as Michelin star is not awarded in this country but this lack of Michelin star restaurants in India has not stopped the Indian chefs from showcasing their extraordinary talents in the Indian restaurants situated in different parts of the world rated amongst the top 10 Michelin star chefs. The Song of India is one of the top Michelin star restaurants in the world which is located in Singapore and earned its first Michelin star in the year 2016. Modern Indian cuisine served here can be enjoyed in the classy and stylish seating area which makes for a luxurious dining experience. It is run by Chef Mural Manjunath who lays out exquisite dishes such as Lamb Chops, Mustard Fish, Kulfi, and much more.",
+    "cuisines": "Location: 33 Scotts Road, Singapore 228226\nCost for two: INR 12,000\nCuisines: Indian, Asian\nMust try: Tandoori Achaari Mushroom\nOpening hours: 12–3PM and 6–11PM",
+    "mustTry": "Suggested Read: 3 Restaurants Near Coronation Road, Singapore For Relishing Singaporean Food At!",
+    "openingHours": "11. Cheval Blanc – Switzerland"
+  },
+  {
+    "nombre": "11. Cheval Blanc – Switzerland",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/basel.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "Out of the top Michelin restaurants in the world, three are located in Switzerland. Cheval Blanc is one of them. The Italian restaurant is situated in Basel, one of the most populous cities in Switzerland. It was awarded the Michelin star in 2016 under the command of Chef Peter Knoll. The river-side venue is one of the most elegant restaurants in Switzerland where you can enjoy a sophisticated dining experience.",
+    "cuisines": "Location: Blumenrain 8, 4001 Basel, Switzerland\nCost for two: INR 50,000\nCuisines: French, European, Central European\nMust try: Pasta\nOpening hours: 12–2 PM and 7–10 PM",
+    "mustTry": "Suggested Read: Get Ready To Chomp In 2023 At The 10 Best Restaurants In Zurich",
+    "openingHours": "12. Le Cinq – France"
+  },
+  {
+    "nombre": "12. Le Cinq – France",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/12/le-cing.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "Le Cinq is one of the top Michelin star restaurants in the world. Ever since its opening in 2001, it has rapidly gained accolades and appreciation from the food aficionados. The gourmet restaurant was initially headed by Chef Philippe Legendre before Chef Briffard took over in 2008. But it was the leadership of Chef Christian Le Squer that led to it receiving 3 Michelin stars in 2016. But is it the best Michelin restaurant in the world? Why don’t you go and find out?",
+    "cuisines": "Location: 31 Avenue George V, 75008 Paris, France\nCost for two: INR 10,682 – INR 35,607\nCuisines: French, European\nMust try: Desserts\nOpening hours: 12:30–2 PM and 7–9:30 PM",
+    "mustTry": "Suggested Read: 10 French Restaurants That Offer Such Good Food & Splendid Views",
+    "openingHours": "13. Canon – Sacramento"
+  },
+  {
+    "nombre": "13. Canon – Sacramento",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2020/01/Canon-in-Sacramento.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "Canon in Sacramento is located amid a serene ambiance away from the hustle and bustles of city life. This awesome site having contrasts of deep tones with bright whites and the flavorsome aroma is among the most popular places to eat in California. The famous chef Brad Cecchi is the mastermind of this place offering scrumptious delicacies prepared with love. This is amongst the most visited Michelin rated restaurants around the world.",
+    "cuisines": "Location: 1719 34th St., Sacramento, 95801, United States\nCost for two: INR 5,000-8,000\nCuisines: American\nMust try: Lamb pavé matched with roasted pineapple and blue corn tortillas\nOpening hours: Lunch Sat-Sun Dinner Tue – Sun",
+    "mustTry": "Suggested Read: 8 Best Chinese Restaurants In Vancouver Which Will Let You Satiate Your Craving For Chinese Cuisine!",
+    "openingHours": "14. Trailblazer Tavern – San Francisco"
+  },
+  {
+    "nombre": "14. Trailblazer Tavern – San Francisco",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2020/01/Tailblazer-Tavern.jpg",
+    "descripcion": "Image Source",
+    "locationCost": "Trailblazer Tavern is located deep in the jungle and this interesting place by Michael Mina is surely a delightful place for the Epicures holidaying in San Francisco. The restaurant is known for Hawaiian cuisine prepared with Asian influences. This is one of the highest Michelin star restaurants.",
+    "cuisines": "Location: 350 Mission St., San Francisco, 94101, United States\nCost for two: INR 2400-3500\nCuisines: Hawaiian, American, Bar\nMust try: Ahi tuna with fried wonton nachos\nOpening hours: 11:00AM-9:00PM",
+    "mustTry": "Suggested Read: 10 Restaurants In Edinburgh That Serve The Most Delectable Cuisines In The City!",
+    "openingHours": "15. La Calenda – Washington"
+  },
+  {
+    "nombre": "15. La Calenda – Washington",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2019/06/singapore-cuisin.jpg",
+    "descripcion": "Popular chef Thomas Keller has introduced his culinary delights to Mexican food at La Calenda and this beautiful restaurant offers scrumptious delicacies cooked exclusively in his style. They don’t have a reservation policy but you can get a table for yourself in less than an hour by then you can check out their excellent house margaritas. This is surely among the most popular Michelin rated restaurants around the world.",
+    "locationCost": "Location: 6518 Washington St., Yountville, 94599, United States\nCost for two: INR 2400-3500\nCuisines: Mexican, Latin\nMust try: Chef de cuisine Kaelin Ulrich Trilling \nOpening hours: 11:00AM-11:00PM",
+    "cuisines": "Suggested Read: Dubai Cuisine: 26 Exotic Dishes To Try In 2023 That Serve As The Gate Pass To Heaven",
+    "mustTry": "16. Stockhome – Petaluma",
+    "openingHours": "<img loading=\"lazy\" class=\"alignnone size-full wp-image-180257\" src=\"https://assets.traveltriangle.com/blog/wp-content/uploads/2018/11/Mediterranean-Gem-Salad.jpg\" alt=\"Gem Salad\" width=\"700\" height=\"467\" />"
+  },
+  {
+    "nombre": "16. Stockhome – Petaluma",
+    "imagen": "https://assets.traveltriangle.com/blog/wp-content/uploads/2018/11/Mediterranean-Gem-Salad.jpg",
+    "descripcion": "Stockhome is another cheerful place to eat in the United States where you can head with your friends or loved ones to grab delicious food cooked by the renowned chef couple Roberth and Andrea Sundell. The place is often visited by locals who love munching meatballs and pickled herring. This is among the world’s best Michelin star restaurants.",
+    "locationCost": "Location: 220 Western Ave., Petaluma, 94952, United States\nCost for two: INR 2100-3200\nCuisines: European, Swedish\nMust try: Falafel, tabbouleh, and a terrific beef-lamb pita wrap\nOpening hours: 11:00AM-9:00PM",
+    "cuisines": "Further Read: Savour These 10 Best Swedish Food Items On Your Next Eurocation!",
+    "mustTry": "These Michelin rated restaurants around the world are worth a visit by every gastronome who loves exploring the variety of flavorsome dishes of different cuisines and cultures. Contact TravelTriangle and plan a trip to these wonderful destinations to see what marvels they serve on your platter!",
+    "openingHours": "Frequently Asked Questions About Michelin Rated Restaurants Around The World"
+  },
+  {
+    "nombre": "Recent Posts",
+    "descripcion": "Trending Blogs",
+    "locationCost": "20 Mysterious Places In India To Visit In 2023 More Bizarre Than The Bermuda Triangle   Social Score     10 Scariest Roads In India That Are A Driver’s Nightmare   Social Score     101 Places To Visit In India Before You Turn 30 in 2024   Social Score     <img width=\"400\" height=\"267\" src=\"//assets.traveltriangle.com/blog/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif\" data-lazy-type=\"image\" data-src=\"https://img.traveltriangle.com/blog/wp-content/uploads/2019/06/Skiing-In-Krasnaya-Polyana1-400x267.jpg\" class=\"lazy lazy-hidden attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"Skiing In Krasnaya Polyana\" loading=\"lazy\" /><noscript><img width=\"400\" height=\"267\" src=\"https://img.traveltriangle.com/blog/wp-content/uploads/2019/06/Skiing-In-Krasnaya-Polyana1-400x267.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"Skiing In Krasnaya Polyana\" loading=\"lazy\" />35 Exotic Places To Visit In December In India 2024 To Enjoy A Surreal Vacation   Social Score     <img width=\"400\" height=\"210\" src=\"//assets.traveltriangle.com/blog/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif\" data-lazy-type=\"image\" data-src=\"https://img.traveltriangle.com/blog/wp-content/uploads/2019/02/honeymoon-places-top-india-12345678-400x210.jpg\" class=\"lazy lazy-hidden attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"a couple in front of taj mahal\" loading=\"lazy\" /><noscript><img width=\"400\" height=\"210\" src=\"https://img.traveltriangle.com/blog/wp-content/uploads/2019/02/honeymoon-places-top-india-12345678-400x210.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"a couple in front of taj mahal\" loading=\"lazy\" />60 Best Honeymoon Destinations In India In 2024   Social Score     <img width=\"400\" height=\"265\" src=\"//assets.traveltriangle.com/blog/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif\" data-lazy-type=\"image\" data-src=\"https://assets.traveltriangle.com/blog/wp-content/uploads/2015/06/wild-honeymoon-400x265.jpg\" class=\"lazy lazy-hidden attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"Best honeymoon destinations in the world\" loading=\"lazy\" /><noscript><img width=\"400\" height=\"265\" src=\"https://assets.traveltriangle.com/blog/wp-content/uploads/2015/06/wild-honeymoon-400x265.jpg\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" alt=\"Best honeymoon destinations in the world\" loading=\"lazy\" />95 Best Honeymoon Destinations In The World In 2023 For A Romantic Escape!   Social Score",
+    "cuisines": "",
+    "mustTry": "",
+    "openingHours": ""
+  },
+  {
+    "nombre": "Trending Blogs",
+    "descripcion": "",
+    "locationCost": "",
+    "cuisines": "",
+    "mustTry": "",
+    "openingHours": ""
+  }
+]
+}
