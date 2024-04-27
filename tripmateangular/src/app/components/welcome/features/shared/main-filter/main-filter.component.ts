@@ -10,6 +10,21 @@ import {PlaceholderCardComponent} from "./placeholder-card/placeholder-card.comp
   templateUrl: './main-filter.component.html',
   styleUrl: './main-filter.component.scss'
 })
+
 export class MainFilterComponent {
   @Input() title: string = '';
+  @Input() filterTitle: string = '';
+  @Input() filter1: string = '';
+  @Input() filter2: string = '';
+  @Input() filter3: string = '';
+  @Input() filter4: string = '';
+  @Input() filter5: string = '';
+
+  minValue: number = 0;
+  maxValue: number = 9999;
+
+  updateValues(event: { min: number, max: number }) {
+    this.minValue = event.min;
+    this.maxValue = event.max;
+  }
 }
