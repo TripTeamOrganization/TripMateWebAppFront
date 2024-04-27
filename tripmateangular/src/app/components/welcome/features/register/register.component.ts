@@ -20,7 +20,7 @@ export interface Register {
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  register: Register = {
+    register: Register = {
     nombre: '',
     apellidos: '',
     dni: '',
