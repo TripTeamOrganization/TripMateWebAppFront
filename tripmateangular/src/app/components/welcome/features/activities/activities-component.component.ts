@@ -8,20 +8,22 @@ import {CardgroupComponent} from "../shared/groups/cardgroup";
 import {CardmainComponent} from "../shared/cardmain/cardmain.component";
 import {NgForOf, NgIf} from "@angular/common";
 import {Restaurant} from "../../../../models/restaurant.interface";
+import {MainFilterComponent} from "../shared/main-filter/main-filter.component";
 
 @Component({
   selector: 'app-activities',
   standalone: true,
-  imports: [
-    RouterLink,
-    RouterOutlet,
-    SearchbarComponent,
-    HttpClientModule,
-    CardgroupComponent,
-    CardmainComponent,
-    NgForOf,
-    NgIf
-  ],
+    imports: [
+        RouterLink,
+        RouterOutlet,
+        SearchbarComponent,
+        HttpClientModule,
+        CardgroupComponent,
+        CardmainComponent,
+        NgForOf,
+        NgIf,
+        MainFilterComponent
+    ],
   templateUrl: './activities-component.component.html',
   styleUrl: './activities-component.component.scss'
 })
