@@ -9,28 +9,19 @@ export class AllapisService {
   url:string=environment.baseUrl;
   constructor(private http: HttpClient) {}
 
-  private getHttpHeaders() {
-    return new HttpHeaders({
-      'ngrok-skip-browser-warning': '69420' //importante
-    });
+  getFlights(){
+    return this.http.get<any>(`${this.url}/vuelos`); ///linea importante para la conexion exterior
   }
 
-  getFlights(){
-    return this.http.get<any>(`${this.url}/vuelos`,{
-    headers: this.getHttpHeaders() })//linea importante para la conexion exterior
-  };
   getActivities(){
-    return this.http.get<any>(`${this.url}/actividades`,{
-    headers: this.getHttpHeaders()})//linea importante para la conexion exterior
-  };
-  getRestaurants() {
-    return this.http.get<any>(`${this.url}/restaurantes`, {
-      headers: this.getHttpHeaders() //linea importante para la conexion exterior
-    });
+    return this.http.get<any>(`${this.url}/actividades`);
   }
+
+  getRestaurants() {
+    return this.http.get<any>(`${this.url}/restaurantes`);
+  }
+
   getAccomodations(){
-    return this.http.get<any>(`${this.url}/alojamientos`, {
-      headers: this.getHttpHeaders()
-    })
+    return this.http.get<any>(`${this.url}/alojamientos`);
   }
 }
