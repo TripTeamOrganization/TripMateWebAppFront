@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-placeholder-card',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './placeholder-card.component.scss'
 })
 export class PlaceholderCardComponent {
-
+  @Input() minMax: string = '';
+  @Input() value: number = 0.00;
 }
