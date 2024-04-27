@@ -1,1 +1,12 @@
-<p>dropdown-card works!</p>
+<mat-form-field >
+  <mat-label>{{ title }}</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option>None</mat-option>
+    <mat-option value="option1">{{ option1 }}</mat-option>
+    <mat-option value="option2">{{ option2 }}</mat-option>
+    <mat-option value="option3">{{ option3 }}</mat-option>
+    <mat-option value="option2">{{ option4 }}</mat-option>
+    <mat-option value="option3">{{ option5 }}</mat-option>
+  </mat-select>
+
+</mat-form-field>
