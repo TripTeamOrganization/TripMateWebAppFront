@@ -8,13 +8,14 @@ import { ImputsComponent } from "../shared/imputs/imputs.component";
 import { PasswordImputsComponent } from "../shared/password-imputs/password-imputs.component";
 import { CardgroupComponent } from "../shared/groups/cardgroup";
 import { CardmainComponent } from "../shared/cardmain/cardmain.component";
+import {MainFilterComponent} from "../shared/main-filter/main-filter.component";
 
 @Component({
   selector: 'app-flights',
   standalone: true,
-  imports: [
-    SearchbarComponent, HttpClientModule, ImputsComponent, PasswordImputsComponent, CardgroupComponent, CardmainComponent
-  ],
+    imports: [
+        SearchbarComponent, HttpClientModule, ImputsComponent, PasswordImputsComponent, CardgroupComponent, CardmainComponent, MainFilterComponent
+    ],
   templateUrl: './flights-component.component.html',
   styleUrls: ['./flights-component.component.scss']
 })

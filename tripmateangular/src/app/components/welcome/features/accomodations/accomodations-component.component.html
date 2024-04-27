@@ -1,7 +1,8 @@
-<!--  Acá el código visual en html de la sección Alojamientos  -->
-
 <app-searchbar textoplaceholder="Busca entre las opciones.."
                (searchChanged)="searchHandler($event)"></app-searchbar>
+
+<app-main-filter title="por noche" filterTitle="Camas" filter1="1" filter2="2" filter3="3" filter4="4" filter5="5"></app-main-filter>
+
 <group-cardgroup>
   @for (accommodation of filteredAccomodations.length > 0 ? filteredAccomodations : accomodations; track accommodation.nombre) {
 
