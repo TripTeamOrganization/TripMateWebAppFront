@@ -1,0 +1,336 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  //background-image: url(/images/fondoLoginRegister.png);
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  background-color: #e9e5d8a8;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+
+}
+
+.contenedor {
+  width: 100%;
+  min-height: 100vh;
+
+  transition: all .3s ease;
+}
+
+.contenedor.active {
+  grid-template-columns: minmax(300px, 18%) auto;
+}
+
+.custom-alert {
+  background-color: #ff5733;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 18px;
+
+  text-align: center;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 9999;
+
+}
+
+
+.custom-alert::before {
+  content: "";
+
+  position: absolute;
+
+  top: -10px;
+
+  left: 50%;
+
+  margin-left: -10px;
+
+  border-width: 10px;
+
+  border-style: solid;
+
+  border-color: transparent transparent #ff5733 transparent;
+
+}
+
+
+.main {
+  grid-area: contenido;
+  background: #E9E5D8;
+
+  padding: 40px;
+}
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.label-container {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.registration {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: auto;
+  max-width: 600px;
+  width: 90%;
+}
+
+.registration .title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.registration .description {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+.registration .form-group {
+  margin-bottom: 32px;
+  position: relative;
+  text-align: left;
+}
+
+.registration .form-group label {
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+}
+
+.registration input[type="text"],
+.registration input[type="email"],
+.registration input[type="password"] {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.registration .btn-register {
+  background-color: #190933;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.registration .btn-register:hover {
+  background-color: #111;
+  transform: scale(1.1);
+}
+
+
+.error-message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: red;
+  display: none;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+
+
+
+#telefono {
+  width: 100%;
+  padding: 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-family: 'Manrope', sans-serif;
+
+}
+
+#telefono:focus {
+  border-color: #007bff;
+
+  outline: none;
+
+}
+
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .registration {
+    padding: 30px;
+  }
+
+  .menu-lateral {
+    transform: translateX(-100%);
+
+    display: none;
+
+  }
+
+  .registration .title {
+    font-size: 28px;
+  }
+
+  .registration .description {
+    font-size: 18px;
+  }
+
+  .registration input[type="text"],
+  .registration input[type="email"],
+  .registration input[type="password"] {
+    font-size: 14px;
+  }
+
+  .registration .btn-register {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .header .contenedor-logo .logo span {
+    display: none;
+  }
+
+  .header .barra-busqueda input {
+    min-width: 100%;
+  }
+
+  .main .como-funciona-image {
+    display: none;
+  }
+
+  @media screen and (max-width: 992px) {}
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto auto;
+
+    grid-template-areas:
+            "header"
+            "menu"
+            "contenido";
+
+  }
+
+  .header {
+    padding: 20px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    grid-template-areas: "logo iconos"
+            "busqueda busqueda";
+  }
+
+  .header .contenedor-logo .logo span {
+    display: inline;
+  }
+
+  .header .barra-busqueda input {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .main .como-funciona {
+    flex-direction: column;
+  }
+
+  .main .como-funciona button.btn-empezar {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .header .contenedor-logo .logo {
+    font-size: 14px;
+  }
+
+  .main .como-funciona-content {
+    margin-bottom: 20px;
+  }
+
+  .main .como-funciona-image {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .main .como-funciona .titulo,
+  .main .como-funciona ol {
+    display: none;
+  }
+
+  .main .como-funciona button.btn-empezar {
+    display: block;
+  }
+}
