@@ -5,18 +5,11 @@
 }
 
 body {
-  //agrega la imagen de la carpeta assets
-  font-family: monospace;
   background-size: cover;
   background-position: center;
-  
-}
-
-body {
-  font-family: monospace;
+  background-image: url('../../../../../assets/images/fondo.jpg');
   margin: 0;
   padding: 0;
-  background-color: #e9e5d8a8;
 }
 
 a {
@@ -28,12 +21,13 @@ a {
 .contenedor {
   width: 100%;
   min-height: 100vh;
-
+  background-image: url('../../../../../assets/images/fondo.jpg');
   transition: all .3s ease;
 }
 
 .contenedor.active {
   grid-template-columns: minmax(300px, 18%) auto;
+  background-image: url('../../../../../assets/images/fondo.jpg');
 }
 
 .custom-alert {
@@ -104,7 +98,7 @@ a {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  
+
 }
 
 .label-container {

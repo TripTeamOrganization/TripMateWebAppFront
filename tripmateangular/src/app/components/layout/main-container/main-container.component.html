@@ -1,4 +1,11 @@
-<div class="main-container">
+@if (isRegisteredRoute()===true){
+  <div class="main-container"> 
+    <ng-content/>
+  </div>
+}
+@else {
+  <div class="main-container">
   <ng-content/>
-
 </div>
+}
+
