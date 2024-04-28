@@ -41,11 +41,7 @@ width: 80%;
   height: 20vh !important;
 
 }
-@media screen and (max-width: 768px) {
-  .veinte h2{
-    display:none;
-  }
-}
+
 .mat-toolbar {
   margin: 0;
   padding: 0;
@@ -54,4 +50,12 @@ width: 80%;
 
 .selected-tab {
   background-color: yellow !important;
+}
+@media screen and (max-width: 768px) {
+  .veinte h2{
+    display:none;
+  }
+  .bars{
+    justify-content: flex-end;
+  }
 }

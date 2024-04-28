@@ -244,13 +244,12 @@
     display: none;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .cardmain {
     display: grid;
     max-height: 100vw;
 
   }
-
   .textcontain {
     display: grid;
     grid-area: contenido;

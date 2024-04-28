@@ -9,11 +9,16 @@ import {NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet} from 
 import {MatTooltip} from "@angular/material/tooltip";
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import {NotificationsModel} from "../../models/notifications.model";
-
+import {BreakpointState, Breakpoints, BreakpointObserver} from "@angular/cdk/layout";
+import {map, Observable} from "rxjs";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-toolbar',
-  standalone: true,  imports: [MatToolbarModule, MatIconModule, CommonModule, MatIconButton, MatTabGroup, MatTab, RouterLink, RouterOutlet, RouterLinkActive, MatTabNav, MatTabLink, MatTabNavPanel, MatTooltip],
+  standalone: true,
+  imports: [MatToolbarModule, MatIconModule, CommonModule, MatIconButton, MatTabGroup, MatTab, RouterLink, RouterOutlet, RouterLinkActive,
+    MatTabNav, MatTabLink, MatTabNavPanel, MatTooltip, MatSidenav, MatSidenavModule],
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
   animations: [
@@ -27,12 +32,13 @@ import {NotificationsModel} from "../../models/notifications.model";
 })
 
 export class ToolbarComponent implements AfterViewInit,OnInit {
+  @ViewChild('sidenav') sidenav!: MatSidenav;
   @ViewChild(MatTabGroup) tabGroup: MatTabGroup | undefined;
   notifications: NotificationsModel[] = [];
   Usuario: string = 'UsuarioExample';
   showNotificationBar: boolean = false;
 
-  constructor(private router: Router, private notificationService: TripmateApiService) {}
+  constructor(private router: Router, private notificationService: TripmateApiService, public breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
     this.getNotifications();
@@ -59,8 +65,15 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
       }
     );
   }
-
-
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map((result: BreakpointState) => result.matches)
+    );
+  toggleSidenav() {
+    if (this.sidenav) {
+      this.sidenav.toggle();
+    }
+  }
   ngAfterViewInit(): void {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd && this.tabGroup) {
@@ -86,5 +99,6 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
         this.router.navigate([selectedRoute]);
       });
     }
+
   }
 }
