@@ -40,7 +40,7 @@ export class CardmainComponent {
       price: this.price,
       starcount: this.starcount
     };
-    console.log('Elemento agregado al carrito:', item);
+    console.log('Elemento agregado al carrito :):', item);
     this.shoppingCartService.agregarAlCarrito(item);
   }
 }
