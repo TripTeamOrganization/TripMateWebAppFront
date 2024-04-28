@@ -1,0 +1,97 @@
+.main {
+  background-color: #F4F4F4;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  padding-top: 20px;
+}
+
+mat-stroked-button {
+  font-size: 30px;
+  color: white;
+}
+
+span {
+  font-size: 20px;
+  color: white;
+}
+
+button {
+  width: 20%;
+  height: 8vh;
+  border: dashed;
+  border-width: 2px 4px;
+  border-radius: 40px;
+  background-color: #BE0606;
+  color: white;
+}
+
+.plan-button {
+  background-color: #3A6CEC;
+  width: 40%;
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+.plan-button span {
+  color: white;
+}
+
+
+.card-container {
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 150px;
+  flex: 2;
+}
+
+mat-card-content {
+  font-size: 30px;
+  color: white;
+  padding-left: 20%;
+  padding-top: 10%;
+}
+
+.card {
+  flex: 1;
+  margin-bottom: 70px;
+  width: 50%;
+  height: 10vh;
+  background-color: #3A6CEC;
+  border-radius: 40px;
+}
+
+.actions-container {
+  flex: 1; /* Ajusta la proporción de espacio ocupado por los botones */
+  display: flex;
+  flex-direction: column; /* Alinea los botones verticalmente */
+  padding-top: 120px;
+  padding-right: 80px;
+  gap: 120px;
+}
+
+.action-button {
+  background-color: #3A6CEC;
+  width: 80%;
+  height: 10vh;
+  margin-left: 30px;
+}
+
+.action-button span {
+  color: white;
+}
+
+
