@@ -7,8 +7,9 @@
       <mat-tab routerLink="restaurants" routerLinkActive="selected-tab" label="Restaurantes"></mat-tab>
     </mat-tab-group>
 
+
   </div>
-  <div class="veinte">
+  <div class="veinte" >
     <svg matTooltip="Mis viajes" routerLink="/myjourneys" version="1.0" xmlns="http://www.w3.org/2000/svg"
          width="22.000000pt" height="20.000000pt" viewBox="0 0 512.000000 512.000000"
          preserveAspectRatio="xMidYMid meet">
@@ -33,14 +34,15 @@ l-56 -27 -1985 0 -1985 0 -55 27 c-71 35 -133 97 -168 167 l-27 56 -3 1393 -2
     </svg>
 
 
-    <svg
+      <button mat-icon-button (click)="toggleNotificationBar()">
+      <svg
       matTooltip="Notificaciones"
-      version="1.0"
-      xmlns="http://www.w3.org/2000/svg"
-      width="22.000000pt"
-      height="25.000000pt"
-      viewBox="0 0 512.000000 512.000000"
-      preserveAspectRatio="xMidYMid meet">
+        version="1.0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="22.000000pt"
+        height="25.000000pt"
+        viewBox="0 0 512.000000 512.000000"
+        preserveAspectRatio="xMidYMid meet">
 
       <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
          fill="#000000" stroke="none">
@@ -60,7 +62,7 @@ l-56 -27 -1985 0 -1985 0 -55 27 c-71 35 -133 97 -168 167 l-27 56 -3 1393 -2
 146 -114 171 0 3 203 5 451 5 425 0 451 -1 445 -17z"/>
       </g>
     </svg>
-
+    </button>
 
 
     <svg matTooltip="Carrito de Compras" routerLink="/shoppingcart" version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -97,4 +99,10 @@ l-56 -27 -1985 0 -1985 0 -55 27 c-71 35 -133 97 -168 167 l-27 56 -3 1393 -2
     <h2>{{Usuario}}</h2>
   </div>
 </mat-toolbar>
+
+<div class="notification-bar" *ngIf="showNotificationBar" [@fadeIn]>
+  <p *ngFor="let notification of notifications">{{ notification.text }}</p>
+</div>
+
+
 <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
