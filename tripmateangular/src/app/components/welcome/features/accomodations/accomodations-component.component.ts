@@ -6,6 +6,7 @@ import {SearchbarComponent} from "../../../../../public/shared/searchbar/searchb
 import {MainFilterComponent} from "../../../../../public/shared/main-filter/main-filter.component";
 import {CardgroupComponent} from "../../../../../public/shared/groups/cardgroup";
 import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.component";
+import {ItineraryComponent} from "../itinerary/itinerary.component";
 
 @Component({
   selector: 'app-accomodations',
@@ -20,7 +21,8 @@ import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.
     SearchbarComponent,
     MainFilterComponent,
     CardgroupComponent,
-    CardmainComponent
+    CardmainComponent,
+    ItineraryComponent
   ],
   templateUrl: './accomodations-component.component.html',
   styleUrl: './accomodations-component.component.scss'

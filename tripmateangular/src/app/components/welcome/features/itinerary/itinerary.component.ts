@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {SearchbarComponent} from "../shared/searchbar/searchbar.component";
 import {MatTab, MatTabGroup} from "@angular/material/tabs";
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {NgForOf} from "@angular/common";
@@ -8,13 +7,14 @@ import {NgForOf} from "@angular/common";
   selector: 'app-itinerary',
   standalone: true,
   imports: [
-    SearchbarComponent,
+
     MatTab,
     MatTabGroup,
     RouterLink,
     RouterLinkActive,
     NgForOf
   ],
+
   templateUrl: './itinerary.component.html',
   styleUrl: './itinerary.component.scss'
 })
