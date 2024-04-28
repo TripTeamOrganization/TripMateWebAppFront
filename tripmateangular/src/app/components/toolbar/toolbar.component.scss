@@ -5,15 +5,37 @@
 width: 80%;
 }
 .veinte{
-  width:20%;
-  display:flex;
-  justify-content: right;
+  width: 20%;
+  display: flex;
+  justify-content: flex-end; /* Cambiado de 'right' a 'flex-end' */
   margin-right: 2vw;
   flex-direction: row;
   align-items: center;
-  column-gap: 10%;
-
 }
+
+.notification-bar {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  position: fixed;
+  top: 50px; /* Distancia desde el borde superior de la pantalla */
+  right: 50px; /* Distancia desde el borde derecho de la pantalla */
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 90vw; /* Ancho máximo del 90% del ancho de la ventana */
+  max-height: 90vh; /* Altura máxima del 90% de la altura de la ventana */
+}
+
+.notification-bar p {
+  margin: 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #000000;
+}
+
+.notification-bar p:last-child {
+  border-bottom: none;
+}
+
+
 .mat-tab-label{
   color: red;
   height: 20vh !important;
