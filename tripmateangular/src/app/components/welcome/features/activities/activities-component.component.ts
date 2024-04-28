@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { RouterLink, RouterOutlet } from "@angular/router";
 import { SearchbarComponent } from "../shared/searchbar/searchbar.component";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
@@ -9,6 +9,7 @@ import {CardmainComponent} from "../shared/cardmain/cardmain.component";
 import {NgForOf, NgIf} from "@angular/common";
 import {Restaurant} from "../../../../models/restaurant.interface";
 import {MainFilterComponent} from "../shared/main-filter/main-filter.component";
+import { ShoppingcartComponent } from '../shoppingcart/shoppingcart.component';
 
 @Component({
   selector: 'app-activities',
@@ -22,15 +23,18 @@ import {MainFilterComponent} from "../shared/main-filter/main-filter.component";
         CardmainComponent,
         NgForOf,
         NgIf,
-        MainFilterComponent
+        MainFilterComponent,
+        ShoppingcartComponent
     ],
   templateUrl: './activities-component.component.html',
   styleUrl: './activities-component.component.scss'
 })
 export class ActivitiesComponentComponent implements OnInit {
+  @Output() activitySelected = new EventEmitter<Activity>();
   activities: Activity[] = [];
   activityData: Activity;
   filteredActivities: Activity[] = [];
+  shoppingCart: ShoppingcartComponent = new ShoppingcartComponent();
 
   constructor(private apiservice: AllapisService) {
     this.activityData = {} as Activity;
@@ -69,5 +73,7 @@ export class ActivitiesComponentComponent implements OnInit {
     // Puedes agregar un console.log aquí para verificar los resultados filtrados
     console.log('Actividades filtrados:', this.filteredActivities);
   }
-
+  onActivitySelected(activity: Activity) {
+    this.activitySelected.emit(activity);
+  }
 }

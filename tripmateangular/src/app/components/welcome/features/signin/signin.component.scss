@@ -8,7 +8,7 @@ body {
   font-family: monospace;
   margin: 0;
   padding: 0;
-  //background-image: url(/images/fondo.jpg);
+  background-image: url('../../../../../assets/images/fondo.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -17,10 +17,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
+  background-image: url('../../../../../assets/images/fondo.jpg');
 }
 
-.registration {
+.signin {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 50px;
@@ -31,33 +32,33 @@ body {
   width: 90%;
 }
 
-.registration .title {
+.signin .title {
   font-size: 32px;
   margin-bottom: 20px;
   color: #333;
 }
 
-.registration .description {
+.signin .description {
   font-size: 20px;
   line-height: 1.5;
   color: #666;
   margin-bottom: 20px;
 }
 
-.registration .form-group {
+.signin .form-group {
   margin-bottom: 32px;
   position: relative;
   text-align: left;
 }
 
-.registration .form-group label {
+.signin .form-group label {
   font-size: 18px;
   color: #333;
   text-align: left;
 }
 
-.registration input[type="email"],
-.registration input[type="password"] {
+.signin input[type="email"],
+.signin input[type="password"] {
   width: 100%;
   padding: 16px;
   border: 1px solid #ccc;
@@ -65,7 +66,7 @@ body {
   font-size: 16px;
 }
 
-´ .registration .btn-register {
+.signin .btn-signin {
   background-color: #190933;
   color: #fff;
   font-size: 18px;
@@ -76,7 +77,7 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.registration .btn-register:hover {
+.signin .btn-signin:hover {
   background-color: #111;
   transform: scale(1.1);
 }
@@ -85,7 +86,6 @@ body {
   text-align: left;
   margin-bottom: 5px;
 }
-
 
 .error-message {
   position: absolute;
@@ -97,24 +97,24 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .registration {
+  .signin {
     padding: 30px;
   }
 
-  .registration .title {
+  .signin .title {
     font-size: 28px;
   }
 
-  .registration .description {
+  .signin .description {
     font-size: 18px;
   }
 
-  .registration input[type="email"],
-  .registration input[type="password"] {
+  .signin input[type="email"],
+  .signin input[type="password"] {
     font-size: 14px;
   }
 
-  .registration .btn-register {
+  .signin .btn-signin {
     font-size: 16px;
     padding: 10px 20px;
   }

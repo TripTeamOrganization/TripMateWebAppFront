@@ -10,13 +10,11 @@ body {
   background-image: url('../../../../../assets/images/fondo.jpg');
   margin: 0;
   padding: 0;
-
 }
 
 a {
   text-decoration: none;
   color: #333;
-
 }
 
 .contenedor {
@@ -25,7 +23,6 @@ a {
   transition: all .3s ease;
   display: flex;
   flex-direction: column;
-
 }
 
 .contenedor.active {
@@ -39,37 +36,23 @@ a {
   border-radius: 5px;
   padding: 15px;
   font-size: 18px;
-
   text-align: center;
-
   position: absolute;
-
   top: 50%;
-
   left: 50%;
-
   transform: translate(-50%, -50%);
-
   z-index: 9999;
 
 }
 
-
 .custom-alert::before {
   content: "";
-
   position: absolute;
-
   top: -10px;
-
   left: 50%;
-
   margin-left: -10px;
-
   border-width: 10px;
-
   border-style: solid;
-
   border-color: transparent transparent #ff5733 transparent;
 
 }
@@ -77,7 +60,6 @@ a {
 .main {
   grid-area: contenido;
   background: #E9E5D8;
-
   padding: 40px;
 }
 
@@ -132,7 +114,6 @@ a {
   margin-bottom: 20px;
 }
 
-
 .registration .form-group {
   margin-bottom: 32px;
   position: relative;
@@ -171,15 +152,11 @@ a {
   transform: scale(1.1);
 }
 
-
 .error-message {
   color: red;
   font-size: 14px;
   margin-top: 4px;
 }
-
-
-
 
 #telefono {
   width: 100%;
@@ -194,9 +171,7 @@ a {
 
 #telefono:focus {
   border-color: #007bff;
-
   outline: none;
-
 }
 
 
@@ -222,7 +197,6 @@ a {
 
   .menu-lateral {
     transform: translateX(-100%);
-
     display: none;
 
   }
@@ -246,8 +220,6 @@ a {
     padding: 10px 20px;
   }
 }
-
-
 
 @media screen and (max-width: 1200px) {
   .header .contenedor-logo .logo span {
