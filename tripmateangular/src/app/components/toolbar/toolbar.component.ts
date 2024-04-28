@@ -24,7 +24,7 @@ export class ToolbarComponent implements AfterViewInit {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd && this.tabGroup) {
         let currentRoute = event.url.split('/').pop(); // Obtener la última parte de la ruta
-        const tabLabels = ['accommodations', 'flights', 'activities', 'restaurants', 'myjourneys', 'shoppingcart'];
+        const tabLabels = ['accommodations', 'flights', 'activities', 'restaurants', 'myjourneys', 'shoppingcart, userview'];
 
         // Si la última parte de la ruta está vacía (es la ruta raíz), establecerla en 'restaurants'
         if (!currentRoute) {
@@ -40,7 +40,7 @@ export class ToolbarComponent implements AfterViewInit {
 
     if (this.tabGroup) {
       this.tabGroup.selectedTabChange.subscribe((event: MatTabChangeEvent) => {
-        const routes = ['accommodations', 'flights', 'activities', 'restaurants', 'myjourneys', 'shoppingcart'];
+        const routes = ['accommodations', 'flights', 'activities', 'restaurants', 'myjourneys', 'shoppingcart, userview'];
         const selectedRoute = routes[event.index];
         this.router.navigate([selectedRoute]);
       });
