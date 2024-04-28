@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CardmainComponent} from "../shared/cardmain/cardmain.component";
 import {CardgroupComponent} from "../shared/groups/cardgroup";
+import {ShoppingCartService} from "../shared/services/shoppingcardService";
 
 @Component({
   selector: 'app-shoppingcart',
@@ -10,6 +11,10 @@ import {CardgroupComponent} from "../shared/groups/cardgroup";
   templateUrl: './shoppingcart.component.html',
   styleUrl: './shoppingcart.component.scss'
 })
-export class ShoppingcartComponent {
+export class ShoppingcartComponent implements OnInit{
+  constructor(private shoppingCartService: ShoppingCartService) {}
 
+  ngOnInit(): void {
+    console.log(this.shoppingCartService.carrito);
+  }
 }
