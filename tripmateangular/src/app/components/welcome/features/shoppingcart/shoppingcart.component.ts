@@ -24,7 +24,9 @@ export class ShoppingcartComponent implements OnInit{
 
   ReservarTodo() {
     for (let item of this.items) {
-      this.reservationService.agregarAReserva(item);
+      if (!item.reservado){
+        this.reservationService.agregarAReserva(item);
+      }
     }
   }
 }
