@@ -12,9 +12,12 @@ import {ShoppingCartService} from "../shared/services/shoppingcardService";
   styleUrl: './shoppingcart.component.scss'
 })
 export class ShoppingcartComponent implements OnInit{
+  item: any[] = [];
   constructor(private shoppingCartService: ShoppingCartService) {}
-
+  
   ngOnInit(): void {
-    console.log(this.shoppingCartService.carrito);
+    //console.log(this.shoppingCartService.carrito);
+    this.item = this.shoppingCartService.obtenerCarrito();
+    console.log(this.item);
   }
 }

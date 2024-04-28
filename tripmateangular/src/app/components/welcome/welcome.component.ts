@@ -5,10 +5,7 @@ import {FlightsComponentComponent} from "./features/flights/flights-component.co
 import {RestaurantsComponentComponent} from "./features/restaurants/restaurants-component.component";
 import {ActivitiesComponentComponent} from "./features/activities/activities-component.component";
 import {AccomodationsComponentComponent} from "./features/accomodations/accomodations-component.component";
-
-
-
-
+import {ShoppingcartComponent} from "./features/shoppingcart/shoppingcart.component";
 
 @Component({
   selector: 'app-welcome',
@@ -19,7 +16,8 @@ import {AccomodationsComponentComponent} from "./features/accomodations/accomoda
     RestaurantsComponentComponent,
     ActivitiesComponentComponent,
     AccomodationsComponentComponent,
-    RouterModule
+    RouterModule,
+    ShoppingcartComponent
   ],
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss']
