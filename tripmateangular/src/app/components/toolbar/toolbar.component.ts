@@ -3,7 +3,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from "@angular/material/icon";
 import { MatIconButton } from "@angular/material/button";
-import {AllapisService} from "../welcome/features/shared/services/allapis.service";
+import {TripmateApiService} from "../../services/tripmate-api.service";
 import {MatTab, MatTabChangeEvent, MatTabGroup, MatTabLink, MatTabNav, MatTabNavPanel} from "@angular/material/tabs";
 import {NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {MatTooltip} from "@angular/material/tooltip";
@@ -13,8 +13,7 @@ import {NotificationsModel} from "../../models/notifications.model";
 
 @Component({
   selector: 'app-toolbar',
-  standalone: true,
-  imports: [MatToolbarModule, MatIconModule, CommonModule, MatIconButton, MatTabGroup, MatTab, RouterLink, RouterOutlet, RouterLinkActive, MatTabNav, MatTabLink, MatTabNavPanel, MatTooltip],
+  standalone: true,  imports: [MatToolbarModule, MatIconModule, CommonModule, MatIconButton, MatTabGroup, MatTab, RouterLink, RouterOutlet, RouterLinkActive, MatTabNav, MatTabLink, MatTabNavPanel, MatTooltip],
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
   animations: [
@@ -33,7 +32,7 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
   Usuario: string = 'UsuarioExample';
   showNotificationBar: boolean = false;
 
-  constructor(private router: Router, private notificationService: AllapisService) {}
+  constructor(private router: Router, private notificationService: TripmateApiService) {}
 
   ngOnInit(): void {
     this.getNotifications();

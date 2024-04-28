@@ -1,0 +1,10 @@
+mat-form-field {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+mat-form-field .mat-select-value,
+mat-form-field .mat-select-trigger,
+mat-option {
+  border-radius: 10px;
+}

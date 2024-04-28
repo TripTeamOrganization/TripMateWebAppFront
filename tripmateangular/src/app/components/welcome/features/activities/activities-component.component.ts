@@ -1,29 +1,32 @@
 import {Component, OnInit} from '@angular/core';
 import { RouterLink, RouterOutlet } from "@angular/router";
-import { SearchbarComponent } from "../shared/searchbar/searchbar.component";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
-import {Activity} from "../../../../models/activity.interface";
-import {AllapisService} from "../shared/services/allapis.service";
-import {CardgroupComponent} from "../shared/groups/cardgroup";
-import {CardmainComponent} from "../shared/cardmain/cardmain.component";
+import {Activity} from "../../../../models/activity.model";
+import {TripmateApiService} from "../../../../services/tripmate-api.service";
 import {NgForOf, NgIf} from "@angular/common";
-import {Restaurant} from "../../../../models/restaurant.interface";
-import {MainFilterComponent} from "../shared/main-filter/main-filter.component";
+import {MainFilterComponent} from "../../../../../public/shared/main-filter/main-filter.component";
+import {SearchbarComponent} from "../../../../../public/shared/searchbar/searchbar.component";
+import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.component";
+import {CardgroupComponent} from "../../../../../public/shared/groups/cardgroup";
 
 @Component({
   selector: 'app-activities',
   standalone: true,
-    imports: [
-        RouterLink,
-        RouterOutlet,
-        SearchbarComponent,
-        HttpClientModule,
-        CardgroupComponent,
-        CardmainComponent,
-        NgForOf,
-        NgIf,
-        MainFilterComponent
-    ],
+  imports: [
+    RouterLink,
+    RouterOutlet,
+    SearchbarComponent,
+    HttpClientModule,
+    CardgroupComponent,
+    CardmainComponent,
+    NgForOf,
+    NgIf,
+    MainFilterComponent,
+    MainFilterComponent,
+    SearchbarComponent,
+    CardmainComponent,
+    CardgroupComponent
+  ],
   templateUrl: './activities-component.component.html',
   styleUrl: './activities-component.component.scss'
 })
@@ -32,7 +35,7 @@ export class ActivitiesComponentComponent implements OnInit {
   activityData: Activity;
   filteredActivities: Activity[] = [];
 
-  constructor(private apiservice: AllapisService) {
+  constructor(private apiservice: TripmateApiService) {
     this.activityData = {} as Activity;
   }
 
