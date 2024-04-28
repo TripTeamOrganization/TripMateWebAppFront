@@ -618,5 +618,16 @@
     "celular": 955944091,
     "plan": "Premium"
   }
-]
+],
+  "Notifications"  : [
+    {
+      "text": "Tienes un codigo de descuento disponible: BLABLA123"
+    },
+    {
+      "text": "Tienes un codigo de descuento disponible: BLABLA123"
+    },
+    {
+      "text": "Tienes un codigo de descuento disponible: BLABLA123"
+    }
+  ]
 }
