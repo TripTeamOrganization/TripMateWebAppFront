@@ -1,18 +1,13 @@
 <h1>Tu carro de Compras</h1>
-<app-cardmain
-  *ngFor="let item of items"
-[title]="item.title"
-[descripcion]="item.descripcion"
-[sourceimage]="item.sourceimage"
-[ubicacion]="item.ubicacion"
-[price]="item.price"
-[starcount]="item.starcount">
-</app-cardmain>
-<!--<div *ngFor="let item of items">
-  <h2>{{ item.title }}</h2>
-  <p>{{ item.descripcion }}</p>
-  <img [src]="item.sourceimage" alt="{{ item.title }}">
-  <p>{{ item.ubicacion }}</p>
-  <p>{{ item.price }}</p>
-  <p>{{ item.starcount }}</p>
-</div>-->
+<group-cardgroup>
+  @for (item of items; track item.name) {
+    <app-cardmain
+      [title]="item.title"
+      [descripcion]="item.descripcion"
+      [sourceimage]="item.sourceimage"
+      [ubicacion]="item.ubicacion"
+      [price]="item.price"
+      buttonText="Eliminar"
+    ></app-cardmain>
+  }
+</group-cardgroup>
