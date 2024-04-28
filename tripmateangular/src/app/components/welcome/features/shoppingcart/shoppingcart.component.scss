@@ -11,3 +11,27 @@ h2 {
   margin-right: auto;
   margin-bottom: 0;
 }
+.fila{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+.ReservarTodo{
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+  background-color: rgba(0, 0, 117, 0.17);
+  border-radius: 5%;
+  transition: all 0.3s ease;
+  padding: 1vh;
+}
+.ReservarTodo:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  cursor:pointer;
+}

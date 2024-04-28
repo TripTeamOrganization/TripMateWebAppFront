@@ -34,7 +34,8 @@ export const routes: Routes = [
       { path: 'userview',component:UserviewComponent},
       { path: 'register', component: RegisterComponent},
       { path: 'reservation',component: ReservationComponent},
-      { path: 'itinerary', component: ItineraryComponent}
+      { path: 'itinerary', component: ItineraryComponent},
+
     ]
   }
 ];
