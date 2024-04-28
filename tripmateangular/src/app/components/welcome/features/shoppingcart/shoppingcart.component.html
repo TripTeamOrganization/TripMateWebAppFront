@@ -1,16 +1,20 @@
 <h1>Tu carro de Compras</h1>
 <group-cardgroup>
   <div class="titulo">
-    <h2>Actividad</h2>
+    <h2>Alojamiento</h2>
   </div>
-  <app-cardmain *ngFor="let activity of cart"
-  [maxWidth]="80"
-  [maxHeight]="30"
-  starcount="0"
-  [sourceimage]="activity.imagen"
-  [title]="activity.nombre"
-  [ubicacion]="activity.ubicacion"
-  [descripcion]="activity.descripcion ? activity.descripcion : ''"
-  buttontext="Eliminar">
-  </app-cardmain>
-</group-cardgroup>
+    <app-cardmain
+      [maxWidth]="80"
+      starcount="4"
+      sourceimage="https://www.bbva.pe/content/dam/public-web/peru/photos/cards/card-home-tc-febrero-avion.png"
+      title="Delfines Hotel & Convention Center"
+      price="$543"
+      ubicacion="a 6km del centro"
+      descripcion="
+    El Delfines Hotel & Convention Center es un hotel de lujo en Lima, Perú, que ofrece una experiencia
+    de alojamiento de primera clase en un entorno elegante y sofisticado. Ubicado en el exclusivo distrito
+    de San Isidro, el hotel cuenta con habitaciones y suites de lujo, un spa de clase mundial, una piscina
+    al aire libre y una variedad de restaurantes y bares. El hotel también alberga un centro de convenciones
+    de última generación, que es el lugar ideal para eventos corporativos y sociales en Lima."
+      buttontext="Eliminar">
+    </app-cardmain>

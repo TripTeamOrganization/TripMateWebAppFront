@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NgClass, NgStyle} from "@angular/common";
 import {MatCard} from "@angular/material/card";
 import {of} from "rxjs";
@@ -26,13 +26,9 @@ export class CardmainComponent {
   @Input() price: string = '';
   @Input() starcount: string ='0';
   @Input() maxHeight: number =30;
-  @Output() select = new EventEmitter<void>();
-  
+
   getStarIndices(starcount: string): number[] {
     const count: number = parseInt(starcount, 10);
     return Array.from({ length: count }, (_, i) => i);
-  }
-  onSelect() {
-    this.select.emit();
   }
 }
