@@ -1,10 +1,11 @@
 <h1>Tu carro de Compras</h1>
-<app-cardmain *ngFor="let item of items" 
-[title]="item.title" 
-[descripcion]="item.descripcion" 
-[sourceimage]="item.sourceimage" 
-[ubicacion]="item.ubicacion" 
-[price]="item.price" 
+<app-cardmain
+  *ngFor="let item of items"
+[title]="item.title"
+[descripcion]="item.descripcion"
+[sourceimage]="item.sourceimage"
+[ubicacion]="item.ubicacion"
+[price]="item.price"
 [starcount]="item.starcount">
 </app-cardmain>
 <!--<div *ngFor="let item of items">

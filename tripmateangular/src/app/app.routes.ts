@@ -10,7 +10,6 @@ import {
   RestaurantsComponentComponent
 } from "./components/welcome/features/restaurants/restaurants-component.component";
 import {FlightsComponentComponent} from "./components/welcome/features/flights/flights-component.component";
-import { JourneysComponentComponent } from './components/welcome/features/journeys/journeys-component/journeys-component.component';
 import { MyjourneysComponent } from './components/welcome/features/myjourneys/myjourneys.component';
 import { ShoppingcartComponent } from './components/welcome/features/shoppingcart/shoppingcart.component';
 import {SigninComponent} from "./components/welcome/features/signin/signin.component";
@@ -29,7 +28,6 @@ export const routes: Routes = [
       { path: 'activities', component: ActivitiesComponentComponent },
       { path: 'restaurants', component: RestaurantsComponentComponent },
       { path: 'flights', component: FlightsComponentComponent },
-      { path: 'journeys', component: JourneysComponentComponent},
       { path: 'myjourneys', component: MyjourneysComponent},
       { path: 'shoppingcart', component: ShoppingcartComponent},
       { path: 'signin', component:SigninComponent},

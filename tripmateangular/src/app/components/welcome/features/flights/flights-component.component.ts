@@ -1,21 +1,21 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import { SearchbarComponent } from "../shared/searchbar/searchbar.component";
-import { AllapisService } from "../shared/services/allapis.service";
-import { Flight } from '../../../../models/flight.interface';
+import { TripmateApiService } from "../../../../services/tripmate-api.service";
+import { Flight } from '../../../../models/flight.model';
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
-import { ImputsComponent } from "../shared/imputs/imputs.component";
-import { PasswordImputsComponent } from "../shared/password-imputs/password-imputs.component";
-import { CardgroupComponent } from "../shared/groups/cardgroup";
-import { CardmainComponent } from "../shared/cardmain/cardmain.component";
-import {MainFilterComponent} from "../shared/main-filter/main-filter.component";
+import { InputsComponent } from "../../../../../public/shared/inputs/inputs.component";
+import { PasswordImputsComponent } from "../../../../../public/shared/password-imputs/password-imputs.component";
+import {SearchbarComponent} from "../../../../../public/shared/searchbar/searchbar.component";
+import {MainFilterComponent} from "../../../../../public/shared/main-filter/main-filter.component";
+import {CardgroupComponent} from "../../../../../public/shared/groups/cardgroup";
+import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.component";
 
 @Component({
   selector: 'app-flights',
   standalone: true,
-    imports: [
-        SearchbarComponent, HttpClientModule, ImputsComponent, PasswordImputsComponent, CardgroupComponent, CardmainComponent, MainFilterComponent
-    ],
+  imports: [
+    SearchbarComponent, HttpClientModule, InputsComponent, PasswordImputsComponent, CardgroupComponent, CardmainComponent, MainFilterComponent, SearchbarComponent, MainFilterComponent, CardgroupComponent, CardmainComponent
+  ],
   templateUrl: './flights-component.component.html',
   styleUrls: ['./flights-component.component.scss']
 })
@@ -24,7 +24,7 @@ export class FlightsComponentComponent implements OnInit {
   filteredFlights: Flight[] = [];
   searchTimer: any; // Declarar la propiedad searchTimer
 
-  constructor(private allapisService: AllapisService, private cdr: ChangeDetectorRef) { }
+  constructor(private allapisService: TripmateApiService, private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.getFlights();

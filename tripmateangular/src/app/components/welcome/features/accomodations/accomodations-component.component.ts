@@ -1,23 +1,27 @@
 import {Component, OnInit} from '@angular/core';
-import {SearchbarComponent} from "../shared/searchbar/searchbar.component";
-import {CardmainComponent} from "../shared/cardmain/cardmain.component";
-import {CardgroupComponent} from "../shared/groups/cardgroup";
-import {Accommodation} from "../../../../models/accomodation.interface";
-import {AllapisService} from "../shared/services/allapis.service";
+import {Accommodation} from "../../../../models/accomodation.model";
+import {TripmateApiService} from "../../../../services/tripmate-api.service";
 import {NgForOf, NgIf} from "@angular/common";
-import {MainFilterComponent} from "../shared/main-filter/main-filter.component";
+import {SearchbarComponent} from "../../../../../public/shared/searchbar/searchbar.component";
+import {MainFilterComponent} from "../../../../../public/shared/main-filter/main-filter.component";
+import {CardgroupComponent} from "../../../../../public/shared/groups/cardgroup";
+import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.component";
 
 @Component({
   selector: 'app-accomodations',
   standalone: true,
-    imports: [
-        SearchbarComponent,
-        CardmainComponent,
-        CardgroupComponent,
-        NgForOf,
-        NgIf,
-        MainFilterComponent
-    ],
+  imports: [
+    SearchbarComponent,
+    CardmainComponent,
+    CardgroupComponent,
+    NgForOf,
+    NgIf,
+    MainFilterComponent,
+    SearchbarComponent,
+    MainFilterComponent,
+    CardgroupComponent,
+    CardmainComponent
+  ],
   templateUrl: './accomodations-component.component.html',
   styleUrl: './accomodations-component.component.scss'
 })
@@ -25,7 +29,7 @@ export class AccomodationsComponentComponent implements OnInit {
   accomodationData: Accommodation;
   accomodations: Accommodation[] = [];
   filteredAccomodations: Accommodation[] = [];
-  constructor(private apiservice: AllapisService) {
+  constructor(private apiservice: TripmateApiService) {
     this.accomodationData = {} as Accommodation;
   }
 
