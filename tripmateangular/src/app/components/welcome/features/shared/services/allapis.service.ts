@@ -24,10 +24,4 @@ export class AllapisService {
   getAccomodations(){
     return this.http.get<any>(`${this.url}/alojamientos`);
   }
-  getNotifications(){
-    return this.http.get<any>(`${this.url}/Notifications`);
-  }
-  getUsers() {
-    return this.http.get<any>(`${this.url}/usuarios`);
-  }
 }
