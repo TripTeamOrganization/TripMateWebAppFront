@@ -1,18 +1,19 @@
+
+
 @if (isRegisteredRoute()){
   <app-register></app-register>
 }
 @else {
-  <div class="main-container">
-    <ng-content/>
-  </div>
+  @if (isSignInRoute()){
+    <app-signin></app-signin>
+  }
+
+  @else {
+    <div class="main-container">
+      <ng-content/>
+    </div>
+  }
+
 }
 
-@if (isSignInRoute()){
-  <app-signin></app-signin>
-}
 
-@else {
-  <div class="main-container">
-    <ng-content/>
-  </div>
-}
