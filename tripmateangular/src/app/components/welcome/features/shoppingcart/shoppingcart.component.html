@@ -1,13 +1,13 @@
 <h1>Tu carro de Compras</h1>
 <group-cardgroup>
   @for (item of items; track item.name) {
-    <app-cardmain
+    <app-card-shopcar
       [title]="item.title"
-      [descripcion]="item.descripcion"
-      [sourceimage]="item.sourceimage"
-      [ubicacion]="item.ubicacion"
       [price]="item.price"
+      [sourceimage]="item.sourceimage"
       buttonText="Eliminar"
-    ></app-cardmain>
+    ></app-card-shopcar>
+
+
   }
 </group-cardgroup>

@@ -1,0 +1,36 @@
+<div class="cardmain">
+  <div class="imagecontainer">
+    <img class="imagen" [src]="sourceimage" alt="Imagen">
+  </div>
+  <div class="textcontain">
+    <span class="title">{{ title }}</span>
+    <span class="price">{{ price }}</span>
+    @if (!reservado) {
+      <div class="boton">
+        <button class="boton1" (click)="EliminarEnCarrito()">Eliminar</button>
+        <button class="boton2"
+                (mouseenter)="activarDatepicker()"
+                (click)="$event.stopPropagation()"
+                matTooltip="Reservar"
+                [matTooltipDisabled]="mostrarDatepicker">
+          Reservar
+          @if (mostrarDatepicker) {
+            <mat-form-field>
+              <mat-label>Choose a date</mat-label>
+              <input matInput [matDatepicker]="picker" (dateInput)="fechaSeleccionada = $event.value; reiniciarTemporizador()">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          }
+        </button>
+        @if (fechaSeleccionada) {
+          <button class="boton3" (click)="ReservarEnCarrito()">Confirmar Reserva</button>
+        } @else {
+          <span class="Required">Debe seleccionar una fecha antes de reservar</span>
+        }
+      </div>
+    } @else {
+      <span class="Required">Se ha reservado correctamente</span>
+    }
+  </div>
+</div>
