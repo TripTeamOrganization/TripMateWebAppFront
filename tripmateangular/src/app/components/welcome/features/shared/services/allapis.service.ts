@@ -27,4 +27,7 @@ export class AllapisService {
   getNotifications(){
     return this.http.get<any>(`${this.url}/Notifications`);
   }
+  getUsers() {
+    return this.http.get<any>(`${this.url}/usuarios`);
+  }
 }
