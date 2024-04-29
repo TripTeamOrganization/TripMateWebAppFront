@@ -1,0 +1,22 @@
+<div class="contenedor">
+  <div class="background-image"></div> <!-- Añade este div para la imagen de fondo -->
+  <div class="content"> <!-- Añade este div para contener el contenido -->
+    <div class="container">
+      <div class="card-container">
+        <h1>PLANES</h1>
+        <div class="row">
+          <app-card-plan title="Plan Gratuito" subtitle="Una planificación de viaje gratuita" price="$0" [features]=3
+                         feature1="Acceso a la información de los servicios" feature2="Libre elección de servicios"
+                         feature3="Sin previo pago para el primer viaje"></app-card-plan>
+          <app-card-plan title="Plan Basic" subtitle="Acceso y compras por 3 meses" price="$0.5" [features]=1
+                         feature1="Viajes planificados ilimitados por tres meses"></app-card-plan>
+        </div>
+        <div class="single">
+          <app-card-plan title="Plan Premium" subtitle="Acceso y compras de por vida" price="$1" [features]=3
+                         feature1="Viajes planificados de por vida" feature2="Recomendaciones de opciones de lujo y en tendencia"
+                         feature3="Ofertas exclusivas en hoteles, vuelos y más"></app-card-plan>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
