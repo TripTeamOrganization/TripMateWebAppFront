@@ -8,6 +8,7 @@ import {MatInput} from "@angular/material/input";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import {ReservationsService} from "../../../app/services/reservationsService.service";
 
 @Component({
   selector: 'app-card-shopcar',
@@ -38,7 +39,7 @@ export class CardShopcarComponent {
   temporizador: any;
   reservado: boolean = false;
 
-  constructor(private shoppingCartService: ShoppingCartService) { }
+  constructor(private shoppingCartService: ShoppingCartService, private reservationService: ReservationsService) { }
 
   private crearItem(): any {
     return {
@@ -68,7 +69,7 @@ export class CardShopcarComponent {
   ReservarEnCarrito() {
     const item = this.crearItem();
     console.log('Elemento Reservado en carrito:', item);
-    this.shoppingCartService.agregarAlCarrito(item);
+    this.reservationService.agregarAReserva(item);
     this.reservado = true;
   }
 
