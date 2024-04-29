@@ -13,6 +13,7 @@
         @if (emailError) {
           <span class="error-message">Ingrese un correo electrónico válido.</span>
         }
+        
       </div>
 
       <div class="form-group">
@@ -24,6 +25,7 @@
           <span class="error-message">La contraseña debe tener al menos 8 caracteres.</span>
         }
       </div>
+      <a class="link-register" routerLink="/register">¿Aún no tienes una cuenta? Registrate</a>
       <button class="btn-signin" (click)="validarFormulario()">Iniciar sesión</button>
     </div>
     </div>

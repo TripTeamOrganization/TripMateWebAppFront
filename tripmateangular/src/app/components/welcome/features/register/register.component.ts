@@ -1,5 +1,8 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import {FormsModule} from "@angular/forms";
+import { HttpClient} from "@angular/common/http";
+import {map} from "rxjs";
+import {RouterLink} from "@angular/router";
 
 export interface Register {
   nombre: string;
@@ -15,7 +18,8 @@ export interface Register {
   templateUrl: './register.component.html',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   styleUrls: ['./register.component.scss']
 })
@@ -28,7 +32,8 @@ export class RegisterComponent {
     password: '',
     telefono: ''
   };
-
+  registroExitoso: boolean = false;
+  emailExistsError: string = '';
   nombreError: boolean = false;
   apellidosError: boolean = false;
   dniError: boolean = false;
@@ -36,7 +41,7 @@ export class RegisterComponent {
   passwordError: boolean = false;
   telefonoError: boolean = false;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, private http: HttpClient) {}
 
   validarFormulario() {
     this.nombreError = this.register.nombre.length < 3 || this.register.nombre.length > 15;
@@ -61,6 +66,26 @@ export class RegisterComponent {
       if (this.emailError) console.error('Error en el correo electrónico');
       if (this.passwordError) console.error('Error en la contraseña');
       if (this.telefonoError) console.error('Error en el número de teléfono');
+    }
+    if (!this.nombreError && !this.apellidosError && !this.dniError && !this.emailError && !this.passwordError && !this.telefonoError) {
+      this.http.get('http://localhost:3000/users').pipe(map(response => response as any[]))
+        .subscribe(
+          (users: any[]) => {
+            if (users.some(user => user.email === this.register.email)) {
+              this.emailExistsError = 'Este correo electrónico ya está en uso.';
+            } else {
+              this.http.post('http://localhost:3000/users', this.register)
+                .subscribe(
+                  response => {
+                    console.log(response);
+                    this.registroExitoso = true;
+                  },
+                  error => console.log(error)
+                );
+            }
+          },
+          error => console.log(error)
+        );
     }
   }
 }

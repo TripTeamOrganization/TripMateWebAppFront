@@ -1,5 +1,7 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {RouterLink} from "@angular/router";
+import { HttpClient} from "@angular/common/http";
 
 export interface SignIn {
   email: string;
@@ -8,9 +10,10 @@ export interface SignIn {
 @Component({
   selector: 'app-signin',
   standalone: true,
-  imports: [
-    FormsModule
-  ],
+    imports: [
+        FormsModule,
+        RouterLink
+    ],
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss']
 })

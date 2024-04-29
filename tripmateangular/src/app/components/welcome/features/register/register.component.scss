@@ -27,7 +27,12 @@ a {
   flex-direction: column;
 
 }
-
+.link-signin {
+  color: inherit;
+  text-decoration: none;
+  display: grid;
+  padding-bottom: 20px;
+}
 .contenedor.active {
   grid-template-columns: minmax(300px, 18%) auto;
   background-image: url('../../../../../assets/images/fondo.jpg');
