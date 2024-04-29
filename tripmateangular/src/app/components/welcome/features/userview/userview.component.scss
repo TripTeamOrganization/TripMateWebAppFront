@@ -38,11 +38,19 @@ button {
   color: white;
 }
 
+button:hover {
+  transform: scale(1.05);
+}
+
 .plan-button {
   background-color: #3A6CEC;
   width: 40%;
   margin-left: 30px;
   font-size: 30px;
+}
+
+.plan-button:hover {
+  transform: scale(1.05);
 }
 
 .plan-button span {
@@ -75,9 +83,9 @@ mat-card-content {
 }
 
 .actions-container {
-  flex: 1; /* Ajusta la proporción de espacio ocupado por los botones */
+  flex: 1;
   display: flex;
-  flex-direction: column; /* Alinea los botones verticalmente */
+  flex-direction: column;
   padding-top: 120px;
   padding-right: 80px;
   gap: 120px;
@@ -92,6 +100,10 @@ mat-card-content {
 
 .action-button span {
   color: white;
+}
+
+.action-button:hover {
+  transform: scale(1.05);
 }
 
 

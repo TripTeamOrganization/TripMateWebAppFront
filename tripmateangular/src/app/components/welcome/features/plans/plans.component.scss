@@ -1,0 +1,32 @@
+.contenedor {
+  background-image: url('../../../../../assets/images/fondo.jpg');
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.card-container h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #413F3F;
+  margin-top: 1vh;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  padding-top: 20px;
+}
+
+.single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+

@@ -1,0 +1,42 @@
+@if (features == 3) {
+  <mat-card class="card">
+    <mat-card-content>
+      <h1>{{title}}</h1>
+      <h2>{{subtitle}}</h2>
+      <h2>{{price}}</h2>
+      <ul>
+        <li>{{feature1}}</li>
+        <li>{{feature2}}</li>
+        <li>{{feature3}}</li>
+      </ul>
+      <button class="button">Seleccionar</button>
+    </mat-card-content>
+  </mat-card>
+}
+@else if (features == 2) {
+  <mat-card class="card">
+    <mat-card-content>
+      <h1>{{title}}</h1>
+      <h2>{{subtitle}}</h2>
+      <h2>{{price}}</h2>
+      <ul>
+        <li>{{feature1}}</li>
+        <li>{{feature2}}</li>
+      </ul>
+      <button class="button">Seleccionar</button>
+    </mat-card-content>
+  </mat-card>
+}
+@else {
+  <mat-card class="card">
+    <mat-card-content>
+      <h1>{{title}}</h1>
+      <h2>{{subtitle}}</h2>
+      <h2>{{price}}</h2>
+      <ul>
+        <li>{{feature1}}</li>
+      </ul>
+      <button class="button">Seleccionar</button>
+    </mat-card-content>
+  </mat-card>
+}

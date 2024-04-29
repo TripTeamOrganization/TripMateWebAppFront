@@ -1,13 +1,13 @@
 export class User {
-  dni: any;
-  nombre: any;
-  correo: any;
-  contrasenia: any;
-  fechaRegistro: any;
-  celular: any;
-  plan: any;
+  dni: string;
+  nombre: string;
+  correo: string;
+  contrasenia: string;
+  fechaRegistro: string;
+  celular: number;
+  plan: string;
 
-  constructor(dni: any, nombre: any, correo: any, contrasenia: any, fechaRegistro: any, celular: any, plan: any) {
+  constructor(dni: string, nombre: string, correo: string, contrasenia: string, fechaRegistro: string, celular: number, plan: string) {
     this.dni = dni;
     this.nombre = nombre;
     this.correo = correo;
