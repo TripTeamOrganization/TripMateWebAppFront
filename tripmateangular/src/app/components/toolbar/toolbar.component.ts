@@ -13,6 +13,7 @@ import {BreakpointState, Breakpoints, BreakpointObserver} from "@angular/cdk/lay
 import {map, Observable} from "rxjs";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { MatSidenav } from '@angular/material/sidenav';
+import {User} from "../../models/user.model";
 
 @Component({
   selector: 'app-toolbar',
@@ -35,13 +36,16 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
   @ViewChild(MatTabGroup) tabGroup: MatTabGroup | undefined;
   notifications: NotificationsModel[] = [];
-  Usuario: string = 'UsuarioExample';
+  userData!: User;
+  users: User[] = [];
+  Usuario: string = 'Usuario';
   showNotificationBar: boolean = false;
 
   constructor(private router: Router, private notificationService: TripmateApiService, public breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
     this.getNotifications();
+    this.getUser();
   }
 
   toggleNotificationBar() {
@@ -62,6 +66,30 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
       },
       (error) => {
         console.error('Error al obtener las notificaciones:', error);
+      }
+    );
+  }
+  getUser() {
+    this.notificationService.getUsers().subscribe((data: any) => {
+        if(Array.isArray(data)) {
+          this.users = data.map(user => new User(
+            user.dni,
+            user.nombre,
+            user.correo,
+            user.contrasenia,
+            user.fechaRegistro,
+            user.celular,
+            user.plan
+          ));
+          if (this.users.length > 0) {
+            this.Usuario = this.users[0].nombre;
+          }
+        }else {
+          console.error('El formato de datos recibido no es un array.');
+        }
+      },
+      error => {
+        console.error('Error al obtener datos de usuarios:', error);
       }
     );
   }
