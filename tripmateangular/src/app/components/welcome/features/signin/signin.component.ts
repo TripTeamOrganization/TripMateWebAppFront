@@ -23,14 +23,16 @@ export class SigninComponent {
     password: '',
   };
 
+  emailNotFound: boolean = false;
   emailError: boolean = false;
   passwordError: boolean = false;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, private http: HttpClient) {}
 
   validarFormulario() {
     this.emailError = !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.signin.email);
     this.passwordError = this.signin.password.length < 8;
+    this.checkEmail(this.signin.email);
 
     // Forzamos la detección de cambios después de actualizar las variables booleanas
     this.cdr.detectChanges();
@@ -44,5 +46,14 @@ export class SigninComponent {
       if (this.emailError) console.error('Error en el correo electrónico');
       if (this.passwordError) console.error('Error en la contraseña');
     }
+  }
+  checkEmail(email: string) {
+    this.http.get('http://localhost:3000').subscribe((data: any) => {
+      if (!data.some((item: any) => item.email === email)) {
+        this.emailNotFound = true;
+        this.cdr.detectChanges();
+      }
+      else {console.log('Email no encontrado')}
+    });
   }
 }

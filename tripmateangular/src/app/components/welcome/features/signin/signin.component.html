@@ -13,7 +13,9 @@
         @if (emailError) {
           <span class="error-message">Ingrese un correo electrónico válido.</span>
         }
-        
+        @if (emailNotFound) {
+          <span class="error-message">El correo electrónico ingresado no se encuentra registrado.</span>
+        }
       </div>
 
       <div class="form-group">
