@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import {Component, ChangeDetectorRef, OnInit} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import { HttpClient} from "@angular/common/http";
 import {map} from "rxjs";
@@ -50,6 +50,7 @@ export class RegisterComponent {
     this.emailError = !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.register.email);
     this.passwordError = this.register.password.length < 8;
     this.telefonoError = !/^\d{9}$/.test(this.register.telefono);
+    this.registroExitoso = true;
 
     // Forzamos la detección de cambios después de actualizar las variables booleanas
     this.cdr.detectChanges();

@@ -659,6 +659,15 @@
       "email": "Diego@gmail.com",
       "password": "MesSobble007",
       "telefono": "990990605"
+    },
+    {
+      "id": "5a3a",
+      "nombre": "John",
+      "apellidos": "Doe",
+      "dni": "12345678",
+      "email": "jd2@gmail.com",
+      "password": "MesSobble008",
+      "telefono": "990990606"
     }
   ],
   "Notifications": [
