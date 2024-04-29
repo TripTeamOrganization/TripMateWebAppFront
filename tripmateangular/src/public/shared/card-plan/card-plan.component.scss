@@ -1,0 +1,37 @@
+.card {
+  width: 500px;
+  height: 36vh;
+  border-radius: 20px;
+  color: black;
+}
+
+.card h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #3A6CEC;
+  width: 40%;
+  font-size: 30px;
+  border-radius: 50px;
+  height: 8vh;
+  color: white;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
