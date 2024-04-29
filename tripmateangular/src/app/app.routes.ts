@@ -17,6 +17,7 @@ import {UserviewComponent} from "./components/welcome/features/userview/userview
 import {RegisterComponent} from "./components/welcome/features/register/register.component";
 import {ReservationComponent} from "./components/welcome/features/reservation/reservation.component";
 import {ItineraryComponent} from "./components/welcome/features/itinerary/itinerary.component";
+import {PlansComponent} from "./components/welcome/features/plans/plans.component";
 export const routes: Routes = [
   {
     path: '',
@@ -35,7 +36,7 @@ export const routes: Routes = [
       { path: 'register', component: RegisterComponent},
       { path: 'reservation',component: ReservationComponent},
       { path: 'itinerary', component: ItineraryComponent},
-
+      { path: 'suscription', component: PlansComponent}
     ]
   }
 ];
