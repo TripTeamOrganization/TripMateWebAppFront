@@ -4,24 +4,27 @@
     <button mat-stroked-button><span>Log out</span></button>
   </div>
 
+
+@for (user of users; track user.nombre) {
   <div class="container">
     <div class="card-container">
       <h1>Nombre</h1>
       <mat-card class="card">
-        <mat-card-content>Simple card</mat-card-content>
+        <mat-card-content>{{user.nombre}}</mat-card-content>
       </mat-card>
       <h1>Plan</h1>
       <mat-card class="card">
-        <mat-card-content>Simple card</mat-card-content>
+        <mat-card-content>{{user.plan}}</mat-card-content>
       </mat-card>
-      <button mat-stroked-button class="plan-button"><span>Obtener otro plan</span></button>
+      <button mat-stroked-button class="plan-button" (click)="MostrarPlanes()"><span>Obtener otro plan</span></button>
     </div>
     <div class="actions-container">
-      <button mat-stroked-button class="action-button"><span>Cambiar Email</span></button>
-      <button mat-stroked-button class="action-button"><span>Olvidé mi contraseña</span></button>
-      <button mat-stroked-button class="action-button"><span>Eliminar cuenta</span></button>
+      <button class="action-button"><span>Cambiar Email</span></button>
+      <button class="action-button"><span>Olvidé mi contraseña</span></button>
+      <button class="action-button"><span>Eliminar cuenta</span></button>
     </div>
   </div>
+}
 
 </div>
 
