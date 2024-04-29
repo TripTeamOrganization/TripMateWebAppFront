@@ -1,0 +1,52 @@
+.background{
+  background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpgStaP21Rrz-2ZmH0jqsn92-ZCy0eBlXmMM6Tbif19rf4WH38');
+  background-size: cover; /* Ajusta el tamaño de la imagen al tamaño de la sección */
+  background-position: center;
+}
+
+.container-form {
+  background-color: #F5F5F5;
+  max-width: 20rem;
+  margin: 0 auto; /* Centrar horizontalmente */
+  margin-top: 4rem;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.date-cvv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fullName {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-form-field {
+  width: 100%; /* Ancho del formulario */
+  margin-bottom: 15px; /* Espacio entre cada campo */
+}
+
+
+.banks {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  width: auto;
+  height: 5rem;
+}
