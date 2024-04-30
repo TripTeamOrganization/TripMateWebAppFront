@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { WelcomeComponent } from "./components/welcome/welcome.component";
 import {
   AccomodationsComponentComponent
-} from "./components/welcome/features/accomodations/accomodations-component.component";
+} from "./components/welcome/features/accomodations/components/accomodations-component.component";
 import {
   ActivitiesComponentComponent
 } from "./components/welcome/features/activities/activities-component.component";

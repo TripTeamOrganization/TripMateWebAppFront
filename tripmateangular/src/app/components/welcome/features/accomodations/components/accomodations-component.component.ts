@@ -1,12 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {Accommodation} from "../../../../models/accomodation.model";
-import {TripmateApiService} from "../../../../services/tripmate-api.service";
+import {Accommodation} from "../../../../../models/accomodation.model";
+import {TripmateApiService} from "../../../../../services/tripmate-api.service";
 import {NgForOf, NgIf} from "@angular/common";
-import {SearchbarComponent} from "../../../../../public/shared/searchbar/searchbar.component";
-import {MainFilterComponent} from "../../../../../public/shared/main-filter/main-filter.component";
-import {CardgroupComponent} from "../../../../../public/shared/groups/cardgroup";
-import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.component";
-import {ItineraryComponent} from "../itinerary/itinerary.component";
+import {SearchbarComponent} from "../../../../../../public/shared/searchbar/searchbar.component";
+import {MainFilterComponent} from "../../../../../../public/shared/main-filter/main-filter.component";
+import {CardgroupComponent} from "../../../../../../public/shared/groups/cardgroup";
+import {CardmainComponent} from "../../../../../../public/shared/cardmain/cardmain.component";
+import {ItineraryComponent} from "../../itinerary/itinerary.component";
 
 @Component({
   selector: 'app-accomodations',

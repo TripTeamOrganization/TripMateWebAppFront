@@ -4,7 +4,7 @@ import { RouterModule } from "@angular/router";
 import {FlightsComponentComponent} from "./features/flights/flights-component.component";
 import {RestaurantsComponentComponent} from "./features/restaurants/restaurants-component.component";
 import {ActivitiesComponentComponent} from "./features/activities/activities-component.component";
-import {AccomodationsComponentComponent} from "./features/accomodations/accomodations-component.component";
+import {AccomodationsComponentComponent} from "./features/accomodations/components/accomodations-component.component";
 import {ShoppingcartComponent} from "./features/shoppingcart/shoppingcart.component";
 
 @Component({
