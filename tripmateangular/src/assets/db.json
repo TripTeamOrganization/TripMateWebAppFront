@@ -612,17 +612,6 @@
       "openingHours": ""
     }
   ],
-  "usuarios": [
-    {
-      "dni": "08943926",
-      "nombre": "Adrian Bárbara",
-      "correo": "adrian123@gmail.com",
-      "contraseña": "adrian123",
-      "fechaRegistro": "2022-10-10",
-      "celular": 955944091,
-      "plan": "Premium"
-    }
-  ],
   "users": [
     {
       "id": 1,
