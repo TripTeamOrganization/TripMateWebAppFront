@@ -1,8 +1,9 @@
-import {Component, ChangeDetectorRef, OnInit} from '@angular/core';
+import {Component, ChangeDetectorRef} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import { HttpClient} from "@angular/common/http";
 import {map} from "rxjs";
 import {RouterLink} from "@angular/router";
+import {NgIf} from "@angular/common";
 
 export interface Register {
   nombre: string;
@@ -19,7 +20,8 @@ export interface Register {
   standalone: true,
   imports: [
     FormsModule,
-    RouterLink
+    RouterLink,
+    NgIf
   ],
   styleUrls: ['./register.component.scss']
 })
