@@ -1,8 +1,12 @@
+h2 {
+  color: red;
+}
+
 .spacer {
   flex: 1 1 auto;
 }
 .ochenta{
-width: 80%;
+  width: 80%;
 }
 .veinte{
   width: 20%;
@@ -51,18 +55,33 @@ width: 80%;
 .selected-tab {
   background-color: yellow !important;
 }
+
+#mtToolBarMenu {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
-  .veinte{
-    display:none;
-  }
-  .ochenta{
+
+  #mtToolBar {
     display: none;
   }
+
+  #mtToolBarMenu {
+    display: block;
+  }
+
+  .veinte  {
+    display:none;
+  }
   .bars{
-    justify-content: flex-end;
-    display: flex;
+    display: block;
+    background-color: red;
+    // justify-content: flex-end;
+
   }
-  #mtToolBar{
-    width: 100%;
+
+  .ochenta {
+    display: none;
   }
+
 }
