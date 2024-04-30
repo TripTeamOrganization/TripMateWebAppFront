@@ -3,6 +3,7 @@ import {MatTab, MatTabGroup} from "@angular/material/tabs";
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {NgForOf} from "@angular/common";
 
+
 @Component({
   selector: 'app-itinerary',
   standalone: true,
@@ -12,7 +13,8 @@ import {NgForOf} from "@angular/common";
     MatTabGroup,
     RouterLink,
     RouterLinkActive,
-    NgForOf
+    NgForOf,
+
   ],
 
   templateUrl: './itinerary.component.html',
