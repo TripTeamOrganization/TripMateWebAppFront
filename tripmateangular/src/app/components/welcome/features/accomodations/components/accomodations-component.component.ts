@@ -47,7 +47,8 @@ export class AccomodationsComponentComponent implements OnInit {
             accomodation.nombre,
             accomodation.imagen,
             accomodation.descripcion,
-            accomodation.ubicacion
+            accomodation.ubicacion,
+            accomodation.precio
           ));
         } else {
           console.error('El formato de datos recibido no es un array.');
