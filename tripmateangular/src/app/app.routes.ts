@@ -18,6 +18,8 @@ import {RegisterComponent} from "./components/welcome/features/register/register
 import {ReservationComponent} from "./components/welcome/features/reservation/reservation.component";
 import {ItineraryComponent} from "./components/welcome/features/itinerary/itinerary.component";
 import {PlansComponent} from "./components/welcome/features/plans/plans.component";
+import { PaymentSuccesfullyComponent } from './components/welcome/features/payment-succesfully/payment-succesfully.component';
+import { PaymentComponent} from "./components/welcome/features/payment/payment.component";
 
 export const routes: Routes = [
   {
@@ -38,7 +40,8 @@ export const routes: Routes = [
       { path: 'reservation',component: ReservationComponent},
       { path: 'itinerary', component: ItineraryComponent},
       { path: 'suscription', component: PlansComponent},
-
+      { path: 'payment', component: PaymentComponent},
+      { path: 'payment-succesfully', component: PaymentSuccesfullyComponent}
     ]
   }
 ];
