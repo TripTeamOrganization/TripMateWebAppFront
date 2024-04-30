@@ -40,8 +40,9 @@ export class FlightsComponentComponent implements OnInit {
             flight.tipo,
             flight.duracion,
             flight.ubicacion,
-            flight.precio
-          ));
+            flight.precio,
+            flight.descripcion
+        ));
         } else {
           console.error('El formato de datos recibido no es un array.');
         }
