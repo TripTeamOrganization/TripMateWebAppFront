@@ -30,3 +30,8 @@
   flex-direction: column;
   background-color: transparent;
 }
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+}

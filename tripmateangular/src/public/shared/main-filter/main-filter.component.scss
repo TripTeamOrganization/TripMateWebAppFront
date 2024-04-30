@@ -22,3 +22,15 @@
 h1 {
   margin-bottom: 0;
 }
+@media screen and (max-width: 768px) {
+  .slider-container {
+    flex-direction: column;
+  }
+  .cards-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .dropdown-filter{
+    flex-direction: column;
+  }
+}
