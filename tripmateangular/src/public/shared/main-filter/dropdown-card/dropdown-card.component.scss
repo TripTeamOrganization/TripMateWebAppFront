@@ -1,8 +1,8 @@
-mat-form-field {
+.filter-container {
   border-radius: 10px;
   overflow: hidden;
   flex-wrap: wrap;
-  display: flex;
+  display: block;
   justify-content: space-between;
 }
 
@@ -11,9 +11,11 @@ mat-form-field .mat-select-trigger,
 mat-option {
   border-radius: 10px;
 }
+
 @media screen and (max-width: 768px) {
   mat-form-field {
-    flex-direction: column;
+    display: block;
     margin-top: 10px;
+    flex-direction: column;
   }
 }
