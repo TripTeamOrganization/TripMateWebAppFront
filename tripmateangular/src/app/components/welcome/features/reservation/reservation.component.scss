@@ -1,0 +1,139 @@
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(152, 152, 152, 0.2);
+  //margen para abajo
+  margin-top: 120px;
+
+}
+
+.container1 {
+  width: 100%;
+  max-width: 600px;
+
+  background-color: rgba(152, 152, 152, 0.2);
+  //margen para abajo
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+.container3 {
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(152, 152, 152, 0.2);
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  position: absolute; /* Agrega esta línea */
+  top: 500px; /* Agrega esta línea */
+  // para que esten el derecha
+  right: 300px; /* Agrega esta línea */
+}
+
+.container3 .input-group3 input {
+  background-color: transparent; /* Agrega esta línea */
+  // sin borde
+  border: none; /* Agrega esta línea */
+  // sin sombra
+  box-shadow: none; /* Agrega esta línea */
+  // cuando delecion para el cuado no me resalte el duadro
+  outline: none; /* Agrega esta línea */
+  // para la letra de lo cuadors en en el extremo derecho
+  text-align: right; /* Agrega esta línea */
+}
+
+
+h1 {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.text {
+  text-align: left;
+  margin-left: 10px;
+
+
+
+}
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.input-group1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.input-group3 {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
+  margin-left: 30px;
+  font-weight: bold;
+
+
+}
+
+.field {
+  flex: 1;
+  margin-right: 10px;
+}
+
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 69%;
+  height: 2em;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  border: 1px solid rgba(51, 50, 50, 0.6);
+}
+
+.container3 input {
+  width: 50%;
+}
+button {
+
+  background-color: #3a6cec;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1vh;
+  font-size: 1rem;
+  /* Cambia margin-left a margin-right */
+  margin-right: 100px;
+}
+
+
+
+.border{
+  max-width: 500px;
+  border-radius: 1px;
+  position: absolute; /* Agrega esta línea */
+  top: 170px; /* Agrega esta línea */
+  // para que esten el derecha
+  right: 300px; /* Agrega esta línea */
+}
+
+img{
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1px;
+}
+
+
