@@ -30,6 +30,6 @@ export class TripmateApiService {
   }
 
   getUsers() {
-    return this.http.get<any>(`${this.url}/usuarios`);
+    return this.http.get<any>(`${this.url}/users`);
   }
 }

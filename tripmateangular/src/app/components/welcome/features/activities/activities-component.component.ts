@@ -51,7 +51,8 @@ export class ActivitiesComponentComponent implements OnInit {
             activity.nombre,
             activity.imagen,
             activity.descripcion,
-            activity.ubicacion
+            activity.ubicacion,
+            activity.precio
           ));
         } else {
           console.error('El formato de datos recibido no es un array.');

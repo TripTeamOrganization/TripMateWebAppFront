@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common'; // Importa CommonModule para módulos secundarios
+import {CommonModule, NgOptimizedImage} from '@angular/common'; // Importa CommonModule para módulos secundarios
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
@@ -16,7 +16,9 @@ import { Router } from '@angular/router';
     CommonModule,
     MatButtonModule,
     MatInputModule,
-    MatIconModule,],
+    MatIconModule,
+    NgOptimizedImage,
+  ],
   templateUrl: './payment.component.html',
   styleUrl: './payment.component.scss'
 })

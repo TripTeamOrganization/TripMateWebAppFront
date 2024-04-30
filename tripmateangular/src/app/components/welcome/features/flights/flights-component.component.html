@@ -11,7 +11,8 @@
       [price]="flight.precio"
       [sourceimage]="flight.imagen"
       [title]="flight.nombre"
-      [ubicacion]="flight.tipo"
+      [ubicacion]="flight.ubicacion"
+      [descripcion]="flight.descripcion ? flight.descripcion : ''"
       buttontext="Seleccionar">
     </app-cardmain>
   }
