@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 
@@ -17,4 +17,10 @@ export class CardPlanComponent {
   @Input() feature1: string = '';
   @Input() feature2: string = '';
   @Input() feature3: string = '';
+
+  @Output() onSelectPlan = new EventEmitter<void>();
+
+  onButtonClick() {
+    this.onSelectPlan.emit();
+  }
 }
