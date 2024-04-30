@@ -134,7 +134,7 @@ l-56 -27 -1985 0 -1985 0 -55 27 c-71 35 -133 97 -168 167 l-27 56 -3 1393 -2
   </div>
 </mat-toolbar>
 
-<mat-toolbar  id="mtToolBarMenu" style="background-color: yellow">
+<mat-toolbar  id="mtToolBarMenu">
   <div class="bars" >
       <div id="divBotonesMenu" #divBotonnes style="display: none; background-color: #3A6CEC;  width: 100%;">
         <ul>
@@ -205,36 +205,6 @@ l-56 -27 -1985 0 -1985 0 -55 27 c-71 35 -133 97 -168 167 l-27 56 -3 1393 -2
           <h2>{{Usuario}}</h2>
         </ul>
       </div>
-      <mat-sidenav-container>
-        <mat-sidenav #sidenav mode="over">
-          <mat-tab-group animationDuration="500ms" color="warn">
-            <mat-tab routerLink="accommodations" routerLinkActive="selected-tab" label="Alojamientos"></mat-tab>
-            <mat-tab routerLink="flights" routerLinkActive="selected-tab" label="Vuelos"></mat-tab>
-            <mat-tab routerLink="activities" routerLinkActive="selected-tab" label="Actividades"></mat-tab>
-            <mat-tab routerLink="restaurants" routerLinkActive="selected-tab" label="Restaurantes"></mat-tab>
-          </mat-tab-group>
-          <svg matTooltip="Mis viajes" routerLink="/myjourneys" version="1.0" xmlns="http://www.w3.org/2000/svg"
-               width="22.000000pt" height="20.000000pt" viewBox="0 0 512.000000 512.000000"
-               preserveAspectRatio="xMidYMid meet"> </svg>
-          <button mat-icon-button (click)="toggleNotificationBar()">
-            <svg
-              matTooltip="Notificaciones"
-              version="1.0"
-              xmlns="http://www.w3.org/2000/svg"
-              width="22.000000pt"
-              height="25.000000pt"
-              viewBox="0 0 512.000000 512.000000"
-              preserveAspectRatio="xMidYMid meet"> </svg>
-          </button>
-          <svg matTooltip="Carrito de Compras" routerLink="/shoppingcart" version="1.0" xmlns="http://www.w3.org/2000/svg"
-               width="22.0000000pt" height="25.000000pt" viewBox="0 0 512.000000 512.000000"
-               preserveAspectRatio="xMidYMid meet"> </svg>
-          <svg matTooltip="{{Usuario}}" routerLink="/userview" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="30">
-            <path d="M12 2C6.48 2 2 6.48 2 12c0 3.93 2.4 7.29 5.79 8.69a9.003 9.003 0 0 1 9.42 0C19.6 19.29 22 15.93 22 12c0-5.52-4.48-10-10-10zm0 16c-2.67 0-5.02-1.31-6.5-3.31C6.98 12.59 9.79 12 12 12s5.02.59 6.5 2.69C17.02 16.69 14.67 18 12 18zm0-14a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
-          </svg>
-          <h2>{{Usuario}}</h2>
-        </mat-sidenav>
-      </mat-sidenav-container>
   </div>
 </mat-toolbar>
 
