@@ -46,7 +46,8 @@ export class AccomodationsComponentComponent implements OnInit {
           this.accomodations = data.map(accomodation => new Accommodation(
             accomodation.nombre,
             accomodation.imagen,
-            accomodation.datosAdicionales,
+            accomodation.descripcion,
+            accomodation.ubicacion
           ));
         } else {
           console.error('El formato de datos recibido no es un array.');

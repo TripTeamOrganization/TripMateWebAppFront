@@ -1,15 +1,13 @@
 export class Accommodation {
   nombre: string;
   imagen: string;
-  datosAdicionales: string;
+  descripcion: string;
+  ubicacion: string;
 
-  constructor(
-    nombre: string,
-    imagen: string,
-    datosAdicionales: string,
-  ) {
-    this.nombre = nombre;
-    this.imagen = imagen;
-    this.datosAdicionales = datosAdicionales;
+  constructor(name: string, image: string, description: string, location: string) {
+    this.nombre = name;
+    this.imagen = image;
+    this.descripcion = description;
+    this.ubicacion = location;
   }
 }
