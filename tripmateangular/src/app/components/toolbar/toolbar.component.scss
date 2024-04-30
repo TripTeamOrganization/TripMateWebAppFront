@@ -52,10 +52,17 @@ width: 80%;
   background-color: yellow !important;
 }
 @media screen and (max-width: 768px) {
-  .veinte h2{
+  .veinte{
     display:none;
+  }
+  .ochenta{
+    display: none;
   }
   .bars{
     justify-content: flex-end;
+    display: flex;
+  }
+  #mtToolBar{
+    width: 100%;
   }
 }
