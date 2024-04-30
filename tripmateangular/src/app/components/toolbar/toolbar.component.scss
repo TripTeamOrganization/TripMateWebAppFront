@@ -1,5 +1,4 @@
 h2 {
-  color: red;
 }
 
 .spacer {
@@ -41,9 +40,7 @@ h2 {
 
 
 .mat-tab-label{
-  color: red;
   height: 20vh !important;
-
 }
 
 .mat-toolbar {
@@ -59,15 +56,22 @@ h2 {
 #mtToolBarMenu {
   display: none;
 }
-
+#divBotonesMenu li a{
+  color: #190933;
+  //quitale los guiones de lista
+  text-decoration: none;
+  list-style-type: none;
+}
+#divBotonesMenu li {
+  color: #190933;
+  text-decoration: none;
+  list-style-type: none;
+}
 @media screen and (max-width: 768px) {
-
-  #mtToolBar {
-    display: none;
-  }
 
   #mtToolBarMenu {
     display: block;
+    color: #190933;
   }
 
   .veinte  {
@@ -75,13 +79,17 @@ h2 {
   }
   .bars{
     display: block;
-    background-color: red;
     // justify-content: flex-end;
-
   }
 
   .ochenta {
     display: none;
+  }
+  #divBotonesMenu{
+    //quitale el subrayado
+    text-decoration: none;
+    list-style-type: none;
+
   }
 
 }

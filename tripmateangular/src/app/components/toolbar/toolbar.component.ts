@@ -35,6 +35,9 @@ import {User} from "../../models/user.model";
 export class ToolbarComponent implements AfterViewInit,OnInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
   @ViewChild(MatTabGroup) tabGroup: MatTabGroup | undefined;
+
+  menuIsOpen = false;
+
   notifications: NotificationsModel[] = [];
   userData!: User;
   users: User[] = [];
@@ -99,6 +102,29 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
     );
   toggleSidenav() {
     if (this.sidenav) {
+      //alert("toggle sidenav clikkk");
+      const  myDiv =  document.getElementById('divBotonesMenu');
+      if (!this.menuIsOpen)
+      {
+
+
+        if (myDiv != null ) {
+          myDiv.style.display = 'block';
+          myDiv.style.marginTop = "0px";
+          myDiv.style.position = "absolute";
+
+          this.menuIsOpen = !this.menuIsOpen;
+        }
+      }
+      else {
+        if (myDiv != null)
+        {
+          myDiv.style.display = "none";
+          this.menuIsOpen = !this.menuIsOpen;
+        }
+      }
+
+
       this.sidenav.toggle();
     }
   }
