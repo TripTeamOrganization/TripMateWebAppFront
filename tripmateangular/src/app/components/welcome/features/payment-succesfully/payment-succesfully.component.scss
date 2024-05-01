@@ -1,4 +1,4 @@
-.center-elements {
+/*.center-elements {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,5 +10,35 @@
   margin-top: 18rem;
   font-family: Roboto, Asap;
   font-size: 5rem;
+}*/
+.center-elements h1 {
+  margin-bottom: 20px;
+  margin-top: 180px;
+  font-family: Roboto, Asap;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 1.5;
+}
+.center-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
+.center-elements .button-form {
+  width: 100%;
+  max-width: 300px;
+}
+
+@media screen and (max-width: 668px) {
+  .center-elements h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .center-elements .button-form {
+    width: 80%;
+  }
+}
