@@ -266,22 +266,9 @@ a {
   .main .como-funciona-image {
     display: none;
   }
-
-  @media screen and (max-width: 992px) {}
 }
 
 @media screen and (max-width: 768px) {
-  .contenedor {
-    grid-template-columns: 1fr;
-
-    grid-template-rows: auto auto;
-
-    grid-template-areas:
-            "header"
-            "menu"
-            "contenido";
-
-  }
 
   .header {
     padding: 20px;
@@ -332,4 +319,5 @@ a {
   .main .como-funciona button.btn-empezar {
     display: block;
   }
+
 }

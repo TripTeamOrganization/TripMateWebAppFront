@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 94.75vh;
+  height: 110vh;
   background-image: url('../../../../../assets/images/fondo.jpg');
 }
 
@@ -104,6 +104,7 @@ body {
 @media screen and (max-width: 768px) {
   .signin {
     padding: 30px;
+    margin-top: 40px;
   }
 
   .signin .title {

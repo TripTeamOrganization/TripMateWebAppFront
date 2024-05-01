@@ -9,11 +9,10 @@
 .container1 {
   width: 100%;
   max-width: 600px;
-
   background-color: rgba(152, 152, 152, 0.2);
   margin-top: 40px;
   margin-bottom: 40px;
-
+flex-direction: column;
 }
 
 .container3 {
@@ -22,11 +21,10 @@
   background-color: rgba(152, 152, 152, 0.2);
   margin-top: 40px;
   margin-bottom: 40px;
-
   position: absolute;
   top: 500px;
-
   right: 300px;
+  flex-direction: column;
 }
 
 .container3 .input-group3 input {
@@ -129,5 +127,29 @@ img{
   max-width: 500px;
   border-radius: 1px;
 }
+.container, .container1, .container3 {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
+.input-group, .input-group1, .input-group3 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.field {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .input-group, .input-group1, .input-group3 {
+    align-items: stretch;
+  }
+
+  .field {
+    margin-bottom: 20px;
+  }
+}
 
