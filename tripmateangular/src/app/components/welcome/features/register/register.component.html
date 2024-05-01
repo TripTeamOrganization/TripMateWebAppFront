@@ -70,7 +70,7 @@
         }
       </div>
       <a class="link-signin" routerLink="/signin">¿Ya tienes una cuenta? Inicia sesión</a>
-      <button class="btn-register" (click)="validarFormulario()">Registrarse</button>
+      <button class="btn-register" (click)="validarFormulario(); login()">Registrarse</button>
     </div>
     <div *ngIf="registroExitoso" class="success-message">
       Registro exitoso!
