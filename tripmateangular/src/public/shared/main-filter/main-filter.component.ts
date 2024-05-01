@@ -26,5 +26,9 @@ export class MainFilterComponent {
   updateValues(event: { min: number, max: number }) {
     this.minValue = event.min;
     this.maxValue = event.max;
+
   }
+
+
+
 }
