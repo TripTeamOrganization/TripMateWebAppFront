@@ -20,6 +20,8 @@ import {ItineraryComponent} from "./components/welcome/features/itinerary/itiner
 import {PlansComponent} from "./components/welcome/features/plans/plans.component";
 import { PaymentSuccesfullyComponent } from './components/welcome/features/payment-succesfully/payment-succesfully.component';
 import { PaymentComponent} from "./components/welcome/features/payment/payment.component";
+import {CrudAccomodationComponent} from "./components/welcome/cruds/components/crud-accomodation/crud-accomodation.component";
+import {CrudFlightsComponent} from "./components/welcome/cruds/components/crud-flights/crud-flights.component";
 
 export const routes: Routes = [
   {
@@ -27,7 +29,7 @@ export const routes: Routes = [
     component: WelcomeComponent,
     pathMatch: 'prefix',
     children: [
-      { path: '', redirectTo: 'restaurants', pathMatch: 'full' },
+      { path: '', redirectTo: 'accommodations', pathMatch: 'full' },
       { path: 'accommodations', component: AccomodationsComponentComponent },
       { path: 'activities', component: ActivitiesComponentComponent },
       { path: 'restaurants', component: RestaurantsComponentComponent },
@@ -41,7 +43,9 @@ export const routes: Routes = [
       { path: 'itinerary', component: ItineraryComponent},
       { path: 'suscription', component: PlansComponent},
       { path: 'payment', component: PaymentComponent},
-      { path: 'payment-succesfully', component: PaymentSuccesfullyComponent}
+      { path: 'payment-succesfully', component: PaymentSuccesfullyComponent},
+      { path: 'admin/accommodationCrud', component: CrudAccomodationComponent },
+      { path: 'admin/flightsCrud', component: CrudFlightsComponent }
     ]
   }
 ];

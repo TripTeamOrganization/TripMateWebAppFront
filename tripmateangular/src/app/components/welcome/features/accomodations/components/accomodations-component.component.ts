@@ -44,6 +44,7 @@ export class AccomodationsComponentComponent implements OnInit {
       (data: any) => {
         if (Array.isArray(data)) {
           this.accomodations = data.map(accomodation => new Accommodation(
+            accomodation.id,
             accomodation.nombre,
             accomodation.imagen,
             accomodation.descripcion,
