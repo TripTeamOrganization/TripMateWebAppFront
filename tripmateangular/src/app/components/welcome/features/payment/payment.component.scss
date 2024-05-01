@@ -1,5 +1,5 @@
 .background{
-  background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpgStaP21Rrz-2ZmH0jqsn92-ZCy0eBlXmMM6Tbif19rf4WH38');
+  //background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpgStaP21Rrz-2ZmH0jqsn92-ZCy0eBlXmMM6Tbif19rf4WH38');
   background-size: cover; /* Ajusta el tamaño de la imagen al tamaño de la sección */
   background-position: center;
 }
@@ -13,6 +13,7 @@
   padding: 20px;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  flex-direction: column;
 }
 
 .date-cvv {
@@ -49,4 +50,10 @@ h2 {
   margin-top: 15px;
   width: auto;
   height: 5rem;
+}
+@media screen and (max-width: 768px) {
+  .container-form {
+    max-width: 100%;
+    padding: 10px;
+  }
 }

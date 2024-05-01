@@ -4,6 +4,7 @@ import { HttpClient} from "@angular/common/http";
 import {map} from "rxjs";
 import {RouterLink} from "@angular/router";
 import {NgIf} from "@angular/common";
+import {Router} from "@angular/router";
 
 export interface Register {
   nombre: string;
@@ -43,7 +44,7 @@ export class RegisterComponent {
   passwordError: boolean = false;
   telefonoError: boolean = false;
 
-  constructor(private cdr: ChangeDetectorRef, private http: HttpClient) {}
+  constructor(private cdr: ChangeDetectorRef, private http: HttpClient, private router: Router) {}
 
   validarFormulario() {
     this.nombreError = this.register.nombre.length < 3 || this.register.nombre.length > 15;
@@ -90,5 +91,8 @@ export class RegisterComponent {
           error => console.log(error)
         );
     }
+  }
+  login() {
+    this.router.navigateByUrl('signin')
   }
 }

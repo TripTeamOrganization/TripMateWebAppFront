@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {RouterLink} from "@angular/router";
 import { HttpClient} from "@angular/common/http";
+import {Router} from "@angular/router";
 
 export interface SignIn {
   email: string;
@@ -28,7 +29,7 @@ export class SigninComponent {
   emailError: boolean = false;
   passwordError: boolean = false;
 
-  constructor(private cdr: ChangeDetectorRef, private http: HttpClient) {}
+  constructor(private cdr: ChangeDetectorRef, private http: HttpClient, private router: Router) {}
 
   validarFormulario() {
     this.emailError = !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.signin.email);
@@ -56,5 +57,8 @@ export class SigninComponent {
       }
       else {console.log('Email no encontrado')}
     });
+  }
+  enterPage() {
+    this.router.navigateByUrl('accommodations');
   }
 }
