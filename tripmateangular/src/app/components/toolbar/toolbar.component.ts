@@ -136,7 +136,7 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
 
         // Si la última parte de la ruta está vacía (es la ruta raíz), establecerla en 'restaurants'
         if (!currentRoute) {
-          currentRoute = 'restaurants';
+          currentRoute = 'accommodations';
         }
 
         const tabIndex = tabLabels.findIndex(label => label === currentRoute);

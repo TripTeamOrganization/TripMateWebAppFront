@@ -27,7 +27,7 @@ export const routes: Routes = [
     component: WelcomeComponent,
     pathMatch: 'prefix',
     children: [
-      { path: '', redirectTo: 'restaurants', pathMatch: 'full' },
+      { path: '', redirectTo: 'accommodations', pathMatch: 'full' },
       { path: 'accommodations', component: AccomodationsComponentComponent },
       { path: 'activities', component: ActivitiesComponentComponent },
       { path: 'restaurants', component: RestaurantsComponentComponent },
