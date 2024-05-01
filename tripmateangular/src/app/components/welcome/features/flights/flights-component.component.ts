@@ -35,6 +35,7 @@ export class FlightsComponentComponent implements OnInit {
       (data: any) => {
         if (Array.isArray(data)) {
           this.flights = data.map(flight => new Flight(
+            flight.id,
             flight.nombre,
             flight.imagen,
             flight.tipo,

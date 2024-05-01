@@ -22,6 +22,8 @@ import { PaymentSuccesfullyComponent } from './components/welcome/features/payme
 import { PaymentComponent} from "./components/welcome/features/payment/payment.component";
 import {CrudAccomodationComponent} from "./components/welcome/cruds/components/crud-accomodation/crud-accomodation.component";
 import {CrudFlightsComponent} from "./components/welcome/cruds/components/crud-flights/crud-flights.component";
+import {CrudActivitiesComponent} from "./components/welcome/cruds/components/crud-activities/crud-activities.component";
+import {CrudRestaurantComponent} from "./components/welcome/cruds/components/crud-restaurant/crud-restaurant.component";
 
 export const routes: Routes = [
   {
@@ -45,7 +47,9 @@ export const routes: Routes = [
       { path: 'payment', component: PaymentComponent},
       { path: 'payment-succesfully', component: PaymentSuccesfullyComponent},
       { path: 'admin/accommodationCrud', component: CrudAccomodationComponent },
-      { path: 'admin/flightsCrud', component: CrudFlightsComponent }
+      { path: 'admin/flightsCrud', component: CrudFlightsComponent },
+      { path: 'admin/activitiesCrud', component: CrudActivitiesComponent },
+      { path: 'admin/restaurantsCrud', component: CrudRestaurantComponent }
     ]
   }
 ];

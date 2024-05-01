@@ -48,11 +48,12 @@ export class ActivitiesComponentComponent implements OnInit {
       (data: any) => {
         if (Array.isArray(data)) {
           this.activities = data.map(activity => new Activity(
+            activity.id,
             activity.nombre,
             activity.imagen,
             activity.descripcion,
             activity.ubicacion,
-            activity.precio
+            activity.precio,
           ));
         } else {
           console.error('El formato de datos recibido no es un array.');
