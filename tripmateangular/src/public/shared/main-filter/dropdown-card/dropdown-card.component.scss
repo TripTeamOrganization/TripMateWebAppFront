@@ -1,21 +1,20 @@
 .filter-container {
-  border-radius: 10px;
-  overflow: hidden;
-  flex-wrap: wrap;
-  display: block;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 }
 
-mat-form-field .mat-select-value,
-mat-form-field .mat-select-trigger,
-mat-option {
-  border-radius: 10px;
+mat-form-field {
+  width: 100%;
+  max-width: 600px;
 }
 
 @media screen and (max-width: 768px) {
+  .dropdown-filter {
+    margin-top: 20px; /* Ajusta este valor según tus necesidades */
+    align-items: stretch;
+  }
+
   mat-form-field {
-    display: block;
-    margin-top: 10px;
-    flex-direction: column;
+    width: 100%;
   }
 }
