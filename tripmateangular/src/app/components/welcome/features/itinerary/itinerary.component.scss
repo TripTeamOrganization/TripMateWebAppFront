@@ -23,25 +23,15 @@
   text-align: center;
   padding: 2px;
   font-weight: bold;
-
-
   padding-inline: 1em;
   padding-block: 0.8em;
-
   margin-bottom: 80px;
   border-radius:1vh;
-
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-
-
   font-size: 3rem;
-
   color: white;
-
-
-
+  line-height: 1.2;
 }
-
 
 .header {
   display: flex;
@@ -49,20 +39,19 @@
   align-items: center;
   margin-top: 200px;
   margin-bottom: 100px;
-
-
+  line-height: 1.2;
+  text-align: center;
+  align-content: center;
 }
 
 .title1-border span {
   padding: 5px;
   font-weight: bold;
-
   margin-bottom: 80px;
   font-size: 3rem;
 }
 
 button {
-
   background-color: #3a6cec;
   color: white;
   padding: 10px 20px;
@@ -72,12 +61,11 @@ button {
   font-size: 1rem;
   /* Cambia margin-left a margin-right */
   margin-right: 100px;
+  margin-top: 20px;
 }
 
 .arrow-left, .arrow-right {
   position: relative;
-
-
 }
 
 .arrow-left {
@@ -91,4 +79,42 @@ button {
 .calendar-container {
   display: flex;
   align-items: center;
+}
+.button{
+  //que valla debajo del titulo
+  display: flex;
+  padding-left: 70px;
+}
+@media screen and (max-width: 999px) {
+  .calendar-container {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .header {
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  button {
+    margin-right: 0; // Elimina el margen derecho
+    margin-top: 20px; // Añade un margen superior para separar el botón del título
+  }
+  .week-calendar {
+    flex-wrap: wrap;
+  }
+
+  .week-calendar .day {
+    flex: 1 0 50%;  // Esto hace que cada día ocupe el 50% del ancho del contenedor
+  }
+
+  .arrow-left{
+    margin-bottom: 10px;
+  }
+  .arrow-right {
+    width: 30px;  // Ajusta el tamaño de las flechas
+    height: 30px;
+    //que vallan separadas del clendario
+  }
 }
