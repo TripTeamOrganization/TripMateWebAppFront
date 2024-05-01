@@ -6,13 +6,15 @@
     0px -3px 5px rgba(0, 0, 0, 0.1),
     3px 0px 5px rgba(0, 0, 0, 0.1),
     -3px 0px 5px rgba(0, 0, 0, 0.1);
-  display: grid;
   grid-template-columns: auto 3.5fr;
   padding: 2.3%;
   grid-column-gap: 1vw;
   max-height: 30vw;
   max-width: 30vw;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 .imagecontainer{
   grid-column-start: 1;
@@ -219,111 +221,9 @@
   }
 
 }
-@media (max-width: 1079px){
-.boton{
-  display: none;
-}
-}
-@media (max-width: 808px){
-  .description{
-    display: none;
-  }
-  .boton{
-    display: flex;
-  }
-  .cardmain{
-    display: flex;
-  }
-  .textcontain{
-    display: flex;
-  }
-  .imagecontainer{
-    display: block;
-  }
-  .svgclass{
-    display: none;
-  }
-}
-@media (max-width: 500px) {
-  .cardmain {
-    display: grid;
-    max-height: 100vw;
-
-  }
-  .textcontain {
-    display: grid;
-    grid-area: contenido;
-    grid-template-areas: "title price" "place ." "description description" "imagen imagen" "button button";
-    grid-template-columns: 1fr 0.5fr;
-
-  }
-
-  .title {
-    grid-area: title;
-    font-size: 0.8em;
-    line-height: 1;
-  }
-
-  .price {
-    display: flex;
-    grid-area: price;
-    flex-wrap: wrap;
-    font-size: 0.7rem;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .mat-subtitle-1 {
-    display: flex;
-    font-size: 0.58rem;
-    grid-area: place;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    justify-content: left;
-    margin-right: auto;
-  }
-
-  .description {
-    display: flex;
-    font-size: 0.5rem;
-    grid-area: description;
-    justify-content: center;
+@media screen and (max-width: 768px) {
+  .imagecontainer, .textcontain {
     width: 100%;
-    margin:0;
-
-  }
-
-  .imagecontainer {
-    display:grid;
-    grid-area: imagen;
-    justify-content: center; /* Centrar horizontalmente */
-
-  }
-
-  .imagen {
-    display:grid;
-    max-width: 100%; /* Ensure image fits within container */
-    height: 120px; /* Ensure image fits within container */
-    grid-area: imagen;
-    margin-top:42vw;
-    margin-right: 30vw;
-    margin-left: 30vw;
-    border-radius: 30px;
-  }
-
-  .boton {
-    display: flex;
-    grid-area: button;
-    width: 55%;
-    height: 30%;
-    padding: 0;
-    font-size: 0.8em;
-    font-weight: normal;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    letter-spacing:0.06em;
   }
 }
 

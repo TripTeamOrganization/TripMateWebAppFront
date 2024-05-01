@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
+  background-image: url('../../../../../assets/images/fondo.jpg');
   background-size: cover;
   background-position: center;
-  background-image: url('../../../../../assets/images/fondo.jpg');
   margin: 0;
   padding: 0;
-
 }
 
 a {
@@ -119,9 +123,9 @@ a {
   text-align: center;
   max-width: 600px;
   width: 90%;
-  height: auto;
   align-items: center;
   transform: scale(0.85);
+  margin-top: 150px;
 }
 
 .registration .title {
@@ -266,22 +270,9 @@ a {
   .main .como-funciona-image {
     display: none;
   }
-
-  @media screen and (max-width: 992px) {}
 }
 
 @media screen and (max-width: 768px) {
-  .contenedor {
-    grid-template-columns: 1fr;
-
-    grid-template-rows: auto auto;
-
-    grid-template-areas:
-            "header"
-            "menu"
-            "contenido";
-
-  }
 
   .header {
     padding: 20px;
@@ -332,4 +323,5 @@ a {
   .main .como-funciona button.btn-empezar {
     display: block;
   }
+
 }
