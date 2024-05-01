@@ -1,16 +1,4 @@
-/*.center-elements {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-}
 
-.center-elements p {
-  margin-bottom: 6rem;
-  margin-top: 18rem;
-  font-family: Roboto, Asap;
-  font-size: 5rem;
-}*/
 .center-elements h1 {
   margin-bottom: 20px;
   margin-top: 180px;
@@ -30,6 +18,8 @@
 .center-elements .button-form {
   width: 100%;
   max-width: 300px;
+  background-color: black;
+  color: white;
 }
 
 @media screen and (max-width: 668px) {
