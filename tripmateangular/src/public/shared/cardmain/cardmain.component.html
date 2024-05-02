@@ -1,5 +1,5 @@
 @if (!isMobileView){
-<div class="cardmain" [style.max-width.vw]="maxWidth" [style.max-height.vw]="maxHeight">
+<div class="cardmain" [style.width.vw]="80" [style.height.vh]="30">
   <div class="imagecontainer">
     <img class="imagen" [src]="sourceimage" alt="Imagen">
   </div>
@@ -20,7 +20,7 @@
 </div>
 }
 @else {
-  <div class="cardmain" [style.max-width.vw]="maxWidth" [style.max-height.vh]="100">
+  <div class="cardmain" [style.max-width.vw]="maxWidth" [style.max-height.vh]="80">
     <div class="linea">
       <span class="title">{{ title }}</span>
       <span class="price">{{price}}</span>
