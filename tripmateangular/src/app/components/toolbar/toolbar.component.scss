@@ -1,3 +1,5 @@
+
+
 h2 {
 }
 
@@ -81,7 +83,10 @@ mat-icon{
     display: block;
     color: white;
   }
-
+  .mat-toolbar {
+    position: relative;
+    z-index: 1000; /* Añadido z-index */
+  }
   .veinte  {
     display:none;
   }

@@ -1,37 +1,39 @@
-.card {
-  width: 500px;
-  height: 36vh;
-  border-radius: 20px;
-  color: black;
-}
 
-.card h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-}
+  .card {
+    width: 500px;
+    height: 40vh; /* aumentado de 36vh a 40vh */
+    border-radius: 20px;
+    color: black;
+  }
 
-.card h2 {
-  text-align: center;
-  margin-bottom: 5px;
-}
+  .card h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
 
-.card ul li {
-  margin-bottom: 10px;
-}
+  .card h2 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
 
-.button {
-  background-color: #3A6CEC;
-  width: 40%;
-  font-size: 30px;
-  border-radius: 50px;
-  height: 8vh;
-  color: white;
-  border: none;
-  display: block;
-  margin: 0 auto;
-}
+  .card ul li {
+    margin-bottom: 10px;
+  }
 
-.button:hover {
-  transform: scale(1.05);
-}
+  .button {
+    background-color: #3A6CEC;
+    width: 40%;
+    font-size: 20px; /* reducido de 30px a 20px */
+    border-radius: 50px;
+    height: 6vh; /* reducido de 8vh a 6vh */
+    color: white;
+    border: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+  }
+
