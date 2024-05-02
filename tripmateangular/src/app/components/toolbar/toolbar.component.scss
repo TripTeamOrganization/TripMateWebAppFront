@@ -68,6 +68,13 @@ h2 {
   text-decoration: none;
   list-style-type: none;
 }
+mat-icon{
+  color: white;
+}
+#mtToolBarMenu {
+  display: none;
+  color: white;
+}
 @media screen and (max-width: 768px) {
 
   #mtToolBarMenu {
@@ -92,5 +99,4 @@ h2 {
     list-style-type: none;
 
   }
-
 }
