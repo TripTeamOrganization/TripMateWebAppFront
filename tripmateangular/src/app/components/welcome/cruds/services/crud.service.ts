@@ -7,7 +7,6 @@ import {Activity} from "../../../../models/activity.model";
 import {Restaurant} from "../../../../models/restaurant.model";
 import {environment} from "../../../../../environments/environment";
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -20,7 +19,9 @@ export class CrudService {
   httpOptions = {
 
     headers: new HttpHeaders({
+
       'Content-type': 'application/json',
+
     })
 
   };
@@ -37,175 +38,131 @@ export class CrudService {
 
   //Funciones Accomodation
 
-  createAccommodation(data: any): Observable<any> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-    return this.http.post<any>(this.url + '/alojamientos', data, httpOptions);
-  }
-
-  getAccomodations(): Observable<Accommodation> {
-    return this.http.get<Accommodation>(this.url + '/alojamientos')
+  createAccomodation(item: any): Observable<Accommodation> {
+    // Realiza la solicitud POST al servidor
+    return this.http.post<Accommodation>(this.url + '/alojamientos', JSON.stringify(item), this.httpOptions)
       .pipe(
-        retry(2),
-        catchError(this.handleError)
+        retry(2), // Intenta la solicitud hasta 2 veces en caso de error
+        catchError(this.handleError) // Maneja los errores de la solicitud
       );
   }
 
-  updateAccomodation(id: string, newData: any): Observable<any> {
-    const url = `${this.url + '/alojamientos'}/${id}`;
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-    return this.http.put(url, newData, httpOptions)
-      .pipe(
-        catchError(error => {
-          console.error('Error updating accommodation:', error);
-          throw error; // Reenviar el error para que sea manejado por el componente
-        })
-      );
+  getAccomodations(): Observable<Accommodation>{
+
+    return this.http.
+    get<Accommodation>(this.url + '/alojamientos')
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  updateAccomodation(id: string, item: any): Observable<Accommodation>{
+    return this.http.
+    put<Accommodation>(this.url + '/alojamientos' + id, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
   deleteAccomodation(id: any): Observable<Accommodation> {
-    return this.http.delete<Accommodation>(this.url + '/alojamientos/' + id, this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      );
+    console.log(this.url + '/' + id)
+    console.log(id)
+    return this.http
+      .delete<Accommodation>(this.url + '/alojamientos' + id, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
-
 
   //Funciones Flights
 
-  createFlights(data: any): Observable<any> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-    return this.http.post<any>(this.url + '/vuelos', data, httpOptions);
-  }
-
-  getFlights(): Observable<Flight> {
-    return this.http.get<Flight>(this.url + '/vuelos')
+  createFlight(item: any): Observable<Flight> {
+    // Realiza la solicitud POST al servidor
+    return this.http.post<Flight>(this.url, JSON.stringify(item), this.httpOptions)
       .pipe(
-        retry(2),
-        catchError(this.handleError)
+        retry(2), // Intenta la solicitud hasta 2 veces en caso de error
+        catchError(this.handleError) // Maneja los errores de la solicitud
       );
   }
 
-  updateFlights(id: string, newData: any): Observable<any> {
-    const url = `${this.url + '/vuelos'}/${id}`;
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-    return this.http.put(url, newData, httpOptions)
-      .pipe(
-        catchError(error => {
-          console.error('Error updating:', error);
-          throw error;
-        })
-      );
+  getFlight(): Observable<Flight>{
+
+    return this.http.
+    get<Flight>(this.url)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
-  deleteFlights(id: any): Observable<Accommodation> {
-    return this.http.delete<Accommodation>(this.url + '/vuelos/' + id, this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      );
+  updateFlight(id: string, item: any): Observable<Flight>{
+    return this.http.
+    put<Flight>(this.url + '/' + id, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  deleteFlight(id: any): Observable<Flight> {
+    console.log(this.url + '/' + id)
+    console.log(id)
+    return this.http
+      .delete<Flight>(this.url + '/' + id, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
   //Funciones Activity
 
-  createActivity(data: any): Observable<any> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-    return this.http.post<any>(this.url + '/actividades', data, httpOptions);
-  }
-
-  getActivity(): Observable<Activity> {
-    return this.http.get<Activity>(this.url + '/actividades')
+  createActivity(item: any): Observable<Activity> {
+    // Realiza la solicitud POST al servidor
+    return this.http.post<Activity>(this.url, JSON.stringify(item), this.httpOptions)
       .pipe(
-        retry(2),
-        catchError(this.handleError)
+        retry(2), // Intenta la solicitud hasta 2 veces en caso de error
+        catchError(this.handleError) // Maneja los errores de la solicitud
       );
   }
 
-  updateActivity(id: string, newData: any): Observable<any> {
-    const url = `${this.url + 'actividades'}/${id}`;
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-    return this.http.put(url, newData, httpOptions)
-      .pipe(
-        catchError(error => {
-          console.error('Error updating :', error);
-          throw error;
-        })
-      );
+  getActivity(): Observable<Activity>{
+
+    return this.http.
+    get<Activity>(this.url)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  updateActivity(id: string, item: any): Observable<Activity>{
+    return this.http.
+    put<Activity>(this.url + '/' + id, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
   deleteActivity(id: any): Observable<Activity> {
-    return this.http.delete<Activity>(this.url + '/actividades/' + id, this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      );
+    console.log(this.url + '/' + id)
+    console.log(id)
+    return this.http
+      .delete<Activity>(this.url + '/' + id, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
   //Funciones Restaurants
 
-  createRestaurants(data: any): Observable<any> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-    return this.http.post<any>(this.url + '/restaurantes', data, httpOptions);
-  }
-
-  getRestaurants(): Observable<Restaurant> {
-    return this.http.get<Restaurant>(this.url + '/restaurantes')
+  createRestaurants(item: any): Observable<Restaurant> {
+    // Realiza la solicitud POST al servidor
+    return this.http.post<Restaurant>(this.url, JSON.stringify(item), this.httpOptions)
       .pipe(
-        retry(2),
-        catchError(this.handleError)
+        retry(2), // Intenta la solicitud hasta 2 veces en caso de error
+        catchError(this.handleError) // Maneja los errores de la solicitud
       );
   }
 
-  updateRestaurants(id: string, newData: any): Observable<any> {
-    const url = `${this.url + 'restaurantes'}/${id}`;
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    };
-    return this.http.put(url, newData, httpOptions)
-      .pipe(
-        catchError(error => {
-          console.error('Error updating :', error);
-          throw error;
-        })
-      );
+  getRestaurants(): Observable<Restaurant>{
+
+    return this.http.
+    get<Restaurant>(this.url)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  updateRestaurants(id: string, item: any): Observable<Restaurant>{
+    return this.http.
+    put<Restaurant>(this.url + '/' + id, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
 
   deleteRestaurants(id: any): Observable<Restaurant> {
-    return this.http.delete<Restaurant>(this.url + '/restaurantes/' + id, this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      );
+    console.log(this.url + '/' + id)
+    console.log(id)
+    return this.http
+      .delete<Restaurant>(this.url + '/' + id, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
   }
+
 
 }

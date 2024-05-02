@@ -50,14 +50,13 @@ import {CrudService} from "../../services/crud.service";
 })
 export class CrudAccomodationComponent implements OnInit{
 
-  @ViewChild('accomodationForm', {static: false}) offersForm!: NgForm; accommodationData: Accommodation;
+  @ViewChild('accomodationForm', {static: false}) offersForm!: NgForm; accommodationData!: Accommodation;
 
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombre','imagen','descripcion','precio','ubicacion','actions'];
+  displayedColumns: string[] = ['id', 'nombre', 'imagen', 'descripcion', 'precio','ubicacion', 'actions'];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   isEditmode = false;
-
   @ViewChild(MatSort) sort!: MatSort;
   showDeleteSuccessMessage = false;
 
@@ -77,7 +76,6 @@ export class CrudAccomodationComponent implements OnInit{
       this.dataSource.data = response;
     });
   }
-
   editItem(element: Accommodation){
     this.accommodationData = cloneDeep(element);
     this.isEditMode = true;
@@ -92,7 +90,7 @@ export class CrudAccomodationComponent implements OnInit{
     this.accomodationService.deleteAccomodation(id).subscribe(() => {
       this.dataSource.data = this.dataSource.data.filter((o: any) => o.id !== id);
       this.showDeleteSuccessMessage = true; // Mostrar el mensaje de éxito al eliminar la película
-      console.log("Se eliminó con éxito"); // Agregamos esta línea para verificar
+      console.log("Película eliminada con éxito"); // Agregamos esta línea para verificar
       setTimeout(() => {
         this.showDeleteSuccessMessage = false; // Ocultar el mensaje después de 3 segundos
       }, 3000);
@@ -100,25 +98,17 @@ export class CrudAccomodationComponent implements OnInit{
   }
 
 
-  addAccommodation() {
-    let maxID: number = 0;
-    maxID = this.dataSource.data.reduce((max: number, accommodation: any) => accommodation.id > max ? accommodation.id : max, 0);
+  addAccomodation(){
+    let maxID : number = 0;
+    maxID = this.dataSource.data.reduce((max:number,movie:any) =>movie.id > max ? movie.id : max,0);
     this.accommodationData.id = (Number(maxID) + 1).toString();
+    console.log(maxID)
 
-    console.log('Nuevo ID:', this.accommodationData.id);
-    console.log('Datos del alojamiento:', this.accommodationData);
-
-    this.accomodationService.createAccommodation(this.accommodationData).subscribe(
-      (response: any) => {
-        this.dataSource.data.push(response); // Aquí deberías agregar la respuesta del servicio, no this.accommodationData
-        this.dataSource.data = [...this.dataSource.data];
-      },
-      (error) => {
-        console.error('Error al agregar el alojamiento:', error);
-      }
-    );
+    this.accomodationService.createAccomodation(this.accommodationData).subscribe((response: any) => {
+      this.dataSource.data.push({...response});
+      this.dataSource.data =[...this.dataSource.data];
+    });
   }
-
 
   updateAccomodation(){
     this.accomodationService.updateAccomodation(this.accommodationData.id, this.accommodationData).subscribe((response: any) => {
@@ -130,13 +120,12 @@ export class CrudAccomodationComponent implements OnInit{
       });
     });
   }
-
   onSubmit(){
     if(this.offersForm.form.valid){
       if(this.isEditMode){
         this.updateAccomodation();
       }else{
-        this.addAccommodation();
+        this.addAccomodation();
       }
       this.cancelEdit();
     }else{

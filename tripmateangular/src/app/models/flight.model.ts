@@ -1,5 +1,4 @@
 export class Flight {
-  id: string;
   nombre: string;
   imagen: string;
   tipo: string;
@@ -8,7 +7,7 @@ export class Flight {
   precio: string;
   ubicacion: string;
 
-  constructor(id: string, nombre: string, imagen: string, tipo: string, duracion: string, ubicacion: string, precio: string, descripcion: string) {
+  constructor(nombre: string, imagen: string, tipo: string, duracion: string, ubicacion: string, precio: string, descripcion: string) {
     this.nombre = nombre;
     this.imagen = imagen;
     this.tipo = tipo;
@@ -16,6 +15,5 @@ export class Flight {
     this.ubicacion = ubicacion;
     this.precio = precio;
     this.descripcion = descripcion;
-    this.id = id;
   }
 }
