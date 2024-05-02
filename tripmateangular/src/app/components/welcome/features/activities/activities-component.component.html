@@ -6,8 +6,6 @@
 <group-cardgroup>
   @for (activity of filteredActivities.length > 0 ? filteredActivities : activities; track activity.nombre) {
     <app-cardmain
-      [maxWidth]="80"
-      [maxHeight]="30"
       starcount="0"
       [sourceimage]="activity.imagen"
       [title]="activity.nombre"

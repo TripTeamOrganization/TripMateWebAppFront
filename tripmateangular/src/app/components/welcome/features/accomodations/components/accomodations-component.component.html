@@ -7,8 +7,6 @@
   @for (accommodation of filteredAccomodations.length > 0 ? filteredAccomodations : accomodations; track accommodation.nombre) {
 
       <app-cardmain
-        [maxWidth]="50"
-        [maxHeight]="30"
         starcount="0"
         [sourceimage]="accommodation.imagen"
         [title]="accommodation.nombre"
