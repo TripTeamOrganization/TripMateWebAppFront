@@ -48,6 +48,7 @@ export class ActivitiesComponentComponent implements OnInit {
       (data: any) => {
         if (Array.isArray(data)) {
           this.activities = data.map(activity => new Activity(
+            activity.id,
             activity.nombre,
             activity.imagen,
             activity.descripcion,
