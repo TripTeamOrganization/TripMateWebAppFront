@@ -71,6 +71,10 @@ h2 {
 mat-icon{
   color: white;
 }
+#mtToolBarMenu {
+  display: none;
+  color: white;
+}
 @media screen and (max-width: 768px) {
 
   #mtToolBarMenu {

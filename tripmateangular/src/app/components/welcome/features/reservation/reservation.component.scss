@@ -1,9 +1,14 @@
+.parent-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 .container {
   width: 100%;
   max-width: 600px;
   background-color: rgba(152, 152, 152, 0.2);
   margin-top: 120px;
-
+  grid-column: 1;
 }
 
 .container1 {
@@ -12,7 +17,8 @@
   background-color: rgba(152, 152, 152, 0.2);
   margin-top: 40px;
   margin-bottom: 40px;
-flex-direction: column;
+  flex-direction: column;
+  grid-column: 1;
 }
 
 .container3 {
@@ -22,9 +28,10 @@ flex-direction: column;
   margin-top: 40px;
   margin-bottom: 40px;
   position: absolute;
-  top: 500px;
-  right: 300px;
+  top: 300px;
+  right: 100px;
   flex-direction: column;
+  grid-column: 2;
 }
 
 .container3 .input-group3 input {
@@ -45,9 +52,6 @@ h1 {
 .text {
   text-align: left;
   margin-left: 10px;
-
-
-
 }
 .input-group {
   display: flex;
@@ -70,17 +74,12 @@ h1 {
   margin-right: 100px;
   margin-left: 30px;
   font-weight: bold;
-
-
 }
 
 .field {
   flex: 1;
   margin-right: 10px;
 }
-
-
-
 label {
   display: block;
   margin-bottom: 5px;
@@ -107,7 +106,7 @@ button {
   cursor: pointer;
   border-radius: 1vh;
   font-size: 1rem;
-
+  grid-column: 1;
   margin-right: 100px;
 }
 
