@@ -28,7 +28,4 @@ export class MainFilterComponent {
     this.maxValue = event.max;
 
   }
-
-
-
 }

@@ -1,10 +1,11 @@
 <mat-slider
   [(ngModel)]="minValue"
+  name="slider"
   [min]="0"
   [max]="9999"
   style="width: 100%"
   (input)="onValueChange()"
 >
-  <input matSliderStartThumb [(ngModel)]="minValue"/>
-  <input matSliderEndThumb [(ngModel)]="maxValue" />
+  <input matSliderStartThumb [(ngModel)]="minValue" name="min"/>
+  <input matSliderEndThumb [(ngModel)]="maxValue" name="max"/>
 </mat-slider>
