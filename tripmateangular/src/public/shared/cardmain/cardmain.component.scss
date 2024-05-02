@@ -125,8 +125,6 @@
   color: black;
 }
 
-
-
 @media (max-width: 1540px) {
   .textcontain {
     grid-column-start: 2;
@@ -234,6 +232,7 @@
     align-items: center;
     width: 80vw;
     height: 100vh;
+    grid-gap: 1vh;
     margin:0;
     padding:0;
     grid-template-areas: "linea1" "linea2" "descripcion" "imagen" "boton";
@@ -262,8 +261,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
-    width: 400px;
+    height: 15vh;
+    width: 20vh;
     border-radius: 20%;
     grid-area:imagen;
     margin-left: auto;
@@ -283,9 +282,9 @@
 
   .mat-subtitle-1 {
     padding: 0;
-    margin: 0;
-    display: flex;
-    font-size: 0.4rem;
+    margin: 10px;
+    display: none;
+    font-size: 0.6rem;
     grid-area:mathiasjade1;
   }
 
@@ -293,7 +292,7 @@
     line-height: 1.5;
     margin-left: 3%;
     margin-right: 3%;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     display: flex;
     grid-area:descripcion;
 
@@ -310,7 +309,6 @@
     margin-left: auto;
     margin-right: auto;
     height: 5vh;
-
   }
 
   .price {
@@ -318,7 +316,7 @@
     flex-direction: row;
     margin-left: auto;
     margin-right: 2%;
-    font-size: 0.6em;
+    font-size: 0.9em;
     font-weight: bold;
     grid-area: barbara;
     align-items: center;
