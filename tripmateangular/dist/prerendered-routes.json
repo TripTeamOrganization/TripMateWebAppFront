@@ -1,0 +1,23 @@
+{
+  "routes": [
+    "/",
+    "/accommodations",
+    "/activities",
+    "/admin/accommodationCrud",
+    "/admin/activitiesCrud",
+    "/admin/flightsCrud",
+    "/admin/restaurantsCrud",
+    "/flights",
+    "/itinerary",
+    "/myjourneys",
+    "/payment",
+    "/payment-succesfully",
+    "/register",
+    "/reservation",
+    "/restaurants",
+    "/shoppingcart",
+    "/signin",
+    "/suscription",
+    "/userview"
+  ]
+}
