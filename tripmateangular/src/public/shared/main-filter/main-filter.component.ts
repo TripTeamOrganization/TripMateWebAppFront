@@ -22,11 +22,12 @@ export class MainFilterComponent {
 
   minValue: number = 0;
   maxValue: number = 9999;
+  @Input() callback!: (min: number, max: number) => void;
 
   updateValues(event: { min: number, max: number }) {
     this.minValue = event.min;
     this.maxValue = event.max;
-
+    this.callback(this.minValue, this.maxValue);
   }
 
 
