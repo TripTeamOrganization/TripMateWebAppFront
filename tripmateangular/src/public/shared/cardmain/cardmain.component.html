@@ -1,5 +1,6 @@
+@if (!isMobileView) {
 
-<div class="cardmain" [style.max-width.vw]="maxWidth" [style.max-height.vw]="maxHeight">
+  <div class="cardmain" [style.max-width.vw]="maxWidth" [style.max-height.vw]="maxHeight">
   <div class="imagecontainer">
     <img class="imagen" [src]="sourceimage" alt="Imagen">
   </div>
@@ -19,6 +20,18 @@
   </div>
 </div>
 
+} @else {
+<div class="cardmain" [style.max-width.vw]="maxWidth" [style.max-height.vw]="maxHeight">
+  <div class="linea">
+    <span class="title">{{ title }}</span>
+    <span class="price">{{price}}</span>
+  </div>
+  <div class="linea2">
+    <h4 class="mat-subtitle-1">{{ubicacion}}</h4>
+  </div>
+    <p class="description"> {{ descripcion }} </p>
+    <img class="imagen" [src]="sourceimage" alt="Imagen">
+    <button class="boton" (click)="GuardarEnCarrito()">{{ buttontext }}</button>
+</div>
 
-
-
+}
