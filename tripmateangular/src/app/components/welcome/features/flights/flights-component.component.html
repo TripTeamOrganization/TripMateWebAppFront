@@ -5,8 +5,6 @@
 <group-cardgroup>
   @for (flight of filteredFlights.length > 0 ? filteredFlights : flights; track flight.nombre) {
     <app-cardmain
-      [maxWidth]="80"
-      [maxHeight]="30"
       starcount="5"
       [price]="flight.precio"
       [sourceimage]="flight.imagen"
