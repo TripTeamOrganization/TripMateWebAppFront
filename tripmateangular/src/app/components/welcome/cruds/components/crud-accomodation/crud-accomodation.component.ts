@@ -17,6 +17,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import {MatToolbar} from "@angular/material/toolbar";
 import {Accommodation} from "../../../../../models/accomodation.model";
 import {CrudService} from "../../services/crud.service";
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-crud-accomodation',
@@ -41,7 +42,8 @@ import {CrudService} from "../../services/crud.service";
     MatRow,
     MatPaginator,
     MatButton,
-    MatToolbar
+    MatToolbar,
+    RouterLink
   ],
 
   templateUrl: './crud-accomodation.component.html',
@@ -62,7 +64,7 @@ export class CrudAccomodationComponent implements OnInit{
   showDeleteSuccessMessage = false;
 
   isEditMode = false; //Inicia si el formulario esta en modo edición
-  constructor(private accomodationService: CrudService){
+  constructor(private accomodationService: CrudService, private router: Router){
     this.accommodationData = {} as Accommodation;
   }
 

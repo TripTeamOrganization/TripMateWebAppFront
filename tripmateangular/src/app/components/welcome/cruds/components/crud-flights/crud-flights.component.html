@@ -25,6 +25,13 @@
     <button mat-raised-button color="primary">Add</button>
   }
 
+  <div class="row">
+    <button mat-raised-button color="warn" routerLink="/admin/accommodationCrud">Alojamientos</button>
+    <button mat-raised-button color="warn" routerLink="/admin/flightsCrud">Vuelos</button>
+    <button mat-raised-button color="warn" routerLink="/admin/activitiesCrud">Actividades</button>
+    <button mat-raised-button color="warn" routerLink="/admin/restaurantsCrud">Restaurantes</button>
+  </div>
+
 </form>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 

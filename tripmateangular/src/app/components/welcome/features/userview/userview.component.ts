@@ -15,12 +15,14 @@ import {TripmateApiService} from "../../../../services/tripmate-api.service";
 export class UserviewComponent implements OnInit {
   userData!: User;
   users: User[] = [];
+  selectedUser: User | undefined;
   constructor(private apiService: TripmateApiService, private router: Router) {
     this.userData = {} as User;
   }
 
   ngOnInit() {
     this.getUser();
+    this.selectedUser = this.users.find(user => user.nombre === 'Messo')
   }
 
   getUser() {
@@ -50,19 +52,7 @@ export class UserviewComponent implements OnInit {
     this.router.navigateByUrl('/suscription')
   }
 
-  MostrarCrudAccommodation(){
+  vistaAdmin(){
     this.router.navigateByUrl('/admin/accommodationCrud')
-  }
-
-  MostrarCrudFlights(){
-    this.router.navigateByUrl('/admin/flightsCrud')
-  }
-
-  MostrarCrudActivities(){
-    this.router.navigateByUrl('/admin/activitiesCrud')
-  }
-
-  MostrarCrudRestaurants(){
-    this.router.navigateByUrl('/admin/restaurantsCrud')
   }
 }

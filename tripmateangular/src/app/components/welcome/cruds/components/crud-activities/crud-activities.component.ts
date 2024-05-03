@@ -17,32 +17,34 @@ import { MatTableDataSource } from '@angular/material/table';
 import {MatToolbar} from "@angular/material/toolbar";
 import {CrudService} from "../../services/crud.service";
 import {Activity} from "../../../../../models/activity.model";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-crud-activities',
   standalone: true,
-  imports: [
-    MatFormField,
-    MatInput,
-    FormsModule,
-    CommonModule,
-    MatTableModule,
-    MatTable,
-    MatColumnDef,
-    MatHeaderCell,
-    ReactiveFormsModule,
-    HttpClientModule,
-    MatCell,
-    MatIcon,
-    MatSort,
-    MatIconButton,
-    MatInputModule,
-    MatHeaderRow,
-    MatRow,
-    MatPaginator,
-    MatButton,
-    MatToolbar
-  ],
+    imports: [
+        MatFormField,
+        MatInput,
+        FormsModule,
+        CommonModule,
+        MatTableModule,
+        MatTable,
+        MatColumnDef,
+        MatHeaderCell,
+        ReactiveFormsModule,
+        HttpClientModule,
+        MatCell,
+        MatIcon,
+        MatSort,
+        MatIconButton,
+        MatInputModule,
+        MatHeaderRow,
+        MatRow,
+        MatPaginator,
+        MatButton,
+        MatToolbar,
+        RouterLink
+    ],
 
   templateUrl: './crud-activities.component.html',
   styleUrl: './crud-activities.component.scss',
