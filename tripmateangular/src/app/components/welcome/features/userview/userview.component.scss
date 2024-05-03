@@ -16,6 +16,7 @@
   justify-content: center;
   gap: 150px;
   padding-top: 20px;
+  border: none;
 }
 
 mat-stroked-button {
@@ -36,6 +37,7 @@ button {
   border-radius: 40px;
   background-color: #BE0606;
   color: white;
+  border: none;
 }
 
 button:hover {

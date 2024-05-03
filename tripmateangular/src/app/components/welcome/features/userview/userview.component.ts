@@ -55,4 +55,8 @@ export class UserviewComponent implements OnInit {
   vistaAdmin(){
     this.router.navigateByUrl('/admin/accommodationCrud')
   }
+
+  vistaSigin(){
+    this.router.navigateByUrl('/signin')
+  }
 }

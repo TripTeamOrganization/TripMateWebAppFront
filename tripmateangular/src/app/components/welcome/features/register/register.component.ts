@@ -72,13 +72,13 @@ export class RegisterComponent {
       if (this.telefonoError) console.error('Error en el número de teléfono');
     }
     if (!this.nombreError && !this.apellidosError && !this.dniError && !this.emailError && !this.passwordError && !this.telefonoError) {
-      this.http.get('http://localhost:3000/users').pipe(map(response => response as any[]))
+      this.http.get('https://6630957fc92f351c03da5174.mockapi.io/tripmate/users').pipe(map(response => response as any[]))
         .subscribe(
           (users: any[]) => {
             if (users.some(user => user.email === this.register.email)) {
               this.emailExistsError = 'Este correo electrónico ya está en uso.';
             } else {
-              this.http.post('http://localhost:3000/users', this.register)
+              this.http.post('https://6630957fc92f351c03da5174.mockapi.io/tripmate/users', this.register)
                 .subscribe(
                   response => {
                     console.log(response);

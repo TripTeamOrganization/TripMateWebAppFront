@@ -55,7 +55,7 @@ export class CrudRestaurantComponent implements OnInit{
   @ViewChild('restaurantForm', {static: false}) restaurantForm!: NgForm; resturantsData: Restaurant;
 
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombre','imagen','descripcion','locationCost','cuisines','mustTry','actions'];
+  displayedColumns: string[] = ['id', 'nombre','imagen','locationCost','mustTry','actions'];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   isEditmode = false;
