@@ -19,9 +19,10 @@
       <button mat-stroked-button class="plan-button" (click)="MostrarPlanes()"><span>Obtener otro plan</span></button>
     </div>
     <div class="actions-container">
-      <button class="action-button"><span>Cambiar Email</span></button>
-      <button class="action-button"><span>Olvidé mi contraseña</span></button>
-      <button class="action-button"><span>Eliminar cuenta</span></button>
+      <button class="action-button" (click)="MostrarCrudAccommodation()"><span>Cambiar Email</span></button>
+      <button class="action-button" (click)="MostrarCrudFlights()"><span>Olvidé mi contraseña</span></button>
+      <button class="action-button" (click)="MostrarCrudActivities()"><span>Eliminar cuenta</span></button>
+      <button class="action-button" (click)="MostrarCrudRestaurants()"><span>Ingresar Celular</span></button>
     </div>
   </div>
 }

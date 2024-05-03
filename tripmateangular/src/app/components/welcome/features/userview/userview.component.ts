@@ -49,4 +49,20 @@ export class UserviewComponent implements OnInit {
   MostrarPlanes() {
     this.router.navigateByUrl('/suscription')
   }
+
+  MostrarCrudAccommodation(){
+    this.router.navigateByUrl('/admin/accommodationCrud')
+  }
+
+  MostrarCrudFlights(){
+    this.router.navigateByUrl('/admin/flightsCrud')
+  }
+
+  MostrarCrudActivities(){
+    this.router.navigateByUrl('/admin/activitiesCrud')
+  }
+
+  MostrarCrudRestaurants(){
+    this.router.navigateByUrl('/admin/restaurantsCrud')
+  }
 }
