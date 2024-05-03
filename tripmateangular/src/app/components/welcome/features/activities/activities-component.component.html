@@ -6,7 +6,7 @@
 <group-cardgroup>
   @for (activity of filteredActivities.length > 0 ? filteredActivities : activities; track activity.nombre) {
     <app-cardmain
-      starcount="0"
+      starcount="4"
       [sourceimage]="activity.imagen"
       [title]="activity.nombre"
       [ubicacion]="activity.ubicacion"

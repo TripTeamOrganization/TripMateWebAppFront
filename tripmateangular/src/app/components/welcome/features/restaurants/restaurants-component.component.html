@@ -7,7 +7,7 @@
   <div *ngFor="let restaurant of filteredRestaurants; let i = index;" role="list">
     <ng-container *ngIf="i < filteredRestaurants.length">
       <app-cardmain
-        starcount="0"
+        starcount="5"
         [sourceimage]="restaurant.imagen"
         [title]="restaurant.nombre"
         [price]="restaurant.mustTry"
