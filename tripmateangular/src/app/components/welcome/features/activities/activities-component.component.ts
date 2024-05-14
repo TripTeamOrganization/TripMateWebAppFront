@@ -35,6 +35,9 @@ export class ActivitiesComponentComponent implements OnInit {
   activityData: Activity;
   filteredActivities: Activity[] = [];
 
+  minLimit: number = 0;
+  maxLimit: number = 999;
+
   constructor(private apiservice: TripmateApiService) {
     this.activityData = {} as Activity;
   }
@@ -43,10 +46,22 @@ export class ActivitiesComponentComponent implements OnInit {
     this.getActivities();
   }
 
+  getValues(event: { min: number, max: number }) {
+    //console.log('minValue in restaurant:',  event.min);
+    //console.log('maxValue in restaurant:',  event.max);
+
+    this.minLimit = event.min;
+    this.maxLimit = event.max;
+
+    this.getActivities();
+  }
+
   getActivities() {
     this.apiservice.getActivities().subscribe(
       (data: any) => {
         if (Array.isArray(data)) {
+          this.activities = [];
+        this.filteredActivities = [];
           this.activities = data.map(activity => new Activity(
             activity.id,
             activity.nombre,
@@ -54,6 +69,8 @@ export class ActivitiesComponentComponent implements OnInit {
             activity.descripcion,
             activity.ubicacion,
             activity.precio
+            //this.activities.push(newActivity);
+          //this.filteredActivities.push(newActivity);
           ));
         } else {
           console.error('El formato de datos recibido no es un array.');
@@ -63,6 +80,21 @@ export class ActivitiesComponentComponent implements OnInit {
         console.error('Error al obtener datos de actividades:', error);
       }
     );
+    //filtrar con los valores mín y max:
+    console.log('filtrados:', this.filteredActivities);
+
+    this.filteredActivities = [];
+    this.activities.forEach((value: Activity) => {
+        console.log('id in integer', eval(value.id));
+       const precio = eval(value.id);
+
+       if (precio >= this.minLimit && precio <= this.maxLimit)
+       {
+          this.filteredActivities.push(value);
+       }
+    });
+
+    console.log(this.activities);
   }
 
   searchHandler(searchQuery: string) {
