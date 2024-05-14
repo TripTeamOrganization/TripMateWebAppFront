@@ -20,9 +20,22 @@ export class RestaurantsComponentComponent implements OnInit {
   restaurants: Restaurant[] = [];
   filteredRestaurants: Restaurant[] = [];
 
+  minLimit: number = 0;
+  maxLimit: number = 999;
+
   constructor(private ApiService: TripmateApiService) {}
 
   ngOnInit() {
+    this.getRestaurants();
+  }
+
+  getValues(event: { min: number, max: number }) {
+    //console.log('minValue in restaurant:',  event.min);
+    //console.log('maxValue in restaurant:',  event.max);
+
+    this.minLimit = event.min;
+    this.maxLimit = event.max;
+
     this.getRestaurants();
   }
 
@@ -48,6 +61,21 @@ export class RestaurantsComponentComponent implements OnInit {
       } else {
         console.error('El formato de datos recibido no es un array.');
       }
+
+      //filtrar con los valores mín y max:
+      console.log('filtrados:', this.filteredRestaurants);
+
+      this.filteredRestaurants = [];
+      this.restaurants.forEach((value: Restaurant) => {
+          console.log('id in integer', eval(value.id));
+         const precio = eval(value.id);
+
+         if (precio >= this.minLimit && precio <= this.maxLimit)
+         {
+            this.filteredRestaurants.push(value);
+         }
+      });
+
       console.log(this.restaurants);
     });
   }

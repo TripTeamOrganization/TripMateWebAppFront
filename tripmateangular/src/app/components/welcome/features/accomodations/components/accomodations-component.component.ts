@@ -35,7 +35,20 @@ export class AccomodationsComponentComponent implements OnInit {
     this.accomodationData = {} as Accommodation;
   }
 
+  minLimit: number = 0;
+  maxLimit: number = 999;
+
   ngOnInit() {
+    this.getAccommodations();
+  }
+
+  getValues(event: { min: number, max: number }) {
+    //console.log('minValue in restaurant:',  event.min);
+    //console.log('maxValue in restaurant:',  event.max);
+
+    this.minLimit = event.min;
+    this.maxLimit = event.max;
+
     this.getAccommodations();
   }
 
@@ -43,6 +56,8 @@ export class AccomodationsComponentComponent implements OnInit {
     this.apiservice.getAccomodations().subscribe(
       (data: any) => {
         if (Array.isArray(data)) {
+          this.accomodations = [];
+           this.filteredAccomodations = [];
           this.accomodations = data.map(accomodation => new Accommodation(
             accomodation.id,
             accomodation.nombre,
@@ -51,6 +66,8 @@ export class AccomodationsComponentComponent implements OnInit {
             accomodation.ubicacion,
             accomodation.precio
           ));
+          //this.accomodations.push(newAccomodation);
+          //this.filteredAccomodations.push(newAccomodation);
         } else {
           console.error('El formato de datos recibido no es un array.');
         }
@@ -59,6 +76,21 @@ export class AccomodationsComponentComponent implements OnInit {
         console.error('Error al obtener datos de actividades:', error);
       }
     );
+    //filtrar con los valores mín y max:
+    console.log('filtrados:', this.filteredAccomodations);
+
+    this.filteredAccomodations = [];
+    this.accomodations.forEach((value: Accommodation) => {
+        console.log('id in integer', eval(value.id));
+       const precio = eval(value.id);
+
+       if (precio >= this.minLimit && precio <= this.maxLimit)
+       {
+          this.filteredAccomodations.push(value);
+       }
+    });
+
+    console.log(this.accomodations);
   }
 
   searchHandler(searchQuery: any) {
