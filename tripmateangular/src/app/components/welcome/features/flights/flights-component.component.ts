@@ -24,9 +24,22 @@ export class FlightsComponentComponent implements OnInit {
   filteredFlights: Flight[] = [];
   searchTimer: any; // Declarar la propiedad searchTimer
 
+  minLimit: number = 0;
+  maxLimit: number = 999;
+
   constructor(private allapisService: TripmateApiService, private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
+    this.getFlights();
+  }
+
+  getValues(event: { min: number, max: number }) {
+    //console.log('minValue in restaurant:',  event.min);
+    //console.log('maxValue in restaurant:',  event.max);
+
+    this.minLimit = event.min;
+    this.maxLimit = event.max;
+
     this.getFlights();
   }
 
@@ -34,6 +47,8 @@ export class FlightsComponentComponent implements OnInit {
     this.allapisService.getFlights().subscribe(
       (data: any) => {
         if (Array.isArray(data)) {
+          this.flights = [];
+          this.filteredFlights = [];
           this.flights = data.map(flight => new Flight(
             flight.id,
             flight.nombre,
@@ -43,6 +58,8 @@ export class FlightsComponentComponent implements OnInit {
             flight.ubicacion,
             flight.precio,
             flight.descripcion
+          //this.flights.push(newFlight);
+          //this.filteredFlights.push(newFlight);
         ));
         } else {
           console.error('El formato de datos recibido no es un array.');
@@ -52,6 +69,21 @@ export class FlightsComponentComponent implements OnInit {
         console.error('Error al obtener datos de vuelos:', error);
       }
     );
+    //filtrar con los valores mín y max:
+    console.log('filtrados:', this.filteredFlights);
+
+    this.filteredFlights = [];
+    this.flights.forEach((value: Flight) => {
+        console.log('id in integer', eval(value.id));
+       const precio = eval(value.id);
+
+       if (precio >= this.minLimit && precio <= this.maxLimit)
+       {
+          this.filteredFlights.push(value);
+       }
+    });
+
+    console.log(this.flights);
   }
 
   searchHandler(searchQuery: any) {
