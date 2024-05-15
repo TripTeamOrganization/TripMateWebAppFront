@@ -4,13 +4,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.7); /* Color de fondo semitransparente */
-  color: white; /* Color del texto */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
   padding: 10px 20px;
   border-radius: 5px;
-  z-index: 9999; /* Asegura que esté por encima de otros elementos */
+  z-index: 9999;
   font-size: 16px;
-  animation: slideIn 0.5s ease forwards, fadeOut 2.5s ease forwards; /* Animaciones de entrada y salida */
+  animation: slideIn 0.5s ease forwards, fadeOut 2.5s ease forwards;
 }
 
 @keyframes slideIn {
