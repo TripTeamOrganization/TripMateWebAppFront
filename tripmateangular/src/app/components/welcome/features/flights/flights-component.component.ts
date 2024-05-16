@@ -9,6 +9,7 @@ import {SearchbarComponent} from "../../../../../public/shared/searchbar/searchb
 import {MainFilterComponent} from "../../../../../public/shared/main-filter/main-filter.component";
 import {CardgroupComponent} from "../../../../../public/shared/groups/cardgroup";
 import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.component";
+import {Accommodation} from "../../../../models/accomodation.model";
 
 @Component({
   selector: 'app-flights',
@@ -43,12 +44,22 @@ export class FlightsComponentComponent implements OnInit {
     this.getFlights();
   }
 
+  getPrice(priceInString: String): number {
+
+    //precioCadena: Desde $126
+    let price: number = 0;
+
+    //lógica de conversión:
+    const result = priceInString.split('$');
+    console.log('price in number:', parseInt(result[1]));
+
+    return parseInt(result[1]);
+    //((return price;
+  }
   getFlights() {
     this.allapisService.getFlights().subscribe(
       (data: any) => {
         if (Array.isArray(data)) {
-          this.flights = [];
-          this.filteredFlights = [];
           this.flights = data.map(flight => new Flight(
             flight.id,
             flight.nombre,
@@ -58,9 +69,18 @@ export class FlightsComponentComponent implements OnInit {
             flight.ubicacion,
             flight.precio,
             flight.descripcion
-          //this.flights.push(newFlight);
-          //this.filteredFlights.push(newFlight);
         ));
+          this.filteredFlights = [];
+
+          this.flights.forEach((value: Flight) => {
+
+            const precio: number = this.getPrice(value.precio);
+            if (precio >= this.minLimit && precio <= this.maxLimit)
+            {
+              this.filteredFlights.push(value);
+            }
+
+          });
         } else {
           console.error('El formato de datos recibido no es un array.');
         }
@@ -74,7 +94,7 @@ export class FlightsComponentComponent implements OnInit {
 
     this.filteredFlights = [];
     this.flights.forEach((value: Flight) => {
-        console.log('id in integer', eval(value.id));
+        console.log('id in integer', eval(value.precio));
        const precio = eval(value.id);
 
        if (precio >= this.minLimit && precio <= this.maxLimit)

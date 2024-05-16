@@ -21,7 +21,7 @@ export class RestaurantsComponentComponent implements OnInit {
   filteredRestaurants: Restaurant[] = [];
 
   minLimit: number = 0;
-  maxLimit: number = 999;
+  maxLimit: number = 9999;
 
   constructor(private ApiService: TripmateApiService) {}
 
@@ -37,6 +37,38 @@ export class RestaurantsComponentComponent implements OnInit {
     this.maxLimit = event.max;
 
     this.getRestaurants();
+  }
+
+  //Se utiliza en todas las páginas => compartido
+  getPrice(mustTry:  String) {
+
+
+    //funciones js a utilizar: split (string) , slice (array). length (string)
+    let price: number = 0;
+
+
+    // se separa un arreglo de dos:
+    const resultSplit = mustTry.split(' ');
+
+
+    //se tomar el valor final:
+    let priceInString = resultSplit[1];
+
+    //sólo e sla long de la cadena:
+    let stringLength = priceInString.length;
+
+    //se le quita el $ final
+    let priceComplete = priceInString.slice(0, stringLength - 1);
+
+    //console.log('length:', resultSplit[1].length - 1);
+    // console.log('resultSplit-1-slice-price', priceInString.slice(0, stringLength - 1));
+
+    //se convierte a number:
+    price =  eval(priceComplete);
+    //console.log('price in number:', price);
+
+    return price;
+
   }
 
   getRestaurants() {
@@ -67,13 +99,17 @@ export class RestaurantsComponentComponent implements OnInit {
 
       this.filteredRestaurants = [];
       this.restaurants.forEach((value: Restaurant) => {
-          console.log('id in integer', eval(value.id));
-         const precio = eval(value.id);
 
-         if (precio >= this.minLimit && precio <= this.maxLimit)
-         {
-            this.filteredRestaurants.push(value);
-         }
+        //eval = evaluar INTEGER => STRING.
+        console.log('mustTry  in integer', value.mustTry);
+        //console.log('mustTry  in integer', eval(value.id));
+        //const precio = eval(value.id);
+        const precio = this.getPrice(value.mustTry);
+
+        if (precio >= this.minLimit && precio <= this.maxLimit)
+        {
+          this.filteredRestaurants.push(value);
+        }
       });
 
       console.log(this.restaurants);

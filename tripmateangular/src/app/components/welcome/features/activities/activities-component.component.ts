@@ -8,6 +8,7 @@ import {MainFilterComponent} from "../../../../../public/shared/main-filter/main
 import {SearchbarComponent} from "../../../../../public/shared/searchbar/searchbar.component";
 import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.component";
 import {CardgroupComponent} from "../../../../../public/shared/groups/cardgroup";
+import {Accommodation} from "../../../../models/accomodation.model";
 
 @Component({
   selector: 'app-activities',
@@ -47,21 +48,44 @@ export class ActivitiesComponentComponent implements OnInit {
   }
 
   getValues(event: { min: number, max: number }) {
-    //console.log('minValue in restaurant:',  event.min);
-    //console.log('maxValue in restaurant:',  event.max);
+    //console.log('minValue in actividades:',  event.min);
+    //console.log('maxValue in actividades:',  event.max);
 
     this.minLimit = event.min;
     this.maxLimit = event.max;
 
     this.getActivities();
   }
+  getPrice(mustTry: String): number {
+
+    let price: number = 0;
+
+    //$5 por persona
+    // se separa un arreglo de dos:
+    const resultSplit = mustTry.split(' ');
+
+    let priceInString = resultSplit[0];
+
+    //sólo es la long de la cadena:
+    let stringLength = priceInString.length;
+
+    //se le quita el $ inicial
+    let priceComplete = priceInString.slice(1);
+
+    //console.log('length:', resultSplit[1].length - 1);
+    // console.log('resultSplit-1-slice-price', priceInString.slice(0, stringLength - 1));
+
+    //se convierte a number:
+    price =  eval(priceComplete);
+    //console.log('price in number:', price);
+
+    return price;
+  }
 
   getActivities() {
     this.apiservice.getActivities().subscribe(
       (data: any) => {
         if (Array.isArray(data)) {
-          this.activities = [];
-        this.filteredActivities = [];
           this.activities = data.map(activity => new Activity(
             activity.id,
             activity.nombre,
@@ -69,9 +93,18 @@ export class ActivitiesComponentComponent implements OnInit {
             activity.descripcion,
             activity.ubicacion,
             activity.precio
-            //this.activities.push(newActivity);
-          //this.filteredActivities.push(newActivity);
+
           ));
+          this.filteredActivities = [];
+          this.activities.forEach((value: Activity) => {
+
+            const precio: number = this.getPrice(value.precio);
+            if (precio >= this.minLimit && precio <= this.maxLimit)
+            {
+              this.filteredActivities.push(value);
+            }
+
+          });
         } else {
           console.error('El formato de datos recibido no es un array.');
         }
@@ -80,21 +113,6 @@ export class ActivitiesComponentComponent implements OnInit {
         console.error('Error al obtener datos de actividades:', error);
       }
     );
-    //filtrar con los valores mín y max:
-    console.log('filtrados:', this.filteredActivities);
-
-    this.filteredActivities = [];
-    this.activities.forEach((value: Activity) => {
-        console.log('id in integer', eval(value.id));
-       const precio = eval(value.id);
-
-       if (precio >= this.minLimit && precio <= this.maxLimit)
-       {
-          this.filteredActivities.push(value);
-       }
-    });
-
-    console.log(this.activities);
   }
 
   searchHandler(searchQuery: string) {

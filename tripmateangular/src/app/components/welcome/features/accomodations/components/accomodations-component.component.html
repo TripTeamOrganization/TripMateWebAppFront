@@ -1,20 +1,20 @@
 <app-searchbar textoplaceholder="Busca tu alojamiento"
                (searchChanged)="searchHandler($event)"></app-searchbar>
 
-<app-main-filter title="por noche" filterTitle="Camas" filter1="1" filter2="2" filter3="3" filter4="4" filter5="5"></app-main-filter>
+<app-main-filter (valuesChangedInFilter)="getValues($event)" title="por noche" filterTitle="Camas" filter1="1" filter2="2" filter3="3" filter4="4" filter5="5"></app-main-filter>
 
 <group-cardgroup>
   @for (accommodation of filteredAccomodations.length > 0 ? filteredAccomodations : accomodations; track accommodation.nombre) {
 
-      <app-cardmain
-        starcount="5"
-        [sourceimage]="accommodation.imagen"
-        [title]="accommodation.nombre"
-        [price]="accommodation.precio"
-        [ubicacion]="accommodation.ubicacion"
-        [descripcion]="accommodation.descripcion ? accommodation.descripcion : ''"
-        buttontext="Seleccionar">
-      </app-cardmain>
+    <app-cardmain
+      starcount="5"
+      [sourceimage]="accommodation.imagen"
+      [title]="accommodation.nombre"
+      [price]="accommodation.precio"
+      [ubicacion]="accommodation.ubicacion"
+      [descripcion]="accommodation.descripcion ? accommodation.descripcion : ''"
+      buttontext="Seleccionar">
+    </app-cardmain>
 
   } @empty {
     <p>Cargando... (Esto podría tardas unos segundos)</p>
