@@ -1,7 +1,7 @@
 <app-searchbar textoplaceholder="Selecciona tu Restaurante"
                (searchChanged)="searchHandler($event)"></app-searchbar>
 
-<app-main-filter title="por platos" filterTitle="Horario de apertura" filter1="7:00 am" filter2="9:00 am" filter3="11:00 am" filter4="1:00 pm" filter5="3:00 pm"></app-main-filter>
+<app-main-filter (valuesChangedInFilter)="getValues($event)" title="por platos" filterTitle="Horario de apertura" filter1="7:00 am" filter2="9:00 am" filter3="11:00 am" filter4="1:00 pm" filter5="3:00 pm"></app-main-filter>
 
 <group-cardgroup>
   <div *ngFor="let restaurant of filteredRestaurants; let i = index;" role="list">

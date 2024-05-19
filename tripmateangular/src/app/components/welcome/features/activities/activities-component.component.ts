@@ -8,6 +8,7 @@ import {MainFilterComponent} from "../../../../../public/shared/main-filter/main
 import {SearchbarComponent} from "../../../../../public/shared/searchbar/searchbar.component";
 import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.component";
 import {CardgroupComponent} from "../../../../../public/shared/groups/cardgroup";
+import {Accommodation} from "../../../../models/accomodation.model";
 
 @Component({
   selector: 'app-activities',
@@ -35,12 +36,50 @@ export class ActivitiesComponentComponent implements OnInit {
   activityData: Activity;
   filteredActivities: Activity[] = [];
 
+  minLimit: number = 0;
+  maxLimit: number = 999;
+
   constructor(private apiservice: TripmateApiService) {
     this.activityData = {} as Activity;
   }
 
   ngOnInit() {
     this.getActivities();
+  }
+
+  getValues(event: { min: number, max: number }) {
+    //console.log('minValue in actividades:',  event.min);
+    //console.log('maxValue in actividades:',  event.max);
+
+    this.minLimit = event.min;
+    this.maxLimit = event.max;
+
+    this.getActivities();
+  }
+  getPrice(mustTry: String): number {
+
+    let price: number = 0;
+
+    //$5 por persona
+    // se separa un arreglo de dos:
+    const resultSplit = mustTry.split(' ');
+
+    let priceInString = resultSplit[0];
+
+    //sólo es la long de la cadena:
+    let stringLength = priceInString.length;
+
+    //se le quita el $ inicial
+    let priceComplete = priceInString.slice(1);
+
+    //console.log('length:', resultSplit[1].length - 1);
+    // console.log('resultSplit-1-slice-price', priceInString.slice(0, stringLength - 1));
+
+    //se convierte a number:
+    price =  eval(priceComplete);
+    //console.log('price in number:', price);
+
+    return price;
   }
 
   getActivities() {
@@ -54,7 +93,18 @@ export class ActivitiesComponentComponent implements OnInit {
             activity.descripcion,
             activity.ubicacion,
             activity.precio
+
           ));
+          this.filteredActivities = [];
+          this.activities.forEach((value: Activity) => {
+
+            const precio: number = this.getPrice(value.precio);
+            if (precio >= this.minLimit && precio <= this.maxLimit)
+            {
+              this.filteredActivities.push(value);
+            }
+
+          });
         } else {
           console.error('El formato de datos recibido no es un array.');
         }

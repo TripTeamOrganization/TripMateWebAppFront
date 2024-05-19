@@ -15,11 +15,15 @@ import { FormsModule } from '@angular/forms';
 })
 export class RangeSliderComponent {
   minValue = 0;
-  maxValue = 9999;
+  maxValue = 999;
 
   @Output() valuesChanged = new EventEmitter<{ min: number, max: number }>();
 
   onValueChange() {
+    console.log('minValue in slider:',  this.minValue);
+    console.log('maxValue in slider:',  this.maxValue);
+
     this.valuesChanged.emit({ min: this.minValue, max: this.maxValue });
+    //{ minimo: th ,  maximo: }
   }
 }

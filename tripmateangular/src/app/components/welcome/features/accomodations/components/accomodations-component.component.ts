@@ -28,15 +28,44 @@ import {ItineraryComponent} from "../../itinerary/itinerary.component";
   styleUrl: './accomodations-component.component.scss'
 })
 export class AccomodationsComponentComponent implements OnInit {
+
+  //Variables:
   accomodationData: Accommodation;
   accomodations: Accommodation[] = [];
   filteredAccomodations: Accommodation[] = [];
+  minLimit: number = 0;
+  maxLimit: number = 999;
+
+
   constructor(private apiservice: TripmateApiService) {
     this.accomodationData = {} as Accommodation;
   }
 
   ngOnInit() {
     this.getAccommodations();
+  }
+
+  getValues(event: { min: number, max: number }) {
+    console.log('minValue in alojamientos:',  event.min);
+    console.log('maxValue in alojamientos',  event.max);
+
+    this.minLimit = event.min;
+    this.maxLimit = event.max;
+
+    this.getAccommodations();
+  }
+
+  getPrice(priceInString: String): number {
+
+    //precioCadena: S/ 543 ó $145.11 por noche
+    let price: number = 0;
+
+    //lógica de conversión:
+    const result = priceInString.split(' '); //['S/', '543', ó, ...]
+    //console.log('price in string:', result[1]);
+
+    return eval(result[1]);
+    //((return price;
   }
 
   getAccommodations() {
@@ -51,6 +80,24 @@ export class AccomodationsComponentComponent implements OnInit {
             accomodation.ubicacion,
             accomodation.precio
           ));
+
+          //actualización del filtro:
+          //Algoritmo: 1. limpiar el fitlro
+          //2.recorrer el arreglo y 3. filtrar los que se encuentran del rango del precio
+          //3. crear la función de acuerdo al formato del API
+
+          this.filteredAccomodations = [];
+
+          this.accomodations.forEach((value: Accommodation) => {
+
+            const precio: number = this.getPrice(value.precio);
+            if (precio >= this.minLimit && precio <= this.maxLimit)
+            {
+              this.filteredAccomodations.push(value);
+            }
+
+          });
+
         } else {
           console.error('El formato de datos recibido no es un array.');
         }
