@@ -1,0 +1,17 @@
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .container3 {
+    grid-column: 1 / -1; /* En móviles, va en la primera columna debajo del botón */
+  }
+  .mat-raised-button{
+    margin-left: 10px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .mat-table {
+    overflow-x: auto;
+  }
+}
