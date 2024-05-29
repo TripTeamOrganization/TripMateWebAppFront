@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output, HostListener, OnInit} from '@angular/core';
-import { NgClass, NgStyle } from "@angular/common";
+import {NgClass, NgIf, NgStyle} from "@angular/common";
 import { MatCard } from "@angular/material/card";
 import { StarsvgComponent } from "./starsvg/starsvg.component";
 import { ShoppingCartService } from "../../../app/services/shoppingcardService";
@@ -11,10 +11,11 @@ import { ShoppingCartService } from "../../../app/services/shoppingcardService";
     NgStyle,
     MatCard,
     NgClass,
-    StarsvgComponent
+    StarsvgComponent,
+    NgIf
   ],
   templateUrl: './cardmain.component.html',
-  styleUrls: ['./cardmain.component.scss']
+    styleUrls: ['./cardmain.component.scss']
 })
 export class CardmainComponent implements OnInit{
   @Input() maxWidth: number = 100;
@@ -26,9 +27,10 @@ export class CardmainComponent implements OnInit{
   @Input() price: string = '';
   @Input() starcount: string = '0';
   @Input() maxHeight: number = 100;
+  showAddedToCartToast = false;
 
   isMobileView = false;
-  constructor(private shoppingCartService: ShoppingCartService) {}
+  constructor(private shoppingCartService: ShoppingCartService) {} // Inyectar el servicio ToastrService
   ngOnInit() {
     this.checkWindowSize();
   }
@@ -60,6 +62,11 @@ export class CardmainComponent implements OnInit{
     };
     console.log('Elemento agregado al carrito :):', item);
     this.shoppingCartService.agregarAlCarrito(item);
+
+    this.showAddedToCartToast = true;
+    setTimeout(() => {
+      this.showAddedToCartToast = false;
+    }, 3000);
   }
 }
 
