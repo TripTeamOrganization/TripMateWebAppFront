@@ -76,6 +76,7 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
     this.notificationService.getUsers().subscribe((data: any) => {
         if(Array.isArray(data)) {
           this.users = data.map(user => new User(
+            user.id,
             user.dni,
             user.nombre,
             user.correo,
