@@ -1,4 +1,3 @@
-
 <div class="header">
   <h1 class="title1-border"><span>Mis Viajes</span></h1>
   <mat-card-actions>
@@ -28,12 +27,40 @@
 
   <!-- Calendario -->
   <div class="week-calendar">
-    <div class="day" *ngFor="let day of daysOfWeek; let i = index" (click)="selectDay(i)" [class.selected]="selectedDay === i">
-      <h2>{{day}}</h2>
-      <div class="itinerary">
+
+<!--
+      <div class="day" *ngFor="let day of daysOfWeek; let i = index" (click)="selectDay(i)" [class.selected]="selectedDay === i">
+        <h2>{{day}}</h2>
+        <div class="itinerary">
+        </div>
       </div>
-    </div>
+
+      <div class="day" *ngFor="let reservation of reservationsOfWeek; let i = index" >
+        <div class="itinerary">
+          {{ reservation}}
+        </div>
+      </div>-->
+    <table style="width: 100%; border-spacing: 0"  >
+      <thead>
+      <tr>
+        <th  class="day" *ngFor="let day of daysOfWeek; let i = index" (click)="selectDay(i)" [class.selected]="selectedDay === i">
+          <h2>{{day }}</h2>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td   class="day"  *ngFor="let reservation of reservationsOfWeek; let i = index">
+            {{ reservation }}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
   </div>
+
+
+
 
 
   <!-- Flecha a la derecha -->
@@ -52,5 +79,3 @@
     </svg>
   </div>
 </div>
-
-
