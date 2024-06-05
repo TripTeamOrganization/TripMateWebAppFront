@@ -3,6 +3,7 @@
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
+  flex-direction: row;
 }
 
 .day {
@@ -11,6 +12,7 @@
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
+  width: calc(100% / 7);
 }
 
 .selected {
@@ -101,9 +103,7 @@ button {
     margin-right: 0; // Elimina el margen derecho
     margin-top: 20px; // Añade un margen superior para separar el botón del título
   }
-  .week-calendar {
-    flex-wrap: wrap;
-  }
+
 
   .week-calendar .day {
     flex: 1 0 50%;  // Esto hace que cada día ocupe el 50% del ancho del contenedor

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ReservationsService {
-  reservas: any[] = [];
+   reservas: any[] = localStorage.getItem('array') == null ? [] :  JSON.parse(localStorage.getItem('array')!);
 
   agregarAReserva(item: any) {
     this.reservas.push(item);
@@ -13,6 +13,11 @@ export class ReservationsService {
     if (contador % 3 === 0) {
       console.log("Recuento de cantidad de reserva: ", contador);
     }
+
+    console.log('array reservas:', this.reservas);
+
+    //CAMBIAR A BACKEND. LLAMAR AL SERVICIO Y GUARDAR LAS RESERVAS
+    localStorage.setItem('array', JSON.stringify(this.reservas));
   }
 
   eliminarDeReserva(index: number) {
