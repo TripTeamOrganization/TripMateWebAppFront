@@ -14,6 +14,15 @@ import { ReservationComponent } from './components/welcome/features/reservation/
 import { ItineraryComponent } from './components/welcome/features/itinerary/itinerary.component';
 import { PlansComponent } from './components/welcome/features/plans/plans.component';
 import { PaymentSuccesfullyComponent } from './components/welcome/features/payment-succesfully/payment-succesfully.component';
+import {PaymentComponent} from "./components/welcome/features/payment/payment.component";
+import {ForgotPasswordComponent} from "./components/welcome/features/forgotpassword/forgotpassword.component";
+import {
+  CrudAccomodationComponent
+} from "./components/welcome/cruds/components/crud-accomodation/crud-accomodation.component";
+import {CrudFlightsComponent} from "./components/welcome/cruds/components/crud-flights/crud-flights.component";
+import {CrudActivitiesComponent} from "./components/welcome/cruds/components/crud-activities/crud-activities.component";
+import {CrudRestaurantComponent} from "./components/welcome/cruds/components/crud-restaurant/crud-restaurant.component";
+import {ChangeEmailComponent} from "./components/welcome/features/change-email/change-email.component";
 
 
 export const routes: Routes = [
