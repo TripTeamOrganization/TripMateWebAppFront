@@ -32,4 +32,9 @@ export class TripmateApiService {
   getUsers() {
     return this.http.get<any>(`${this.url}/users`);
   }
+
+  updateEmail(userId: string, newEmail: string) {
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.http.put(`${this.url}/users/${userId}`, { email: newEmail }, { headers });
+  }
 }

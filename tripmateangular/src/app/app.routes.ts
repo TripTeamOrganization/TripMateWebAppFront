@@ -24,6 +24,7 @@ import {CrudAccomodationComponent} from "./components/welcome/cruds/components/c
 import {CrudFlightsComponent} from "./components/welcome/cruds/components/crud-flights/crud-flights.component";
 import {CrudActivitiesComponent} from "./components/welcome/cruds/components/crud-activities/crud-activities.component";
 import {CrudRestaurantComponent} from "./components/welcome/cruds/components/crud-restaurant/crud-restaurant.component";
+import {ChangeEmailComponent} from "./components/welcome/features/change-email/change-email.component";
 
 export const routes: Routes = [
   {
@@ -49,7 +50,8 @@ export const routes: Routes = [
       { path: 'admin/accommodationCrud', component: CrudAccomodationComponent },
       { path: 'admin/flightsCrud', component: CrudFlightsComponent },
       { path: 'admin/activitiesCrud', component: CrudActivitiesComponent },
-      { path: 'admin/restaurantsCrud', component: CrudRestaurantComponent }
+      { path: 'admin/restaurantsCrud', component: CrudRestaurantComponent },
+      { path: 'change-email', component: ChangeEmailComponent }
     ]
   }
 ];
