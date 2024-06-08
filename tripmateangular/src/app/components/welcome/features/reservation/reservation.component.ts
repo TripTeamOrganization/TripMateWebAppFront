@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MatButton} from "@angular/material/button";
 import {MatCard, MatCardActions, MatCardImage} from "@angular/material/card";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-reservation',
@@ -9,7 +10,8 @@ import {MatCard, MatCardActions, MatCardImage} from "@angular/material/card";
     MatButton,
     MatCard,
     MatCardActions,
-    MatCardImage
+    MatCardImage,
+    RouterLink
   ],
   templateUrl: './reservation.component.html',
   styleUrl: './reservation.component.scss'
