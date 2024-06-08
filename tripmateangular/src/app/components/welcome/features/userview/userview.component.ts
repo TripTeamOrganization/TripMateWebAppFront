@@ -64,4 +64,8 @@ export class UserviewComponent implements OnInit {
   vistaSigin(){
     this.router.navigateByUrl('/signin')
   }
+
+  vistaChangeEmail(){
+    this.router.navigateByUrl('/change-email')
+  }
 }
