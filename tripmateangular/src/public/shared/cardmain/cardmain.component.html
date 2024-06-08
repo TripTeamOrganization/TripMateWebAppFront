@@ -33,6 +33,9 @@
     <button class="boton" (click)="GuardarEnCarrito()">{{ buttontext }}</button>
   </div>
 }
+<div class="toast" *ngIf="showAddedToCartToast">
+  Se ha agregado al carrito
+</div>
 
 
 

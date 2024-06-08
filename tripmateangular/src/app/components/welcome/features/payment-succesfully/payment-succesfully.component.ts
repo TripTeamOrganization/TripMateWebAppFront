@@ -18,4 +18,7 @@ export class PaymentSuccesfullyComponent {
   onSubmitButton(){
     this.router.navigate(['accommodations']);
   }
+  onSubmitButton2() {
+    this.router.navigate(['/itinerary']);
+  }
 }

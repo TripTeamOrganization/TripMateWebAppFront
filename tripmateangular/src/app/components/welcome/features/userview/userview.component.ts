@@ -29,6 +29,7 @@ export class UserviewComponent implements OnInit {
     this.apiService.getUsers().subscribe((data: any) => {
       if(Array.isArray(data)) {
         this.users = data.map(user => new User(
+          user.id,
           user.dni,
           user.nombre,
           user.correo,
@@ -54,6 +55,10 @@ export class UserviewComponent implements OnInit {
 
   vistaAdmin(){
     this.router.navigateByUrl('/admin/accommodationCrud')
+  }
+
+  vistaForgotPassword(){
+    this.router.navigateByUrl('/forgot-password')
   }
 
   vistaSigin(){
