@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from "@angular/material/button";
-import {Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import {User} from "../../../../models/user.model";
 import {TripmateApiService} from "../../../../services/tripmate-api.service";
 
 @Component({
   selector: 'app-userview',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule],
+  imports: [MatCardModule, MatButtonModule, RouterLink],
   templateUrl: './userview.component.html',
   styleUrl: './userview.component.scss'
 })

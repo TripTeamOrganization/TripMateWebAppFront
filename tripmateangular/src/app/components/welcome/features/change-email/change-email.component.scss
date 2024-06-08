@@ -1,0 +1,46 @@
+mat-card {
+  width: 58vh;
+  height: 38vh;
+  margin: 0 auto;
+  align-items: center;
+  gap: 3vh;
+}
+
+.header-container {
+  width: 100%;
+  background-color: #007bff;
+}
+
+mat-card-header {
+  width: 80%;
+  margin: 0 auto;
+}
+
+mat-card-title {
+  margin-top: 1.5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+mat-card-content,
+mat-card-actions {
+  margin-top: 1.5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-form-field {
+  width: 150%; /* Controla el ancho del campo de entrada */
+  margin: 0 auto; /* Centra el campo de entrada */
+}
+
+button {
+  width: 50%;
+  margin-top: 20px;
+  color: white;
+}
