@@ -3,6 +3,8 @@ import {MatButton} from "@angular/material/button";
 import {MatCard, MatCardActions, MatCardImage} from "@angular/material/card";
 import {ReservationsService} from "../../../../services/reservationsService.service";
 
+import {RouterLink} from "@angular/router";
+
 @Component({
   selector: 'app-reservation',
   standalone: true,
@@ -10,7 +12,8 @@ import {ReservationsService} from "../../../../services/reservationsService.serv
     MatButton,
     MatCard,
     MatCardActions,
-    MatCardImage
+    MatCardImage,
+    RouterLink
   ],
   templateUrl: './reservation.component.html',
   styleUrl: './reservation.component.scss'

@@ -53,7 +53,7 @@ export class RegisterComponent {
     this.emailError = !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.register.email);
     this.passwordError = this.register.password.length < 8;
     this.telefonoError = !/^\d{9}$/.test(this.register.telefono);
-    this.registroExitoso = true;
+    this.registroExitoso = false;
 
     // Forzamos la detección de cambios después de actualizar las variables booleanas
     this.cdr.detectChanges();
@@ -75,7 +75,7 @@ export class RegisterComponent {
       this.http.get('https://6630957fc92f351c03da5174.mockapi.io/tripmate/users').pipe(map(response => response as any[]))
         .subscribe(
           (users: any[]) => {
-            if (users.some(user => user.email === this.register.email)) {
+            if (users.some(user => user.email == this.register.email)) {
               this.emailExistsError = 'Este correo electrónico ya está en uso.';
             } else {
               this.http.post('https://6630957fc92f351c03da5174.mockapi.io/tripmate/users', this.register)
@@ -83,6 +83,7 @@ export class RegisterComponent {
                   response => {
                     console.log(response);
                     this.registroExitoso = true;
+                    this.router.navigateByUrl('signin')
                   },
                   error => console.log(error)
                 );
@@ -91,8 +92,5 @@ export class RegisterComponent {
           error => console.log(error)
         );
     }
-  }
-  login() {
-    this.router.navigateByUrl('signin')
   }
 }
