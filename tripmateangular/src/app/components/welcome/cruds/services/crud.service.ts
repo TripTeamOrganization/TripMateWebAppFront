@@ -43,11 +43,11 @@ export class CrudService {
         'Content-Type': 'application/json'
       })
     };
-    return this.http.post<any>(this.url + '/alojamientos', data, httpOptions);
+    return this.http.post<any>(this.url + '/accommodations', data, httpOptions);
   }
 
   getAccomodations(): Observable<Accommodation> {
-    return this.http.get<Accommodation>(this.url + '/alojamientos')
+    return this.http.get<Accommodation>(this.url + '/accommodations')
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -55,7 +55,7 @@ export class CrudService {
   }
 
   updateAccomodation(id: string, newData: any): Observable<any> {
-    const url = `${this.url + '/alojamientos'}/${id}`;
+    const url = `${this.url + '/accommodations'}/${id}`;
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ export class CrudService {
   }
 
   deleteAccomodation(id: any): Observable<Accommodation> {
-    return this.http.delete<Accommodation>(this.url + '/alojamientos/' + id, this.httpOptions)
+    return this.http.delete<Accommodation>(this.url + '/accommodations/' + id, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -87,11 +87,11 @@ export class CrudService {
         'Content-Type': 'application/json'
       })
     };
-    return this.http.post<any>(this.url + '/vuelos', data, httpOptions);
+    return this.http.post<any>(this.url + '/flights', data, httpOptions);
   }
 
   getFlights(): Observable<Flight> {
-    return this.http.get<Flight>(this.url + '/vuelos')
+    return this.http.get<Flight>(this.url + '/flights')
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -99,7 +99,7 @@ export class CrudService {
   }
 
   updateFlights(id: string, newData: any): Observable<any> {
-    const url = `${this.url + '/vuelos'}/${id}`;
+    const url = `${this.url + '/flights'}/${id}`;
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -115,7 +115,7 @@ export class CrudService {
   }
 
   deleteFlights(id: any): Observable<Accommodation> {
-    return this.http.delete<Accommodation>(this.url + '/vuelos/' + id, this.httpOptions)
+    return this.http.delete<Accommodation>(this.url + '/flights/' + id, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -130,11 +130,11 @@ export class CrudService {
         'Content-Type': 'application/json'
       })
     };
-    return this.http.post<any>(this.url + '/actividades', data, httpOptions);
+    return this.http.post<any>(this.url + '/activities', data, httpOptions);
   }
 
   getActivity(): Observable<Activity> {
-    return this.http.get<Activity>(this.url + '/actividades')
+    return this.http.get<Activity>(this.url + '/activities')
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -142,7 +142,7 @@ export class CrudService {
   }
 
   updateActivity(id: string, newData: any): Observable<any> {
-    const url = `${this.url + 'actividades'}/${id}`;
+    const url = `${this.url + '/activities'}/${id}`;
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -158,7 +158,7 @@ export class CrudService {
   }
 
   deleteActivity(id: any): Observable<Activity> {
-    return this.http.delete<Activity>(this.url + '/actividades/' + id, this.httpOptions)
+    return this.http.delete<Activity>(this.url + '/activities/' + id, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -173,11 +173,11 @@ export class CrudService {
         'Content-Type': 'application/json'
       })
     };
-    return this.http.post<any>(this.url + '/restaurantes', data, httpOptions);
+    return this.http.post<any>(this.url + '/restaurants', data, httpOptions);
   }
 
   getRestaurants(): Observable<Restaurant> {
-    return this.http.get<Restaurant>(this.url + '/restaurantes')
+    return this.http.get<Restaurant>(this.url + '/restaurants')
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -185,7 +185,7 @@ export class CrudService {
   }
 
   updateRestaurants(id: string, newData: any): Observable<any> {
-    const url = `${this.url + 'restaurantes'}/${id}`;
+    const url = `${this.url + '/restaurants'}/${id}`;
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -201,7 +201,7 @@ export class CrudService {
   }
 
   deleteRestaurants(id: any): Observable<Restaurant> {
-    return this.http.delete<Restaurant>(this.url + '/restaurantes/' + id, this.httpOptions)
+    return this.http.delete<Restaurant>(this.url + '/restaurants/' + id, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)

@@ -22,19 +22,19 @@ export class TripmateApiService {
   };
 
   getFlights(){
-    return this.http.get<any>(`${this.url}/vuelos`);
+    return this.http.get<any>(`${this.url}/flights`);
   }
 
   getActivities(){
-    return this.http.get<any>(`${this.url}/actividades`);
+    return this.http.get<any>(`${this.url}/activities`);
   }
 
   getRestaurants() {
-    return this.http.get<any>(`${this.url}/restaurantes`);
+    return this.http.get<any>(`${this.url}/restaurants`);
   }
 
   getAccomodations(){
-    return this.http.get<any>(`${this.url}/alojamientos`);
+    return this.http.get<any>(`${this.url}/accommodations`);
   }
 
   getNotifications(){
