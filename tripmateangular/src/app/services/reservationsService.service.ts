@@ -4,7 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ReservationsService {
-   reservas: any[] = localStorage.getItem('array') == null ? [] :  JSON.parse(localStorage.getItem('array')!);
+  reservas: any[] = localStorage.getItem('array') == null ? [] :  JSON.parse(localStorage.getItem('array')!);
+
+  constructor() {
+    // Agrega un listener para el evento unload
+    window.addEventListener('unload', () => {
+      // Vacía la lista de reservas y actualiza el localStorage
+      this.reservas = [];
+      localStorage.setItem('array', JSON.stringify(this.reservas));
+    });
+  }
 
   agregarAReserva(item: any) {
     this.reservas.push(item);

@@ -12,6 +12,10 @@ export class ShoppingCartService {
   agregarAlCarrito(item: any) {
     this.carrito.push(item);
   }
+
+  estaEnCarrito(item: any): boolean {
+    return this.carrito.some(cartItem => cartItem.title === item.title);
+  }
   eliminarDelCarrito(index: number) {
     if (index >= 0 && index < this.carrito.length) {
       this.carrito.splice(index, 1);

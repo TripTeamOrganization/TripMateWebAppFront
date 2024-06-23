@@ -29,6 +29,8 @@ export class CardmainComponent implements OnInit{
   @Input() maxHeight: number = 100;
   @Input() tipo: string = '';
   showAddedToCartToast = false;
+  showAlreadyAddedToast = false;
+
 
   isMobileView = false;
   constructor(private shoppingCartService: ShoppingCartService) {} // Inyectar el servicio ToastrService
@@ -60,8 +62,18 @@ export class CardmainComponent implements OnInit{
       ubicacion: this.ubicacion,
       price: this.price,
       starcount: this.starcount,
-      tipo: this.tipo //campo agregado
+      tipo: this.tipo
     };
+
+    if (this.shoppingCartService.estaEnCarrito(item)) {
+      console.log('Este elemento ya ha sido agregado al carrito.');
+      this.showAlreadyAddedToast = true;
+      setTimeout(() => {
+        this.showAlreadyAddedToast = false;
+      }, 3000);
+      return;
+    }
+
     console.log('Elemento agregado al carrito :):', item);
     this.shoppingCartService.agregarAlCarrito(item);
 
