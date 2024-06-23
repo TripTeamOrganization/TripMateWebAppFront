@@ -23,9 +23,23 @@ export class ReservationComponent implements OnInit {
   reservas: any = [];
   total: number = 0;
 
-  constructor(private reservationService: ReservationsService) {}
+  constructor(private reservationService: ReservationsService) {
 
-  ngOnInit(): void {
-    this.reservas = this.reservationService.obtenerReserva();
   }
+  borrarReservas(){
+    this.reservationService.reservas = [];
+  }
+
+  //Al iniciar el componente se formatea el precio de cadena a número.
+  ngOnInit(): void {
+
+    //una vez formateado el precio se guarda en la variable "reservas" que se muestra en el html
+    //que solo se muestre una vez el nombre de la reserva
+    this.reservas = this.reservationService.reservas;
+    //si se refresca la pagina, borrar el arreglo de reservas
+
+    this.borrarReservas();
+  }
+
 }
+
