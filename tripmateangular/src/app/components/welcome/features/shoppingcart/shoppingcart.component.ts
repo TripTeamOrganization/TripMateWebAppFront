@@ -30,11 +30,6 @@ export class ShoppingcartComponent implements OnInit{
         item.reservado = true;
         this.reservationService.agregarAReserva(item);
       });
-    } else {
-      this.snackBar.open('No has seleccionado nada para reservar', 'Cerrar', {
-        duration: 2000,
-        panelClass: ['custom-snackbar']
-      });
     }
   }
   ReservarTodo() {
