@@ -27,6 +27,7 @@ export class CardmainComponent implements OnInit{
   @Input() price: string = '';
   @Input() starcount: string = '0';
   @Input() maxHeight: number = 100;
+  @Input() tipo: string = '';
   showAddedToCartToast = false;
 
   isMobileView = false;
@@ -58,7 +59,8 @@ export class CardmainComponent implements OnInit{
       sourceimage: this.sourceimage,
       ubicacion: this.ubicacion,
       price: this.price,
-      starcount: this.starcount
+      starcount: this.starcount,
+      tipo: this.tipo //campo agregado
     };
     console.log('Elemento agregado al carrito :):', item);
     this.shoppingCartService.agregarAlCarrito(item);

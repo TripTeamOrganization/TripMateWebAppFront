@@ -69,6 +69,24 @@
 <button type="button">Confirmar reserva</button>
 
 <div class="container3">
+  <div class="reservasContainer">
+    Lista de reservas:
+    <table border="0" style="width: 100%; padding: 10px;">
+      <thead>
+      <tr>
+        <th>Característica</th>
+      </tr>
+      </thead>
+      <tbody>
+        @for(reserva of reservas; track reserva) {
+          <tr>
+            <td>{{ reserva.title }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+  </div>
   <h1>Detalles del precio</h1>
   <div class="input-group3">
     <label for="room">Precio:</label>

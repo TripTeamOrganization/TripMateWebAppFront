@@ -46,6 +46,8 @@ export class ItineraryComponent implements  OnInit {
         //console.log('tineraryComponent:.reservationService.reservas LOCAL STORAGE=>',reservas);
 
         this.mostrarReserva(reservas);
+        //al refrescar que se borre todo el arreglo de reservas
+        this.reservationService.reservas = [];
     }
 
     mostrarReserva(reservas: [any]) {
