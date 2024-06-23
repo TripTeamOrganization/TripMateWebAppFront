@@ -15,28 +15,29 @@ h2 {
   display:flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 27px;
   justify-content: center;
   width: 100%;
   height: auto;
 }
-.ReservarTodo{
+.ReservarTodo, .ReservaSeleccionado{
   font-size: 1.2em;
   font-weight: bold;
   color: #f1e2e2;
   margin-bottom: 5px;
-  display: block;
+  display: inline-block;
   background-color: #0056b3;
   border-radius: 1vh;
   transition: all 0.3s ease;
   padding: 1vh;
-  width: 50%;
+  width: 40%; /* Reducir el ancho para que los botones quepan uno al lado del otro */
   height: 6vh;
+  margin-right: 10px;
 }
-.ReservarTodo:hover{
+.ReservarTodo:hover, .ReservaSeleccionado:hover{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transform: scale(1.05);
+  transform: scale(1.02);
   cursor:pointer;
-  background-color: #f1e2e2;
+  background-color: #cdcdcd;
   color:#0056b3;
-
 }

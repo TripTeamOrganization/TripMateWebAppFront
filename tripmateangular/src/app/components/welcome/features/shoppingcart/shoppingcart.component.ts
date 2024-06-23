@@ -22,10 +22,19 @@ export class ShoppingcartComponent implements OnInit{
     console.log(this.items);
   }
 
+  ReservaSeleccionado() {
+    this.shoppingCartService.carrito.forEach(item => {
+      if (item.selected && !item.reservado) {
+        this.reservationService.agregarAReserva(item);
+        item.reservado = true;
+      }
+    });
+  }
   ReservarTodo() {
     for (let item of this.items) {
       if (!item.reservado){
         this.reservationService.agregarAReserva(item);
+        item.reservado = true;
       }
     }
   }

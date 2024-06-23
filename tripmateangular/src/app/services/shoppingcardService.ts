@@ -9,10 +9,12 @@ export class ShoppingCartService {
   }
   carrito: any[] = [];
 
+
+
   agregarAlCarrito(item: any) {
+    item.selected = false;
     this.carrito.push(item);
   }
-
   estaEnCarrito(item: any): boolean {
     return this.carrito.some(cartItem => cartItem.title === item.title);
   }
