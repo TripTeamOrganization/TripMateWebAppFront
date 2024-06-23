@@ -18,7 +18,7 @@ import {RouterLink} from "@angular/router";
   templateUrl: './reservation.component.html',
   styleUrl: './reservation.component.scss'
 })
-export class ReservationComponent implements OnInit {
+export class ReservationComponent /*implements OnInit*/ {
 
   reservas: any = [];
   total: number = 0;
@@ -36,8 +36,7 @@ export class ReservationComponent implements OnInit {
     //una vez formateado el precio se guarda en la variable "reservas" que se muestra en el html
     //que solo se muestre una vez el nombre de la reserva
     this.reservas = this.reservationService.reservas;
-    //si se refresca la pagina, borrar el arreglo de reservas
-
+    //borrar el arreglo de reservas
     this.borrarReservas();
   }
 
