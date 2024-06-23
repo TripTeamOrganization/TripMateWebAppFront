@@ -5,6 +5,7 @@ import {CardShopcarComponent} from "../../../../../public/shared/card-shopcar/ca
 import {ReservationsService} from "../../../../services/reservationsService.service";
 import {MatTab} from "@angular/material/tabs";
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-shoppingcart',
@@ -15,26 +16,33 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
 })
 export class ShoppingcartComponent implements OnInit{
   items: any[] = [];
-  constructor(private shoppingCartService: ShoppingCartService, private reservationService: ReservationsService) {}
+  selectedItems: any[] = [];
+  constructor(private shoppingCartService: ShoppingCartService, private reservationService: ReservationsService, private snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
     this.items = this.shoppingCartService.obtenerCarrito();
     console.log(this.items);
   }
-
   ReservaSeleccionado() {
-    this.shoppingCartService.carrito.forEach(item => {
-      if (item.selected && !item.reservado) {
-        this.reservationService.agregarAReserva(item);
+    this.selectedItems = this.shoppingCartService.carrito.filter(item => item.selected && !item.reservado && !this.reservationService.estaReservado(item));
+    if (this.selectedItems.length > 0) {
+      this.selectedItems.forEach(item => {
         item.reservado = true;
-      }
-    });
+        this.reservationService.agregarAReserva(item);
+      });
+    } else {
+      this.snackBar.open('No has seleccionado nada para reservar', 'Cerrar', {
+        duration: 2000,
+        panelClass: ['custom-snackbar']
+      });
+    }
   }
   ReservarTodo() {
+    this.items = this.shoppingCartService.obtenerCarrito();
     for (let item of this.items) {
-      if (!item.reservado){
-        this.reservationService.agregarAReserva(item);
+      if (!item.reservado && !this.reservationService.estaReservado(item)){
         item.reservado = true;
+        this.reservationService.agregarAReserva(item);
       }
     }
   }

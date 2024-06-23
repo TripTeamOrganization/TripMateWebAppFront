@@ -17,7 +17,7 @@ export class ReservationsService {
 
   agregarAReserva(item: any) {
     // Verifica si el elemento ya existe en el array de reservas
-    if (!this.reservas.some(reserva => reserva.id === item.id)) {
+    if (!this.reservas.includes(item)) {
       this.reservas.push(item);
       let contador: number = this.reservas.length;
       console.log("Se ha agregado el siguiente item a la reserva: ", item);
@@ -31,13 +31,7 @@ export class ReservationsService {
       localStorage.setItem('array', JSON.stringify(this.reservas));
     }
   }
-
-  eliminarDeReserva(index: number) {
-    if (index >= 0 && index < this.reservas.length) {
-      this.reservas.splice(index, 1);
-    }
-  }
-  obtenerReserva(): any[] {
-    return this.reservas;
+  estaReservado(item: any): boolean {
+    return this.reservas.some(reserva => reserva.title === item.title);
   }
 }

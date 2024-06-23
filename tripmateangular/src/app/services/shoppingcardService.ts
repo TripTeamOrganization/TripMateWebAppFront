@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ShoppingCartService {
+
+
   getItems(): never[] {
     throw new Error('Method not implemented.');
   }
