@@ -3,13 +3,12 @@
 <app-main-filter (valuesChangedInFilter)="getValues($event)" title="Vuelos" filterTitle="Horario de apertura" filter1="7:00 am" filter2="9:00 am" filter3="11:00 am" filter4="1:00 pm" filter5="3:00 pm"></app-main-filter>
 
 <group-cardgroup>
-  @for (flight of filteredFlights.length > 0 ? filteredFlights : flights; track flight.nombre) {
+  @for (flight of filteredFlights.length > 0 ? filteredFlights : flights; track flight.nombreAerolinea) {
     <app-cardmain
       starcount="5"
       [price]="flight.precio"
-      [sourceimage]="flight.imagen"
-      [title]="flight.nombre"
-      [ubicacion]="flight.ubicacion"
+      [sourceimage]="flight.idVuelo.toString()"
+      [title]="flight.nombreAerolinea"
       [descripcion]="flight.descripcion ? flight.descripcion : ''"
       tipo="restaurant"
       buttontext="Seleccionar">
@@ -19,3 +18,4 @@
     <p>Cargando...</p>
   }
 </group-cardgroup>
+

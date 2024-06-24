@@ -105,9 +105,9 @@ export class CrudFlightsComponent implements OnInit{
   addFlights() {
     let maxID: number = 0;
     maxID = this.dataSource.data.reduce((max: number, accommodation: any) => accommodation.id > max ? accommodation.id : max, 0);
-    this.flightsData.id = (Number(maxID) + 1).toString();
+    this.flightsData.idVuelo = (Number(maxID) + 1);
 
-    console.log('Nuevo ID:', this.flightsData.id);
+    console.log('Nuevo ID:', this.flightsData.idVuelo.toString());
     console.log('Datos del alojamiento:', this.flightsData);
 
     this.flightService.createFlights(this.flightsData).subscribe(
@@ -123,7 +123,7 @@ export class CrudFlightsComponent implements OnInit{
 
 
   updateFlights(){
-    this.flightService.updateFlights(this.flightsData.id, this.flightsData).subscribe((response: any) => {
+    this.flightService.updateFlights(this.flightsData.idVuelo.toString(), this.flightsData).subscribe((response: any) => {
       this.dataSource.data = this.dataSource.data.map((o:any) => {
         if(o.id === response.id){
           o = response;

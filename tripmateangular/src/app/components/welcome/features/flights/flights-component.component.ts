@@ -61,12 +61,8 @@ export class FlightsComponentComponent implements OnInit {
       (data: any) => {
         if (Array.isArray(data)) {
           this.flights = data.map(flight => new Flight(
-            flight.id,
-            flight.nombre,
-            flight.imagen,
-            flight.tipo,
-            flight.duracion,
-            flight.ubicacion,
+            flight.idVuelo,
+            flight.nombreAerolinea,
             flight.precio,
             flight.descripcion
         ));
@@ -95,7 +91,7 @@ export class FlightsComponentComponent implements OnInit {
     this.filteredFlights = [];
     this.flights.forEach((value: Flight) => {
         console.log('id in integer', eval(value.precio));
-       const precio = eval(value.id);
+       const precio = eval(value.idVuelo.toString());  //
 
        if (precio >= this.minLimit && precio <= this.maxLimit)
        {
@@ -125,7 +121,7 @@ export class FlightsComponentComponent implements OnInit {
 
         this.filteredFlights = [];
         for (const flight of this.flights) {
-          if (flight.nombre.toLowerCase().includes(trimmedQuery)) {
+          if (flight.idVuelo.toString().toLowerCase().includes(trimmedQuery)) {
             this.filteredFlights.push(flight);
           }
         }

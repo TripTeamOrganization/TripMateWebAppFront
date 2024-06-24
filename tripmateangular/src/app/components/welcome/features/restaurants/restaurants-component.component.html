@@ -8,10 +8,9 @@
     <ng-container *ngIf="i < filteredRestaurants.length">
       <app-cardmain
         starcount="5"
-        [sourceimage]="restaurant.imagen"
-        [title]="restaurant.nombre"
+        [sourceimage]="restaurant.image"
+        [title]="restaurant.name"
         [price]="restaurant.mustTry"
-        [ubicacion]="restaurant.cuisines"
         [descripcion]="restaurant.locationCost ? restaurant.locationCost : ''"
         tipo="restaurant"
         buttontext="Seleccionar">

@@ -4,14 +4,14 @@
 <app-main-filter (valuesChangedInFilter)="getValues($event)"title="por entrada" filterTitle="Horario de apertura" filter1="7:00 am" filter2="9:00 am" filter3="11:00 am" filter4="1:00 pm" filter5="3:00 pm"></app-main-filter>
 
 <group-cardgroup>
-  @for (activity of filteredActivities.length > 0 ? filteredActivities : activities; track activity.nombre) {
+  @for (activity of filteredActivities.length > 0 ? filteredActivities : activities; track activity.name) {
     <app-cardmain
       starcount="4"
-      [sourceimage]="activity.imagen"
-      [title]="activity.nombre"
-      [ubicacion]="activity.ubicacion"
-      [descripcion]="activity.descripcion ? activity.descripcion : ''"
-      [price]="activity.precio"
+      [sourceimage]="activity.imagePath"
+      [title]="activity.name"
+      [ubicacion]="activity.location"
+      [descripcion]="activity.description ? activity.description : ''"
+      [price]="activity.price"
       tipo="restaurant"
       buttontext="Seleccionar">
     </app-cardmain>

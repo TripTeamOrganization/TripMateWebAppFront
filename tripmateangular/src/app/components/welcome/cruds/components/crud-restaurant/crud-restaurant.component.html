@@ -1,10 +1,10 @@
 
 <form (submit) = "onSubmit()" #restaurantForm='ngForm'>
   <mat-form-field>
-    <input matInput placeholder="Nombre" name="nombre" required [(ngModel)]="resturantsData.nombre">
+    <input matInput placeholder="Nombre" name="nombre" required [(ngModel)]="resturantsData.name">
   </mat-form-field>
   <mat-form-field>
-    <input type="text" matInput placeholder="imagen" name="imagen" required [(ngModel)]="resturantsData.imagen">
+    <input type="text" matInput placeholder="imagen" name="imagen" required [(ngModel)]="resturantsData.image">
   </mat-form-field>
   <mat-form-field>
     <input type="text" matInput placeholder="Descripcion" name="locationCost" required [(ngModel)]="resturantsData.locationCost">

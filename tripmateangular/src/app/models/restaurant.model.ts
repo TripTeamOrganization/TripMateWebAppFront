@@ -1,21 +1,15 @@
 export class Restaurant {
   id: string;
-  nombre: string;
-  imagen: string;
-  descripcion: string;
+  name: string;
+  image: string;
   locationCost: string;
-  cuisines: string;
   mustTry: string;
-  openingHours: string;
 
-  constructor(id: string, nombre: string, imagen: string, descripcion: string, locationCost: string, cuisines: string, mustTry: string, openingHours: string) {
+  constructor(id: string, name: string, image: string, locationCost: string, mustTry: string) {
     this.id = id;
-    this.nombre = nombre;
-    this.imagen = imagen;
-    this.descripcion = descripcion;
+    this.name = name;
+    this.image = image;
     this.locationCost = locationCost;
-    this.cuisines = cuisines;
     this.mustTry = mustTry;
-    this.openingHours = openingHours;
   }
 }

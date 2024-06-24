@@ -79,13 +79,10 @@ export class RestaurantsComponentComponent implements OnInit {
         data.slice(0, -2).forEach((restaurant) => {
           const newRestaurant = new Restaurant(
             restaurant.id,
-            restaurant.nombre,
-            restaurant.imagen,
-            restaurant.descripcion,
+            restaurant.name,
+            restaurant.image,
             restaurant.locationCost,
-            restaurant.cuisines,
             restaurant.mustTry,
-            restaurant.openingHours
           );
           this.restaurants.push(newRestaurant);
           this.filteredRestaurants.push(newRestaurant);
@@ -124,7 +121,7 @@ export class RestaurantsComponentComponent implements OnInit {
 
     // Filtrar los restaurantes según el nombre que coincida con la consulta de búsqueda
     this.filteredRestaurants = this.restaurants.filter(restaurant =>
-      restaurant.nombre.toLowerCase().includes(trimmedQuery)
+      restaurant.name.toLowerCase().includes(trimmedQuery)
     );
 
     // Puedes agregar un console.log aquí para verificar los resultados filtrados

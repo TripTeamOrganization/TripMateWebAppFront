@@ -1,21 +1,14 @@
 export class Flight {
-  id: string;
-  nombre: string;
-  imagen: string;
-  tipo: string;
-  duracion: string;
+  idVuelo: number;
+  nombreAerolinea: string;
   descripcion: string;
   precio: string;
-  ubicacion: string;
 
-  constructor(  id: string, nombre: string, imagen: string, tipo: string, duracion: string, ubicacion: string, precio: string, descripcion: string) {
-    this.nombre = nombre;
-    this.imagen = imagen;
-    this.tipo = tipo;
-    this.duracion = duracion;
-    this.ubicacion = ubicacion;
-    this.precio = precio;
+  constructor(idVuelo: number, nombreAerolinea: string, descripcion: string, precio: string) {
+    this.idVuelo = idVuelo;
+    this.nombreAerolinea = nombreAerolinea;
     this.descripcion = descripcion;
-    this.id = id;
+    this.precio = precio;
   }
 }
+

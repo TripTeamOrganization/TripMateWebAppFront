@@ -3,19 +3,19 @@
 </p>
 <form (submit) = "onSubmit()" #activitiesForm='ngForm'>
   <mat-form-field>
-    <input matInput placeholder="Nombre" name="nombre" required [(ngModel)]="activitiesData.nombre">
+    <input matInput placeholder="Nombre" name="nombre" required [(ngModel)]="activitiesData.name">
   </mat-form-field>
   <mat-form-field>
-    <input type="text" matInput placeholder="imagen" name="imagen" required [(ngModel)]="activitiesData.imagen">
+    <input type="text" matInput placeholder="imagen" name="imagen" required [(ngModel)]="activitiesData.imagePath">
   </mat-form-field>
   <mat-form-field>
-    <input type="text" matInput placeholder="descripcion" name="descripcion" required [(ngModel)]="activitiesData.descripcion">
+    <input type="text" matInput placeholder="descripcion" name="descripcion" required [(ngModel)]="activitiesData.description">
   </mat-form-field>
   <mat-form-field>
-    <input type="text" matInput placeholder="precio" name="precio" required [(ngModel)]="activitiesData.precio">
+    <input type="text" matInput placeholder="precio" name="precio" required [(ngModel)]="activitiesData.price">
   </mat-form-field>
   <mat-form-field>
-    <input type="text" matInput placeholder="ubicacion" name="ubicacion" required [(ngModel)]="activitiesData.ubicacion">
+    <input type="text" matInput placeholder="ubicacion" name="ubicacion" required [(ngModel)]="activitiesData.location">
   </mat-form-field>
 
 

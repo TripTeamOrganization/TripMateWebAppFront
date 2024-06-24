@@ -3,10 +3,7 @@
 </p>
 <form (submit) = "onSubmit()" #flightForm='ngForm'>
   <mat-form-field>
-    <input matInput placeholder="Nombre" name="nombre" required [(ngModel)]="flightsData.nombre">
-  </mat-form-field>
-  <mat-form-field>
-    <input type="text" matInput placeholder="imagen" name="imagen" required [(ngModel)]="flightsData.imagen">
+    <input matInput placeholder="Nombre" name="nombre" required [(ngModel)]="flightsData.nombreAerolinea">
   </mat-form-field>
   <mat-form-field>
     <input type="text" matInput placeholder="descripcion" name="descripcion" required [(ngModel)]="flightsData.descripcion">

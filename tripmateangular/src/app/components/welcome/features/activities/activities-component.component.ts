@@ -98,7 +98,7 @@ export class ActivitiesComponentComponent implements OnInit {
           this.filteredActivities = [];
           this.activities.forEach((value: Activity) => {
 
-            const precio: number = this.getPrice(value.precio);
+            const precio: number = this.getPrice(value.price);
             if (precio >= this.minLimit && precio <= this.maxLimit)
             {
               this.filteredActivities.push(value);
@@ -119,7 +119,7 @@ export class ActivitiesComponentComponent implements OnInit {
     const trimmedQuery = searchQuery.trim().toLowerCase();
 
     this.filteredActivities = this.activities.filter(activity =>
-      activity.nombre.toLowerCase().includes(trimmedQuery)
+      activity.name.toLowerCase().includes(trimmedQuery)
     );
     // Puedes agregar un console.log aquí para verificar los resultados filtrados
     console.log('Actividades filtrados:', this.filteredActivities);
