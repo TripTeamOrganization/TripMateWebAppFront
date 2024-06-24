@@ -14,37 +14,25 @@ import {AuthService} from "../../../../services/auth.service";
   styleUrl: './userview.component.scss'
 })
 export class UserviewComponent implements OnInit {
-  userData!: User;
-  users: User[] = [];
-  selectedUser: User | undefined;
-  constructor(private apiService: TripmateApiService, private router: Router, private authService:AuthService) {
-    this.userData = {} as User;
-  }
+  usuario: any = null;
+  constructor(private apiService: TripmateApiService, private router: Router, private authService:AuthService) {}
 
   ngOnInit() {
-    this.getUser();
-    this.selectedUser = this.users.find(user => user.correo === 'Messo')
+    this.getUsername();
   }
 
-  getUser() {
-    this.apiService.getUsers().subscribe((data: any) => {
-      if(Array.isArray(data)) {
-        this.users = data.map(user => new User(
-          user.id,
-          user.correo,
-          user.password,
-          user.roles
-        ));
-        console.log(this.users);
-      }else {
-        console.error('El formato de datos recibido no es un array.');
-      }
+
+  getUsername() {
+    this.apiService.getUser().subscribe({
+      next: (data) => {
+        this.usuario = data;
       },
-      error => {
-        console.error('Error al obtener datos de actividades:', error);
+      error: (error) => {
+        console.error('Hubo un error al obtener los datos del usuario:', error);
       }
-    );
+    });
   }
+
 
   MostrarPlanes() {
     this.router.navigateByUrl('/suscription')

@@ -48,9 +48,12 @@ export class AuthService {
           this.sendUserIDtoSTORAGE(username);
           this.setToken(response.token);
         }
+        const userId = Number(response.id);
+        sessionStorage.setItem('id', userId.toString());
       })
     );
   }
+
 
   private setToken(token: string): void {
     sessionStorage.setItem(this.tokenKey, token);

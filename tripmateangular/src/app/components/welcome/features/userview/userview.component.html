@@ -5,16 +5,16 @@
   </div>
 
 
-@if (selectedUser) {
+@if (usuario) {
   <div class="container">
     <div class="card-container">
-      <h1>Username:</h1>
+      <h1>Email:</h1>
       <mat-card class="card">
-        <mat-card-content>{{selectedUser.correo}}</mat-card-content>
+        <mat-card-content>{{usuario.username}}</mat-card-content>
       </mat-card>
       <h1>Plan</h1>
       <mat-card class="card">
-        <mat-card-content>{{selectedUser.roles}}</mat-card-content>
+        <mat-card-content>{{usuario.roles}}</mat-card-content>
       </mat-card>
       <button mat-stroked-button class="plan-button" (click)="MostrarPlanes()"><span>Obtener otro plan</span></button>
     </div>

@@ -44,8 +44,9 @@ export class TripmateApiService {
     const payload = { password: newPassword };
     return this.http.put<User>(`${this.url}/users/${userId}`, payload, this.httpOptions);
   }
-  getUsers() {
-    return this.http.get<any>(`${this.url}/users`);
+  getUser() {
+    const userId = sessionStorage.getItem('id');
+    return this.http.get<any>(`${this.url}/users/${userId}`);
   }
 
   updateEmail(userId: string, newEmail: string) {
