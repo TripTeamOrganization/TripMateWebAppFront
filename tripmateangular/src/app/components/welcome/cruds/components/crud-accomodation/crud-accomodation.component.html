@@ -15,7 +15,7 @@
     <input type="text" matInput placeholder="precio" name="precio" required [(ngModel)]="accommodationData.price">
   </mat-form-field>
   <mat-form-field>
-    <input type="text" matInput placeholder="ubicacion" name="ubicacion" required [(ngModel)]="accommodationData.location">
+    <input type="text" matInput placeholder="ubicacion" name="ubicacion" required [(ngModel)]="accommodationData.ubicacion">
   </mat-form-field>
 
   @if(isEditMode){
@@ -71,7 +71,7 @@
 
   <ng-container matColumnDef="ubicacion">
     <th mat-header-cell *matHeaderCellDef> ubicacion </th>
-    <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.ubicacion}} </td>
   </ng-container>
 
 

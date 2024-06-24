@@ -18,12 +18,15 @@ import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.
 })
 export class RestaurantsComponentComponent implements OnInit {
   restaurants: Restaurant[] = [];
+  restaurantData: Restaurant;
   filteredRestaurants: Restaurant[] = [];
 
   minLimit: number = 0;
   maxLimit: number = 9999;
 
-  constructor(private ApiService: TripmateApiService) {}
+  constructor(private ApiService: TripmateApiService) {
+    this.restaurantData = {} as Restaurant;
+  }
 
   ngOnInit() {
     this.getRestaurants();
@@ -72,45 +75,34 @@ export class RestaurantsComponentComponent implements OnInit {
   }
 
   getRestaurants() {
-    this.ApiService.getRestaurants().subscribe((data: Restaurant[]) => {
-      if (Array.isArray(data)) {
-        this.restaurants = [];
-        this.filteredRestaurants = [];
-        data.slice(0, -2).forEach((restaurant) => {
-          const newRestaurant = new Restaurant(
+    this.ApiService.getRestaurants().subscribe(
+      (data: any) => {
+        if (Array.isArray(data)) {
+          this.restaurants = data.map(restaurant => new Restaurant(
             restaurant.id,
             restaurant.name,
             restaurant.imagePath,
             restaurant.locationCost,
-            restaurant.mustTry,
-          );
-          this.restaurants.push(newRestaurant);
-          this.filteredRestaurants.push(newRestaurant);
-        });
-      } else {
-        console.error('El formato de datos recibido no es un array.');
-      }
+            restaurant.mustTry
+          ));
+          this.filteredRestaurants = [];
+          this.restaurants.forEach((value: Restaurant) => {
 
-      //filtrar con los valores mín y max:
-      console.log('filtrados:', this.filteredRestaurants);
+            const precio: number = this.getPrice(value.mustTry);
+            if (precio >= this.minLimit && precio <= this.maxLimit)
+            {
+              this.filteredRestaurants.push(value);
+            }
 
-      this.filteredRestaurants = [];
-      this.restaurants.forEach((value: Restaurant) => {
-
-        //eval = evaluar INTEGER => STRING.
-        console.log('mustTry  in integer', value.mustTry);
-        //console.log('mustTry  in integer', eval(value.id));
-        //const precio = eval(value.id);
-        const precio = this.getPrice(value.mustTry);
-
-        if (precio >= this.minLimit && precio <= this.maxLimit)
-        {
-          this.filteredRestaurants.push(value);
+          });
+        } else {
+          console.error('El formato de datos recibido no es un array.');
         }
-      });
-
-      console.log(this.restaurants);
-    });
+      },
+      error => {
+        console.error('Error al obtener datos de restaurantes:', error);
+      }
+    );
   }
 
 

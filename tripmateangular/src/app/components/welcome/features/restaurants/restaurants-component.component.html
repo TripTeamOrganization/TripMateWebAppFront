@@ -4,9 +4,8 @@
 <app-main-filter (valuesChangedInFilter)="getValues($event)" title="por platos" filterTitle="Horario de apertura" filter1="7:00 am" filter2="9:00 am" filter3="11:00 am" filter4="1:00 pm" filter5="3:00 pm"></app-main-filter>
 
 <group-cardgroup>
-  <div *ngFor="let restaurant of filteredRestaurants; let i = index;" role="list">
-    <ng-container *ngIf="i < filteredRestaurants.length">
-      <app-cardmain
+  @for (restaurant of filteredRestaurants.length > 0 ? filteredRestaurants :restaurants; track restaurant.name) {
+    <app-cardmain
         starcount="5"
         [sourceimage]="restaurant.imagePath"
         [title]="restaurant.name"
@@ -15,6 +14,8 @@
         tipo="restaurant"
         buttontext="Seleccionar">
       </app-cardmain>
-    </ng-container>
-  </div>
+    }
+    @empty {
+      <p>Cargando...</p>
+    }
 </group-cardgroup>

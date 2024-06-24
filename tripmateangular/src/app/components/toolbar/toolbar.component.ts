@@ -141,6 +141,5 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
         this.router.navigate([selectedRoute]);
       });
     }
-
   }
 }
