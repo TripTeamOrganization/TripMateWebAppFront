@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable, tap} from "rxjs";
+import {BehaviorSubject, Observable, tap} from "rxjs";
 import {Router} from "@angular/router";
 import {environment} from "../../environments/environment";
+import {setPostSignalSetFn} from "@angular/core/primitives/signals";
 
 @Injectable({
 providedIn: 'root'
@@ -12,18 +13,39 @@ export class AuthService {
   REGISTER_URL = `${(this.BASE_URL)}/authentication/sign-up`;
   LOGIN_URL = `${(this.BASE_URL)}/authentication/sign-in`;
   private tokenKey = 'authToken';
+  private userKey='userID';
+  private userKeySubject = new BehaviorSubject<string | null>(this.getUserIDofSTORAGE());
+
   constructor(private httpClient: HttpClient, private router:Router) {
 
   }
   register(username: string, password: string): Observable<any> {
     return this.httpClient.post<any>(this.REGISTER_URL, {username, password});
   }
+  sendUserIDtoSTORAGE(userKey: string){
+    sessionStorage.setItem(this.userKey, userKey);
+    this.userKeySubject.next(userKey);
 
+  }
+  getUserKeyChanges(): Observable<string | null> {
+    return this.userKeySubject.asObservable();
+  }
+  getUserIDofSTORAGE() {
+    if (this.isSessionStorageAvailable() && sessionStorage.getItem(this.userKey)) {
+      return sessionStorage.getItem(this.userKey);
+    } else {
+      return null;
+    }
+  }
+  private isSessionStorageAvailable(): boolean {
+    return typeof sessionStorage !== 'undefined';
+  }
   login(username: string, password: string): Observable<any> {
     return this.httpClient.post<any>(this.LOGIN_URL, {username, password}).pipe(
       tap(response => {
         if (response.token) {
           console.log(response.token)
+          this.sendUserIDtoSTORAGE(username);
           this.setToken(response.token);
         }
       })
@@ -50,7 +72,10 @@ export class AuthService {
 
   logOut(): void {
     sessionStorage.removeItem(this.tokenKey);
-    this.router.navigate(['/signin']);
+    sessionStorage.removeItem(this.userKey);
+    this.router.navigate(['/signin']).then(() => {
+      window.location.reload();
+    });
   }
 
 }

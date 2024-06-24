@@ -23,7 +23,7 @@ export class UserviewComponent implements OnInit {
 
   ngOnInit() {
     this.getUser();
-    this.selectedUser = this.users.find(user => user.nombre === 'Messo')
+    this.selectedUser = this.users.find(user => user.correo === 'Messo')
   }
 
   getUser() {
@@ -31,13 +31,9 @@ export class UserviewComponent implements OnInit {
       if(Array.isArray(data)) {
         this.users = data.map(user => new User(
           user.id,
-          user.dni,
-          user.nombre,
           user.correo,
-          user.contrasenia,
-          user.fechaRegistro,
-          user.celular,
-          user.plan
+          user.password,
+          user.roles
         ));
         console.log(this.users);
       }else {

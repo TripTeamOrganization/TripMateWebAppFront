@@ -8,13 +8,13 @@
 @if (selectedUser) {
   <div class="container">
     <div class="card-container">
-      <h1>Nombre</h1>
+      <h1>Username:</h1>
       <mat-card class="card">
-        <mat-card-content>{{selectedUser.nombre}}</mat-card-content>
+        <mat-card-content>{{selectedUser.correo}}</mat-card-content>
       </mat-card>
       <h1>Plan</h1>
       <mat-card class="card">
-        <mat-card-content>{{selectedUser.plan}}</mat-card-content>
+        <mat-card-content>{{selectedUser.roles}}</mat-card-content>
       </mat-card>
       <button mat-stroked-button class="plan-button" (click)="MostrarPlanes()"><span>Obtener otro plan</span></button>
     </div>

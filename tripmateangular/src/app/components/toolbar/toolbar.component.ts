@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, HostListener, OnInit, ViewChild} from '@angular/core';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from "@angular/material/icon";
@@ -14,6 +14,7 @@ import {map, Observable} from "rxjs";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { MatSidenav } from '@angular/material/sidenav';
 import {User} from "../../models/user.model";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-toolbar',
@@ -44,13 +45,15 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
   Usuario: string = 'Usuario';
   showNotificationBar: boolean = false;
 
-  constructor(private router: Router, private notificationService: TripmateApiService, public breakpointObserver: BreakpointObserver) {}
+  constructor(private router: Router, private notificationService: TripmateApiService, public breakpointObserver: BreakpointObserver,private authService: AuthService) {}
 
   ngOnInit(): void {
     this.getNotifications();
-    this.getUser();
+    this.getUsername();
+    this.authService.getUserKeyChanges().subscribe(() => {
+      this.getUsername();
+    });
   }
-
   toggleNotificationBar() {
     this.showNotificationBar = !this.showNotificationBar;
   }
@@ -72,31 +75,15 @@ export class ToolbarComponent implements AfterViewInit,OnInit {
       }
     );
   }
-  getUser() {
-    this.notificationService.getUsers().subscribe((data: any) => {
-        if(Array.isArray(data)) {
-          this.users = data.map(user => new User(
-            user.id,
-            user.dni,
-            user.nombre,
-            user.correo,
-            user.contrasenia,
-            user.fechaRegistro,
-            user.celular,
-            user.plan
-          ));
-          if (this.users.length > 0) {
-            this.Usuario = this.users[0].nombre;
-          }
-        }else {
-          console.error('El formato de datos recibido no es un array.');
-        }
-      },
-      error => {
-        console.error('Error al obtener datos de usuarios:', error);
-      }
-    );
+  getUsername() {
+    const userID = this.authService.getUserIDofSTORAGE();
+    if (userID !== null && userID !== undefined && userID !== '') {
+      this.Usuario = userID;
+    }else{
+      this.Usuario="GuestUser";
+    }
   }
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map((result: BreakpointState) => result.matches)
