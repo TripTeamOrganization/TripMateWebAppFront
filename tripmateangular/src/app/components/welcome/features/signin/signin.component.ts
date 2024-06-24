@@ -4,6 +4,7 @@ import {RouterLink} from "@angular/router";
 import { HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {AuthService} from "../../../../services/auth.service";
+import {NgIf} from "@angular/common";
 
 export interface SignIn {
   email: string;
@@ -12,10 +13,11 @@ export interface SignIn {
 @Component({
   selector: 'app-signin',
   standalone: true,
-    imports: [
-        FormsModule,
-        RouterLink
-    ],
+  imports: [
+    FormsModule,
+    RouterLink,
+    NgIf
+  ],
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss']
 })
@@ -30,6 +32,8 @@ export class SigninComponent {
   emailError: boolean = false;
   passwordError: boolean = false;
   badCredentials: boolean = false;
+  showInvalidCredentialsToast: boolean = false;
+  showAlreadyAddedToast: boolean = false;
 
   constructor(private cdr: ChangeDetectorRef, private http: HttpClient, private router: Router,private authService:AuthService) {}
   login() {
@@ -37,6 +41,13 @@ export class SigninComponent {
         next: () => this.router.navigate(['/accommodations']),
         error: (err) => {
           console.error(err);
+          if (err.status === 500) {
+            this.showInvalidCredentialsToast = true;
+            setTimeout(() => this.showInvalidCredentialsToast = false, 3000);
+          } else if (err.status === 401 || err.status === 409) {
+            this.showInvalidCredentialsToast = true;
+            setTimeout(() => this.showInvalidCredentialsToast = false, 3000);
+          }
         }
       });
   }

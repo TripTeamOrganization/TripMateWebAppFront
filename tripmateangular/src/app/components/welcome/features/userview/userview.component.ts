@@ -19,9 +19,20 @@ export class UserviewComponent implements OnInit {
 
   ngOnInit() {
     this.getUsername();
+    this.isAdmin();
   }
 
-
+  isAdmin():boolean {
+    this.apiService.getUser().subscribe({
+      next: (data) => {
+        return this.usuario.role === 'ROLE_ADMIN';
+      },
+      error: (error) => {
+        console.error('Hubo un error al obtener los datos del usuario:', error);
+      }
+    });
+    return this.usuario.role === 'ROLE_ADMIN';
+  }
   getUsername() {
     this.apiService.getUser().subscribe({
       next: (data) => {

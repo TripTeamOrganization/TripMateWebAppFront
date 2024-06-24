@@ -1,41 +1,10 @@
 <div class="contenedor active" id="contenedor">
   <div id="background"></div>
 
-  <div class="container" >
-
+  <div class="container">
     <div class="registration">
       <h2 class="title">Registro</h2>
       <p class="description">Completa el formulario para registrarte.</p>
-
-      <div class="form-group">
-        <div class="label-container">
-          <label for="nombre">Nombre:</label>
-        </div>
-        <input type="text" id="nombre" placeholder="Ingresa tu nombre" [(ngModel)]="register.nombre" name="register">
-        @if (nombreError) {
-          <span class="error-message">El nombre debe tener entre 3 y 15 caracteres.</span>
-        }
-      </div>
-
-      <div class="form-group">
-        <div class="label-container">
-          <label for="apellidos">Apellidos:</label>
-        </div>
-        <input type="text" id="apellidos" placeholder="Ingresa tus Apellidos" [(ngModel)]="register.apellidos" name="lastName">
-        @if (apellidosError) {
-          <span class="error-message">Los apellidos deben tener entre 3 y 15 caracteres.</span>
-        }
-      </div>
-
-      <div class="form-group">
-        <div class="label-container">
-          <label for="dni">DNI:</label>
-        </div>
-        <input type="text" id="dni" placeholder="Ingresa tu DNI" [(ngModel)]="register.dni" name="dni">
-        @if (dniError) {
-          <span class="error-message">El DNI debe tener 8 dígitos numéricos.</span>
-        }
-      </div>
 
       <div class="form-group">
         <div class="label-container">
@@ -60,15 +29,6 @@
         }
       </div>
 
-      <div class="form-group">
-        <div class="label-container">
-          <label for="telefono">Número de teléfono:</label>
-        </div>
-        <input type="tel" id="telefono" placeholder="Ingresa tu número de teléfono" [(ngModel)]="register.telefono" name="telefono">
-        @if (telefonoError) {
-          <span class="error-message">Ingrese un número de teléfono válido.</span>
-        }
-      </div>
       <a class="link-signin" routerLink="/signin">¿Ya tienes una cuenta? Inicia sesión</a>
       <button class="btn-register" (click)="validarFormulario()">Registrarse</button>
     </div>
@@ -76,11 +36,13 @@
       Registro exitoso!
     </div>
   </div>
-</div>
-<div class="toast" *ngIf="showAlreadyAddedToast">
-  Usuario ya existe
+  <div class="toast" *ngIf="showAlreadyAddedToast">
+    Usuario ya existe
+  </div>
+
+  <div class="toast" *ngIf="showInvalidCredentialsToast">
+    Credenciales no válidas
+  </div>
 </div>
 
-<div class="toast" *ngIf="showInvalidCredentialsToast">
-  Credenciales no válidas
-</div>
+

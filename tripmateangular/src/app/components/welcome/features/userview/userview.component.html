@@ -21,7 +21,9 @@
     <div class="actions-container">
 
       <button class="action-button"><span>Eliminar cuenta</span></button>
-      <button class="action-button" (click)="vistaAdmin()"><span>Vista administrador</span></button>
+      @if (isAdmin()) {
+        <button class="action-button" (click)="vistaAdmin()"><span>Vista administrador</span></button>
+      }
 
       <button class="action-button" (click)="vistaChangeEmail()"><span>Cambiar Email</span></button>
 
