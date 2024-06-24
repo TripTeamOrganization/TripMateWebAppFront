@@ -43,17 +43,25 @@ export class RegisterComponent {
   emailError: boolean = false;
   passwordError: boolean = false;
   telefonoError: boolean = false;
+  showAlreadyAddedToast: boolean = false;
+  showInvalidCredentialsToast: boolean = false;
 
-  constructor(private cdr: ChangeDetectorRef, private http: HttpClient, private router: Router, private authService:AuthService) {}
+  constructor(private cdr: ChangeDetectorRef, private http: HttpClient, private router: Router, private authService: AuthService) {}
+
   registerF() {
-    if (1===1) {
-      this.authService.register(this.register.email,this.register.password).subscribe({
-        next: () => this.router.navigate(['/signin']),
-        error: (err) => {
-          console.error(err);
+    this.authService.register(this.register.email, this.register.password).subscribe({
+      next: () => this.router.navigate(['/signin']),
+      error: (err) => {
+        console.error(err);
+        if (err.status === 500) {
+          this.showAlreadyAddedToast = true;
+          setTimeout(() => this.showAlreadyAddedToast = false, 3000);
+        } else if (err.status === 401||err.status === 409) {
+          this.showInvalidCredentialsToast = true;
+          setTimeout(() => this.showInvalidCredentialsToast = false, 3000);
         }
-      });
-    }
+      }
+    });
   }
 
   validarFormulario() {

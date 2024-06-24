@@ -77,3 +77,10 @@
     </div>
   </div>
 </div>
+<div class="toast" *ngIf="showAlreadyAddedToast">
+  Usuario ya existe
+</div>
+
+<div class="toast" *ngIf="showInvalidCredentialsToast">
+  Credenciales no válidas
+</div>
