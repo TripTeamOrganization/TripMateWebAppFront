@@ -90,13 +90,13 @@ export class CrudFlightsComponent implements OnInit{
     this.flightForm.resetForm();
   }
 
-  deleteItem(id: string) {
-    this.flightService.deleteFlights(id).subscribe(() => {
+  deleteItem(id: number) {
+    this.flightService.deleteFlight(id).subscribe(() => {
       this.dataSource.data = this.dataSource.data.filter((o: any) => o.id !== id);
-      this.showDeleteSuccessMessage = true; // Mostrar el mensaje de éxito al eliminar la película
-      console.log("Se eliminó con éxito"); // Agregamos esta línea para verificar
+      this.showDeleteSuccessMessage = true; // Show the success message when the flight is deleted
+      console.log("Successfully deleted"); // We add this line for verification
       setTimeout(() => {
-        this.showDeleteSuccessMessage = false; // Ocultar el mensaje después de 3 segundos
+        this.showDeleteSuccessMessage = false; // Hide the message after 3 seconds
       }, 3000);
     });
   }
@@ -104,26 +104,26 @@ export class CrudFlightsComponent implements OnInit{
 
   addFlights() {
     let maxID: number = 0;
-    maxID = this.dataSource.data.reduce((max: number, accommodation: any) => accommodation.id > max ? accommodation.id : max, 0);
-    this.flightsData.idVuelo = (Number(maxID) + 1);
+    maxID = this.dataSource.data.reduce((max: number, flight: any) => flight.id > max ? flight.id : max, 0);
+    this.flightsData.idVuelo = maxID + 1;
 
-    console.log('Nuevo ID:', this.flightsData.idVuelo.toString());
-    console.log('Datos del alojamiento:', this.flightsData);
+    console.log('New ID:', this.flightsData.idVuelo);
+    console.log('Flight Data:', this.flightsData);
 
-    this.flightService.createFlights(this.flightsData).subscribe(
+    this.flightService.createFlight(this.flightsData).subscribe(
       (response: any) => {
-        this.dataSource.data.push(response); // Aquí deberías agregar la respuesta del servicio, no this.accommodationData
+        this.dataSource.data.push(response); // Here you should add the service response, not this.flightsData
         this.dataSource.data = [...this.dataSource.data];
       },
       (error) => {
-        console.error('Error al agregar el alojamiento:', error);
+        console.error('Error adding the flight:', error);
       }
     );
   }
 
 
   updateFlights(){
-    this.flightService.updateFlights(this.flightsData.idVuelo.toString(), this.flightsData).subscribe((response: any) => {
+    this.flightService.updateFlight(this.flightsData.idVuelo, this.flightsData).subscribe((response: any) => {
       this.dataSource.data = this.dataSource.data.map((o:any) => {
         if(o.id === response.id){
           o = response;

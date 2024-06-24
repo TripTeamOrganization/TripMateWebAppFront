@@ -61,11 +61,12 @@ export class FlightsComponentComponent implements OnInit {
       (data: any) => {
         if (Array.isArray(data)) {
           this.flights = data.map(flight => new Flight(
-            flight.idVuelo,
+            Number(flight.idVuelo),
             flight.nombreAerolinea,
+            flight.imagePath,
             flight.precio,
             flight.descripcion
-        ));
+          ));
           this.filteredFlights = [];
 
           this.flights.forEach((value: Flight) => {

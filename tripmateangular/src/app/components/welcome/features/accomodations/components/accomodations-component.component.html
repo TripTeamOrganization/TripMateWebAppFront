@@ -4,15 +4,15 @@
 <app-main-filter (valuesChangedInFilter)="getValues($event)" title="por noche" filterTitle="Camas" filter1="1" filter2="2" filter3="3" filter4="4" filter5="5"></app-main-filter>
 
 <group-cardgroup>
-  @for (accommodation of filteredAccomodations.length > 0 ? filteredAccomodations : accomodations; track accommodation.nombre) {
+  @for (accommodation of filteredAccomodations.length > 0 ? filteredAccomodations : accomodations; track accommodation.name) {
 
     <app-cardmain
       starcount="5"
-      [sourceimage]="accommodation.imagen"
-      [title]="accommodation.nombre"
-      [price]="accommodation.precio"
-      [ubicacion]="accommodation.ubicacion"
-      [descripcion]="accommodation.descripcion ? accommodation.descripcion : ''"
+      [sourceimage]="accommodation.imagePath"
+      [title]="accommodation.name"
+      [price]="accommodation.price"
+      [ubicacion]="accommodation.location"
+      [descripcion]="accommodation.description ? accommodation.description : ''"
       tipo="restaurant"
       buttontext="Seleccionar">
     </app-cardmain>
@@ -21,19 +21,3 @@
     <p>Cargando... (Esto podría tardas unos segundos)</p>
   }
 </group-cardgroup>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

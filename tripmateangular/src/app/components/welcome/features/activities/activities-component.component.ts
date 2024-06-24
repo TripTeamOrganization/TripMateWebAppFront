@@ -8,7 +8,6 @@ import {MainFilterComponent} from "../../../../../public/shared/main-filter/main
 import {SearchbarComponent} from "../../../../../public/shared/searchbar/searchbar.component";
 import {CardmainComponent} from "../../../../../public/shared/cardmain/cardmain.component";
 import {CardgroupComponent} from "../../../../../public/shared/groups/cardgroup";
-import {Accommodation} from "../../../../models/accomodation.model";
 
 @Component({
   selector: 'app-activities',
@@ -89,10 +88,10 @@ export class ActivitiesComponentComponent implements OnInit {
           this.activities = data.map(activity => new Activity(
             activity.id,
             activity.nombre,
-            activity.imagen,
-            activity.descripcion,
-            activity.ubicacion,
-            activity.precio
+            activity.imagePath,
+            activity.description,
+            activity.location,
+            activity.price
 
           ));
           this.filteredActivities = [];

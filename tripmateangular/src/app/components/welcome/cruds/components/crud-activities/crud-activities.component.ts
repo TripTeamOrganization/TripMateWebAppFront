@@ -75,7 +75,7 @@ export class CrudActivitiesComponent implements OnInit{
   }
 
   getAllActivities(){
-    this.activityService.getActivity().subscribe((response: any) => {
+    this.activityService.getActivities().subscribe((response: any) => {
       this.dataSource.data = response;
     });
   }
@@ -90,13 +90,13 @@ export class CrudActivitiesComponent implements OnInit{
     this.activitiesForm.resetForm();
   }
 
-  deleteItem(id: string) {
+  deleteItem(id: number) {
     this.activityService.deleteActivity(id).subscribe(() => {
       this.dataSource.data = this.dataSource.data.filter((o: any) => o.id !== id);
-      this.showDeleteSuccessMessage = true; // Mostrar el mensaje de éxito al eliminar la película
-      console.log("Se eliminó con éxito"); // Agregamos esta línea para verificar
+      this.showDeleteSuccessMessage = true; // Show the success message when the activity is deleted
+      console.log("Successfully deleted"); // We add this line for verification
       setTimeout(() => {
-        this.showDeleteSuccessMessage = false; // Ocultar el mensaje después de 3 segundos
+        this.showDeleteSuccessMessage = false; // Hide the message after 3 seconds
       }, 3000);
     });
   }
@@ -105,24 +105,23 @@ export class CrudActivitiesComponent implements OnInit{
   addActivity() {
     let maxID: number = 0;
     maxID = this.dataSource.data.reduce((max: number, activities: any) => activities.id > max ? activities.id : max, 0);
-    this.activitiesData.id = (Number(maxID) + 1).toString();
+    this.activitiesData.id = maxID + 1;
 
-    console.log('Nuevo ID:', this.activitiesData.id);
-    console.log('Datos del alojamiento:', this.activitiesData);
+    console.log('New ID:', this.activitiesData.id);
+    console.log('Activity Data:', this.activitiesData);
 
     this.activityService.createActivity(this.activitiesData).subscribe(
       (response: any) => {
-        this.dataSource.data.push(response);
+        this.dataSource.data.push(response); // Here you should add the service response, not this.activitiesData
         this.dataSource.data = [...this.dataSource.data];
       },
       (error) => {
-        console.error('Error al agregar el alojamiento:', error);
+        console.error('Error adding the activity:', error);
       }
     );
   }
 
-
-  updateActiviy(){
+  updateActivity(){
     this.activityService.updateActivity(this.activitiesData.id, this.activitiesData).subscribe((response: any) => {
       this.dataSource.data = this.dataSource.data.map((o:any) => {
         if(o.id === response.id){
@@ -136,7 +135,7 @@ export class CrudActivitiesComponent implements OnInit{
   onSubmit(){
     if(this.activitiesForm.form.valid){
       if(this.isEditMode){
-        this.updateActiviy();
+        this.updateActivity();
       }else{
         this.addActivity();
       }

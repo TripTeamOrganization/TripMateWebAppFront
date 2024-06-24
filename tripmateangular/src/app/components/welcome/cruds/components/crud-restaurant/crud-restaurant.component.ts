@@ -90,8 +90,8 @@ export class CrudRestaurantComponent implements OnInit{
     this.restaurantForm.resetForm();
   }
 
-  deleteItem(id: string) {
-    this.restaurantService.deleteRestaurants(id).subscribe(() => {
+  deleteItem(id: number) {
+    this.restaurantService.deleteRestaurant(id).subscribe(() => {
       this.dataSource.data = this.dataSource.data.filter((o: any) => o.id !== id);
       this.showDeleteSuccessMessage = true; // Mostrar el mensaje de éxito al eliminar la película
       console.log("Se eliminó con éxito"); // Agregamos esta línea para verificar
@@ -110,7 +110,7 @@ export class CrudRestaurantComponent implements OnInit{
     console.log('Nuevo ID:', this.resturantsData.id);
     console.log('Datos del alojamiento:', this.resturantsData);
 
-    this.restaurantService.createRestaurants(this.resturantsData).subscribe(
+    this.restaurantService.createRestaurant(this.resturantsData).subscribe(
       (response: any) => {
         this.dataSource.data.push(response);
         this.dataSource.data = [...this.dataSource.data];
@@ -121,17 +121,16 @@ export class CrudRestaurantComponent implements OnInit{
     );
   }
 
-
-  updateRestaurant(){
-    this.restaurantService.updateRestaurants(this.resturantsData.id, this.resturantsData).subscribe((response: any) => {
-      this.dataSource.data = this.dataSource.data.map((o:any) => {
-        if(o.id === response.id){
-          o = response;
-        }
-        return o;
-      });
+ updateRestaurant(){
+  this.restaurantService.updateRestaurant(Number(this.resturantsData.id), this.resturantsData).subscribe((response: any) => {
+    this.dataSource.data = this.dataSource.data.map((o:any) => {
+      if(o.id === response.id){
+        o = response;
+      }
+      return o;
     });
-  }
+  });
+}
 
   onSubmit(){
     if(this.restaurantForm.form.valid){
