@@ -32,7 +32,7 @@ export const routes: Routes = [
     path: '',
     component: WelcomeComponent,
     children: [
-      { path: '', redirectTo: 'accommodations', pathMatch: 'full'},
+      { path: '', redirectTo: 'signin', pathMatch: 'full'},
       { path: 'accommodations', component: AccomodationsComponentComponent, canActivate: [AuthGuard] },
       { path: 'activities', component: ActivitiesComponentComponent, canActivate: [AuthGuard] },
       { path: 'restaurants', component: RestaurantsComponentComponent, canActivate: [AuthGuard] },
