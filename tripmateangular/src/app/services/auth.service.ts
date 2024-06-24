@@ -26,18 +26,16 @@ export class AuthService {
           console.log(response.token)
           this.setToken(response.token);
         }
-        const userId = Number(response.user_id);
-        localStorage.setItem('user_id', userId.toString());
       })
     );
   }
 
   private setToken(token: string): void {
-    localStorage.setItem(this.tokenKey, token);
+    sessionStorage.setItem(this.tokenKey, token);
   }
 
   private getToken(): string | null {
-    return localStorage.getItem(this.tokenKey);
+    return sessionStorage.getItem(this.tokenKey);
   }
 
   isAuthenticated(): boolean {
@@ -51,7 +49,7 @@ export class AuthService {
   }
 
   logOut(): void {
-    localStorage.removeItem(this.tokenKey);
+    sessionStorage.removeItem(this.tokenKey);
     this.router.navigate(['/signin']);
   }
 
