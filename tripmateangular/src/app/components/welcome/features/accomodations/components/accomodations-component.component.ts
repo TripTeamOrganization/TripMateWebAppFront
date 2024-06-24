@@ -74,11 +74,11 @@ export class AccomodationsComponentComponent implements OnInit {
         if (Array.isArray(data)) {
           this.accomodations = data.map(accomodation => new Accommodation(
             accomodation.id,
-            accomodation.nombre,
-            accomodation.imagen,
-            accomodation.descripcion,
-            accomodation.ubicacion,
-            accomodation.precio
+            accomodation.name,
+            accomodation.imagePath,
+            accomodation.description,
+            accomodation.location,
+            accomodation.price
           ));
 
           //actualización del filtro:
@@ -90,7 +90,7 @@ export class AccomodationsComponentComponent implements OnInit {
 
           this.accomodations.forEach((value: Accommodation) => {
 
-            const precio: number = this.getPrice(value.precio);
+            const precio: number = this.getPrice(value.price);
             if (precio >= this.minLimit && precio <= this.maxLimit)
             {
               this.filteredAccomodations.push(value);
@@ -112,7 +112,7 @@ export class AccomodationsComponentComponent implements OnInit {
     const trimmedQuery = searchQuery.trim().toLowerCase();
 
     this.filteredAccomodations = this.accomodations.filter(accomodation =>
-      accomodation.nombre.toLowerCase().includes(trimmedQuery)
+      accomodation.name.toLowerCase().includes(trimmedQuery)
     );
     console.log('Alojamientos filtrados:', this.filteredAccomodations);
   }

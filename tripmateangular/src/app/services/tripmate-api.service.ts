@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import {environment} from "../../environments/environment";
-import {catchError, Observable, retry} from "rxjs";
-
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {User} from "../models/user.model";
-import {Accommodation} from "../models/accomodation.model";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -40,13 +38,15 @@ export class TripmateApiService {
   getNotifications(){
     return this.http.get<any>(`${this.url}/Notifications`);
   }
-  updatePassword(userId: string | number, newPassword: string | null): Observable<User> {
-    const payload = { password: newPassword };
-    return this.http.put<User>(`${this.url}/users/${userId}`, payload, this.httpOptions);
-  }
+
   getUser() {
     const userId = sessionStorage.getItem('id');
     return this.http.get<any>(`${this.url}/users/${userId}`);
+  }
+
+  updatePassword(userId: string | number, newPassword: string | null): Observable<User> {
+    const payload = { password: newPassword };
+    return this.http.put<User>(`${this.url}/users/${userId}`, payload, this.httpOptions);
   }
 
   updateEmail(userId: string, newEmail: string) {

@@ -80,7 +80,7 @@ export class RestaurantsComponentComponent implements OnInit {
           const newRestaurant = new Restaurant(
             restaurant.id,
             restaurant.name,
-            restaurant.image,
+            restaurant.imagePath,
             restaurant.locationCost,
             restaurant.mustTry,
           );

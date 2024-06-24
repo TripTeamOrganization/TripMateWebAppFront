@@ -75,7 +75,7 @@ export class CrudAccomodationComponent implements OnInit{
   }
 
   getAllAccomodations(){
-    this.accomodationService.getAccomodations().subscribe((response: any) => {
+    this.accomodationService.getAccommodations().subscribe((response: any) => {
       this.dataSource.data = response;
     });
   }
@@ -90,13 +90,13 @@ export class CrudAccomodationComponent implements OnInit{
     this.offersForm.resetForm();
   }
 
-  deleteItem(id: string) {
-    this.accomodationService.deleteAccomodation(id).subscribe(() => {
+  deleteItem(id: number) {
+    this.accomodationService.deleteAccommodation(id).subscribe(() => {
       this.dataSource.data = this.dataSource.data.filter((o: any) => o.id !== id);
-      this.showDeleteSuccessMessage = true; // Mostrar el mensaje de éxito al eliminar la película
-      console.log("Se eliminó con éxito"); // Agregamos esta línea para verificar
+      this.showDeleteSuccessMessage = true; // Show the success message when the accommodation is deleted
+      console.log("Successfully deleted"); // We add this line for verification
       setTimeout(() => {
-        this.showDeleteSuccessMessage = false; // Ocultar el mensaje después de 3 segundos
+        this.showDeleteSuccessMessage = false; // Hide the message after 3 seconds
       }, 3000);
     });
   }
@@ -105,33 +105,33 @@ export class CrudAccomodationComponent implements OnInit{
   addAccommodation() {
     let maxID: number = 0;
     maxID = this.dataSource.data.reduce((max: number, accommodation: any) => accommodation.id > max ? accommodation.id : max, 0);
-    this.accommodationData.id = (Number(maxID) + 1).toString();
+    this.accommodationData.id = maxID + 1;
 
-    console.log('Nuevo ID:', this.accommodationData.id);
-    console.log('Datos del alojamiento:', this.accommodationData);
+    console.log('New ID:', this.accommodationData.id);
+    console.log('Accommodation Data:', this.accommodationData);
 
     this.accomodationService.createAccommodation(this.accommodationData).subscribe(
       (response: any) => {
-        this.dataSource.data.push(response); // Aquí deberías agregar la respuesta del servicio, no this.accommodationData
+        this.dataSource.data.push(response); // Here you should add the service response, not this.accommodationData
         this.dataSource.data = [...this.dataSource.data];
       },
       (error) => {
-        console.error('Error al agregar el alojamiento:', error);
+        console.error('Error adding the accommodation:', error);
       }
     );
   }
 
 
-  updateAccomodation(){
-    this.accomodationService.updateAccomodation(this.accommodationData.id, this.accommodationData).subscribe((response: any) => {
-      this.dataSource.data = this.dataSource.data.map((o:any) => {
-        if(o.id === response.id){
-          o = response;
-        }
-        return o;
-      });
+updateAccomodation(){
+  this.accomodationService.updateAccommodation(this.accommodationData.id, this.accommodationData).subscribe((response: any) => {
+    this.dataSource.data = this.dataSource.data.map((o:any) => {
+      if(o.id === response.id){
+        o = response;
+      }
+      return o;
     });
-  }
+  });
+}
 
   onSubmit(){
     if(this.offersForm.form.valid){
