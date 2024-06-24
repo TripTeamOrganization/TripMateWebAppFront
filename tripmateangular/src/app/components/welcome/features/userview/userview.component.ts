@@ -4,6 +4,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {Router, RouterLink} from "@angular/router";
 import {User} from "../../../../models/user.model";
 import {TripmateApiService} from "../../../../services/tripmate-api.service";
+import {AuthService} from "../../../../services/auth.service";
 
 @Component({
   selector: 'app-userview',
@@ -16,7 +17,7 @@ export class UserviewComponent implements OnInit {
   userData!: User;
   users: User[] = [];
   selectedUser: User | undefined;
-  constructor(private apiService: TripmateApiService, private router: Router) {
+  constructor(private apiService: TripmateApiService, private router: Router, private authService:AuthService) {
     this.userData = {} as User;
   }
 
@@ -62,7 +63,9 @@ export class UserviewComponent implements OnInit {
   }
 
   vistaSigin(){
+    this.authService.logOut()
     this.router.navigateByUrl('/signin')
+
   }
 
   vistaChangeEmail(){
