@@ -1,18 +1,10 @@
-<div class="container">
-  <div class="filter-container">
-
-    <div class="slider-container">
-      <h1>Precio {{title}}</h1>
-      <div class="cards-container">
-        <app-placeholder-card [minMax]="'Min'" [value]="minValue"></app-placeholder-card>
-        <app-placeholder-card [minMax]="'Max'" [value]="maxValue"></app-placeholder-card>
+<div class="filter-container">
+  <div class="slider-container">
+    <h1>Precio {{title}}</h1>
+    <div class="cards-container">
+      <app-placeholder-card [minMax]="'Min'" [value]="minValue"></app-placeholder-card>
+      <app-placeholder-card [minMax]="'Max'" [value]="maxValue"></app-placeholder-card>
       </div>
-      <app-range-slider (valuesChanged)="updateValues($event)"></app-range-slider>
-    </div>
-
-    <div class="dropdown-filter">
-      <h1>Filtrar</h1>
-      <app-dropdown-card title="{{filterTitle}}" option1="{{filter1}}" option2="{{filter2}}" option3="{{filter3}}" option4="{{filter4}}" option5="{{filter5}}"></app-dropdown-card>
-    </div>
+    <app-range-slider (valuesChanged)="updateValues($event)"></app-range-slider>
   </div>
 </div>
