@@ -64,8 +64,8 @@ export class FlightsComponentComponent implements OnInit {
             Number(flight.idVuelo),
             flight.nombreAerolinea,
             flight.imagePath,
-            flight.precio,
-            flight.descripcion
+            flight.descripcion,
+            flight.precio
           ));
           this.filteredFlights = [];
 

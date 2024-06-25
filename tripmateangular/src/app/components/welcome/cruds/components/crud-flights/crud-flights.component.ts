@@ -123,14 +123,19 @@ export class CrudFlightsComponent implements OnInit{
 
 
   updateFlights(){
-    this.flightService.updateFlight(this.flightsData.idVuelo, this.flightsData).subscribe((response: any) => {
-      this.dataSource.data = this.dataSource.data.map((o:any) => {
-        if(o.id === response.id){
-          o = response;
-        }
-        return o;
+    if (this.flightsData) {
+      console.log('Updating flight:', this.flightsData);
+      this.flightService.updateFlight(this.flightsData.idVuelo, this.flightsData).subscribe((response: any) => {
+        this.dataSource.data = this.dataSource.data.map((o:any) => {
+          if(o.id === response.id){
+            o = response;
+          }
+          return o;
+        });
       });
-    });
+    } else {
+      console.error('Error: flightsData is null');
+    }
   }
 
   onSubmit(){

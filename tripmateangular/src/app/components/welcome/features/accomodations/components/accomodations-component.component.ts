@@ -77,8 +77,8 @@ export class AccomodationsComponentComponent implements OnInit {
             accomodation.name,
             accomodation.imagePath,
             accomodation.description,
-            accomodation.location,
-            accomodation.price
+            accomodation.price,
+            accomodation.location
           ));
 
           //actualización del filtro:
